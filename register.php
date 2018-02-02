@@ -1,3 +1,7 @@
+<?php
+$inEmail = "";
+$emailErrMsg="";
+?>
 <!DOCTYPE html>
 <html>
 <head>

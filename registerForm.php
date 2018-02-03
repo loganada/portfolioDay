@@ -108,13 +108,15 @@ $repoErrMsg="";
   </p>
   <p>
     <label>Your Program:</label>
-      <select  name="inProgram" id="program"  selected = "<?php echo $inProgram;?>"required>
-        <option >Please Select a Program</option>
+      <select  name="inProgram" id="program" required>     
+        <option selected><?php if($inProgram === "Web Development" || $inProgram === "Photography" ||$inProgram === "Graphic Design" || $inProgram === "Animation"|| $inProgram === "Other"){ echo $inProgram;} else{echo "Please select and option";}?></option>
+        <!-- <option >Please Select a Program</option> -->
         <option  value="Web Development">Web Development</option>
-        <option  value="Photogaphy">Photogaphy</option>
+        <option  value="Photography">Photography</option>
         <option  value="Graphic Design">Graphic Design</option>
         <option  value="Animation">Animation</option>
         <option value="Other">Other</option>
+
       </select>
       <p id = "programErrMsg"></p>
       <span><?php echo $programErrMsg; ?></span>

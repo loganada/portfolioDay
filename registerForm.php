@@ -1,4 +1,6 @@
 <?php
+
+// testing branch merge
 //Variables
 $validForm = "";
 $inFirstName="";

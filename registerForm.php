@@ -81,6 +81,83 @@ $repoErrMsg="";
 
   }
 
+  // Checking if Submited
+    if(isset($_POST["submit"]))
+    {
+  // Get values from the form
+  $inFirstName = $_POST['inFirstName'];
+  $inLastName = $_POST['inLastName'];
+  $inEmail = $_POST['inEmail'];
+  $inProgram = $_POST['inProgram'];
+  $inWebsite = $_POST['$inWebsite'];
+  $inCareer = $_POST['$inCareer'];
+  $inHometown = $_POST['$inHometown'];
+  $inWords = $_POST['$inWords'];
+  $inRepo = $_POST['$inRepo'];
+
+  //Connect to DB
+  $serverName = "localhost";
+  $username = "root";
+  $password = "";
+  $database = "portfolio_day";
+
+try {
+    $conn = new PDO("mysql:host=$serverName;dbname=$database", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //echo "Connected successfully";
+
+    }
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
+  //Create the SQL command string
+  $sql = "INSERT INTO students (";
+  $sql .= "first_name, ";
+  $sql .= "last_name, ";
+  $sql .= "email, ";
+  $sql .= "program, ";
+  $sql .= "website, ";
+  $sql .= "hometown, ";
+  $sql .= "career, ";
+  $sql .= "three_words, ";
+  $sql .= "repo";	  //Last column does NOT have a comma after it.
+  $sql .= ") VALUES (?,?,?,?,?,?,?,?,?)";	//? Are placeholders for variables
+
+  //Display the SQL command to see if it correctly formatted.
+  //echo "<p>$sql</p>";
+
+  $query = $conn->prepare($sql);	//Prepares the query statement
+
+  //Binds the parameters to the query.
+  //The ssssis are the data types of the variables in order.
+
+
+  $query->bindParam(2, $inFirstName, PDO::PARAM_STR, 100);
+  $query->bindParam(3, $inLastName, PDO::PARAM_STR, 100);
+  $query->bindParam(4, $inProgram, PDO::PARAM_STR, 100);
+  $query->bindParam(4, $inEmail, PDO::PARAM_STR, 100);
+  $query->bindParam(5, $inWebsite, PDO::PARAM_STR, 100);
+  $query->bindParam(6, $inCareer, PDO::PARAM_STR, 100);
+  $query->bindParam(6, $inHometown, PDO::PARAM_STR, 100);
+  $query->bindParam(6, $inWords, PDO::PARAM_STR, 100);
+  $query->bindParam(6, $inRepo, PDO::PARAM_STR, 100);
+  //Run the SQL prepared statements
+  if ( $query->execute(array($inFirstName, $inLastName, $inEmail, $inProgram, $inWebsite, $inCareer, $inHometown, $inWords, $inRepo) ))
+  {
+  $message = "<h1>Your record has been successfully added to the database.</h1>";
+
+  }
+  else
+  {
+  $message = "<h1>You have encountered a problem.</h1>";
+
+  }
+$query=null;
+$conn=null;	//closes the connection to the database once this page is complete
+header('Location: confirm.php');
+}
  ?>
 <!DOCTYPE html>
 <html>
@@ -110,7 +187,7 @@ $repoErrMsg="";
   </p>
   <p>
     <label>Your Program:</label>
-      <select  name="inProgram" id="program" required>     
+      <select  name="inProgram" id="program" required>
         <option selected><?php if($inProgram === "Web Development" || $inProgram === "Photography" ||$inProgram === "Graphic Design" || $inProgram === "Animation"|| $inProgram === "Other"){ echo $inProgram;} else{echo "Please select and option";}?></option>
         <!-- <option >Please Select a Program</option> -->
         <option  value="Web Development">Web Development</option>

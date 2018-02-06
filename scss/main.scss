@@ -1,0 +1,473 @@
+//SCSS IMPORTS
+@font-face {
+    font-family: 'Neoneon-Regular';
+    src: url('../fonts/neoneon/neoneon-webfont.woff2') format('woff2'),
+    url('../fonts/neoneon/neoneon-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+//SCSS VARIABLES 
+$primary-color: #5E4B8D;
+$nav-hover-color: #FBAD2F;
+$neon-color: #FF1177;
+$link-color: #D4295E;
+
+/******* GENERAL *******/
+
+body {
+    background: $primary-color;
+    color: white;
+}
+
+.wrapper {
+    // Makes footer stay at the bottom of the page
+    min-height: 100%; // padding: 0 20px 0 20px;
+}
+
+
+/*Gets rid of unnecessary horizontal scrolling */
+
+.col-md-6,
+.row {
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Neoneon-Regular';
+    font-size: 2.5em;
+}
+
+
+/* unvisited link */
+
+a:link {
+    color: $link-color;
+}
+
+
+/* visited link */
+
+a:visited {
+    color: $link-color;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* selected link */
+
+a:active {
+    color: $link-color;
+}
+
+
+/******* NAVIGATION *******/
+
+.nav-background {
+    background-image: linear-gradient(to bottom, rgba(15, 21, 27, 0.3) 0%, $primary-color 100%);
+}
+
+ul.desktop-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+        float: right;
+        &.nav-lead {
+            float: left;
+            a {
+                font-family: 'Neoneon-Regular';
+                font-size: 2em;
+                -webkit-animation: neon-glowing 1.5s 2s infinite alternate;
+                -moz-animation: neon-glowing 1.5s 2s infinite alternate;
+                animation: neon-glowing 1.5s 2s infinite alternate;
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+        a {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            text-align: center;
+            padding: 14px 16px; //text-transform: uppercase;
+            text-decoration: none;
+            &:hover {
+                font-weight: bold;
+                color: #fff;
+                text-shadow: 0 0 1px $nav-hover-color, 0 0 15px #fff, 0 0 20px $neon-color, 0 0 35px $neon-color, 0 0 40px $neon-color, 0 0 50px $neon-color, 0 0 75px $neon-color;
+            }
+        }
+    }
+}
+
+.mobile-menu {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background: $primary-color;
+    opacity: 0.9;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    a {
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .close-btn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+}
+
+.mobile-nav {
+    display: none;
+}
+
+
+/******* HEADER *******/
+
+.header-container {
+    height: 100vh;
+}
+
+.main-header-content {
+    height: 250px;
+    position: relative;
+    text-align: center;
+    .dmacc-portfolio-day-logo,
+    .main-header-content-centered {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.countdown-container {
+    font-family: 'Montserrat', sans-serif;
+    text-align: cente r;
+    #portfolioDayCountDown {
+        font-size: 4em;
+        .countdownLetter {
+            font-family: 'Neoneon-Regular';
+            text-shadow: 0 0 15px #fff, 0 0 20px $neon-color, 0 0 35px $neon-color, 0 0 40px $neon-color, 0 0 50px $neon-color, 0 0 75px $neon-color;
+        }
+        .countdownNumber {
+            width: 70px;
+            display: inline-block;
+        }
+    }
+}
+
+
+
+.portfolio-day-information {
+    margin-top: 50px;
+    text-align: center;
+    h2 {
+        -webkit-animation: neon-flashing 4s linear 5s 8;
+        -moz-animation: neon-flashing 4s linear 5s 8;
+        animation: neon-flashing 4s linear 5s 8;
+        &:hover {
+            text-shadow: 0 0 15px #fff, 0 0 20px $neon-color, 0 0 35px $neon-color, 0 0 40px $neon-color, 0 0 50px $neon-color, 0 0 75px $neon-color;
+        }
+    }
+}
+
+.social-media-list {
+    text-align: center;
+    .social-media-column {
+        display: inline-block;
+        padding: 8px 8px;
+        img {
+            width: 32px;
+            height: 32px;
+            &:hover {
+                box-shadow: 0 0 5px #fff, 0 0 10px $neon-color, 0 0 25px $neon-color, 0 0 30px $neon-color, 0 0 40px $neon-color, 0 0 65px $neon-color;
+            }
+        }
+    }
+}
+
+
+
+
+/******* MAIN CONTENT *******/
+
+
+/******* FOOTER *******/
+
+
+/*footer and .push-footer MUST be the same height in order to stay at the bottom of the page*/
+
+footer,
+.push-footer {
+    height: 50px;
+}
+
+.miscellaneous-info {
+    margin-top: 5px;
+    text-align: center;
+    p {
+        margin: 0;
+    }
+}
+
+
+/******* SEARCH USERS *******/
+
+.mix-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+}
+
+.user-search-container {
+	h2 {
+		text-align: center;
+		text-shadow: 0 0 15px #fff, 0 0 20px $neon-color, 0 0 35px $neon-color, 0 0 40px $neon-color, 0 0 50px $neon-color, 0 0 75px $neon-color;
+	}
+    .user-search {
+        text-align: center;
+        .test {
+        	display: inline-block;
+        	width: 50%;
+        	margin-right: auto;
+        	margin-left: auto;
+        	padding: 13px 17px;
+        	border:none;
+        	border-radius: 4px;
+        }
+
+        input[type=submit] {
+        	display: inline;
+        	background-color: $nav-hover-color;
+        	margin-top: 25px;
+        	padding: 13px 17px;
+        	border: none;
+        	border-radius: 4px;
+        	&:hover {
+        		cursor: pointer;
+        	}
+        }
+    }
+}
+
+
+/******* MEDIA QUERIES *******/
+
+@media only screen and (max-width: 1268px) {
+    ul.desktop-menu {
+        // margin-left: 50px;
+        li {
+            display: block;
+        }
+    }
+}
+
+@media only screen and (max-width: 936px) {
+    .countdownNumber {
+        width: 40px !important;
+        display: inline-block;
+    }
+}
+
+
+/*ipad*/
+
+@media only screen and (width: 768px) and (height: 1024px) {
+    .col-md-6,
+    .col-md-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .countdownNumber,
+    .countdownLetter {
+        font-size: 2em;
+        margin: 0 5px 0 5px;
+    }
+}
+
+
+/*Reduce countdown timer's size*/
+
+@media only screen and (max-width: 1125px) {
+    .countdown-container {
+        #portfolioDayCountDown {
+            font-size: 2em;
+        }
+    }
+}
+
+@media only screen and (max-width: 988px) {
+    .desktop-menu {
+        display: none;
+    }
+    .mobile-nav {
+        display: block;
+        text-align: center;
+        .nav-logo {
+            display: inline-block;
+            font-family: 'Neoneon-Regular';
+            font-size: 2.5em;
+            color: white;
+            &:hover {
+                color: $nav-hover-color;
+            }
+        }
+        .open-hamburger-menu {
+            display: inline-block;
+            border: 2px solid white;
+            padding: 4px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+    #mobile-menu {
+        opacity: 0.9;
+        a {
+            display: block;
+            font-family: 'Neoneon-Regular';
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-transform: uppercase;
+            text-decoration: none;
+            &:nth-child(2) {
+                font-size: 3em;
+            }
+            &:hover {
+                color: $nav-hover-color;
+                text-shadow: 0 0 15px #fff, 0 0 20px $neon-color, 0 0 35px $neon-color, 0 0 40px $neon-color, 0 0 50px $neon-color, 0 0 75px $neon-color;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-height: 1000px) {
+    .header-container {
+        position: relative;
+        .forBiggerScreens {
+            width: 95vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /*Get rid of the extra margin between countdown and portfolio information */
+    .portfolio-day-information {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 496px) {
+    .countdownNumber {
+        width: 25px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    /* Makes content readable and less busy. */
+    h2 {
+        font-size: 1.5em;
+    }
+    .mobile-nav {
+        .nav-logo {
+            font-size: 2em;
+        }
+    }
+    .main-header-content {
+        /*Gets rid of excessive whitespace*/
+        height: 100px;
+        margin: 15px;
+    }
+    .countdown-container {
+        /* Makes content readable and less busy. */
+        #portfolioDayCountDown {
+            font-size: 2em;
+        }
+    }
+}
+
+@media only screen and (max-width: 366px) {
+    .mobile-nav {
+        display: block;
+        text-align: center;
+        a {
+            float: none;
+            font-family: 'Neoneon-Regular';
+            font-size: 1.5em;
+            color: white;
+            &:hover {
+                color: $nav-hover-color;
+            }
+        }
+        .open-hamburger-menu {
+            float: none;
+            border: 2px solid white;
+            padding: 4px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+/******* ANIMATIONS *******/
+
+@keyframes neon-glowing {
+    from {
+        text-shadow: 0 0 30px #fff, 0 0 40px $neon-color, 0 0 70px $neon-color, 0 0 80px $neon-color, 0 0 100px $neon-color, 0 0 150px $neon-color;
+    }
+    to {
+        text-shadow: 0 0 15px #fff, 0 0 20px $neon-color, 0 0 35px $neon-color, 0 0 40px $neon-color, 0 0 50px $neon-color, 0 0 75px $neon-color;
+    }
+}
+
+@keyframes neon-flashing {
+    from {
+        text-shadow: 0 0 15px #fff, 0 0 20px $neon-color, 0 0 35px $neon-color, 0 0 40px $neon-color, 0 0 50px $neon-color, 0 0 75px $neon-color;
+    }
+    to {
+        text-shadow: none;
+    }
+}

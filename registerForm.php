@@ -85,32 +85,37 @@ $repoErrMsg="";
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Register Form</title>
+  <link rel="stylesheet" type="text/css" href="css/formStyle.css">
 </head>
 <body>
+  <div class="form-container">
 <form name="form1" method="post" action="registerForm.php">
   <fieldset>
-    <legend><h1>Contact Us.</h1></legend>
-  <p>&nbsp;</p>
+    <p class="mix-logo-container">
+      <img class="mix-logo" src="img/dmaccPortfolioDayLogo.svg">
+    </p>
+    <legend><h1 class="form-header">Register </h1></legend>
   <p>
-    <label for="textfield">First Name:</label>
-      <input type="text" name="inFirstName" id="textfield" value="<?php echo $inFirstName;  ?>" required/>
+    <label for="textfield" class="form-label">First Name:</label>
+      <input type="text" name="inFirstName" id="textfield" value="<?php echo $inFirstName;  ?>" />
       <span><?php echo $firstNameErrMsg; ?></span>
 
   </p>
   <p>
-    <label for="textfield2">Last Name:</label>
-      <input type="text" name="inLastName" id="textfield2" value="<?php echo $inLastName;  ?>" required/>
+    <label for="textfield2" class="form-label">Last Name:</label>
+      <input type="text" name="inLastName" id="textfield2" value="<?php echo $inLastName;  ?>"/>
       <span><?php echo $lastNameErrMsg; ?></span>
   </p>
   <p>
-    <label for="textfield3">Your Email:</label>
-    <input size="40"  type="text" name="inEmail" id="textfield3" value="<?php echo $inEmail; ?>" required/>
-  <span>  <?php echo $emailErrMsg; ?></span><br>
-  <span style = "color: green;"> This should be the email you will use after graduation, or use most often.</span>
+    <label for="textfield3" class="form-label">Your Email:</label>
+    <input size="40"  type="text" name="inEmail" id="textfield3" value="<?php echo $inEmail; ?>" />
+  <span>  <?php echo $emailErrMsg; ?></span>
+  <span class="email-note"> Personal email is recommended</span>
   </p>
   <p>
-    <label>Your Program:</label>
-      <select  name="inProgram" id="program" required>     
+    <label class="form-label">Your Program:</label><br>
+      <select  name="inProgram" id="program" >     
         <option selected><?php if($inProgram === "Web Development" || $inProgram === "Photography" ||$inProgram === "Graphic Design" || $inProgram === "Animation"|| $inProgram === "Other"){ echo $inProgram;} else{echo "Please select and option";}?></option>
         <!-- <option >Please Select a Program</option> -->
         <option  value="Web Development">Web Development</option>
@@ -120,42 +125,41 @@ $repoErrMsg="";
         <option value="Other">Other</option>
 
       </select>
-      <p id = "programErrMsg"></p>
-      <span><?php echo $programErrMsg; ?></span>
+      <span id="programErrMsg"><?php echo $programErrMsg; ?></span>
   </p>
   <p>
-    <label for="textfield4">Web Address:</label>
+    <label for="textfield4" class="form-label">Web Address:</label>
     <input size="40" type="text" name="$inWebsite" id="textfield4" value="<?php echo $inWebsite; ?>"/>
   <span>  <?php echo $websiteErrMsg; ?></span><br>
   </p>
   <p>
-    <label for="textfield5">Hometown:</label>
+    <label for="textfield5" class="form-label">Hometown:</label>
     <input size="40" type="text" name="$inHometown" id="textfield5" value="<?php echo $inHometown; ?>"/>
   <span>  <?php echo $hometownErrMsg; ?></span><br>
   </p>
   <p>
-    <label for="textarea2">Career Goals:</label>
+    <label for="textarea2" class="form-label">Career Goals:</label>
     <textarea rows="3" cols="20" name="$inCareer" id="textarea2">
       <?php echo $inCareer; ?></textarea>
   <span>  <?php echo $careerErrMsg; ?></span><br>
   </p>
   <p>
-    <label for="textarea3">Three Words that Describe you:</label>
+    <label for="textarea3" class="form-label">Three Words That Describe You:</label>
     <textarea rows="3" cols="20" name="$inWords" id="textarea3">
       <?php echo $inWords; ?></textarea>
    <span>  <?php echo $wordsErrMsg; ?></span><br>
   </p>
   <p>
-    <label for="textfield8">Repository Address:</label>
+    <label for="textfield8" class="form-label">Repository Address:</label>
     <input size="40" type="text" name="$inRepo" id="textfield8" value="<?php echo $inRepo; ?>"/>
   <span>  <?php echo $repoErrMsg; ?></span><br>
   </p>
-  <p> <br>
+  <p class="form-buttons"> <br>
     <input type="submit" name="submit" id="button" value="Submit"/>
     <input type="reset" name="reset" id="button2" value="Reset"/>
   </p>
 </fieldset>
 </form>
-
+</div>
 </body>
 </html>

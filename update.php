@@ -43,14 +43,12 @@ catch(PDOException $e)
    {
    echo "Connection failed: " . $e->getMessage();
    }
-
-
-
-
+//    grab the student id and place it in a variable
+   $studentID = $_SESSION['student_id'];
 	//fill in the form with the customers information
     $queryStudentInfo = 'SELECT * FROM students WHERE ID = :student_id';
     $stmt1 = $conn->prepare($queryStudentInfo);
-    $stmt1->bindValue(':student_id', $_SESSION['student_id']);
+    $stmt1->bindValue(':student_id',$studentID );
     $stmt1->execute();
     $student_info = $stmt1->fetch();
     $student_name = $student_info['first_name'];
@@ -218,26 +216,9 @@ $programBlank=false;
 if($validForm)
 {
 
-  //Connect to DB
-  $serverName = "localhost";
-  $username = "root";
-  $password = "";
-  $database = "portfolio_day";
 
-try {
-    $conn = new PDO("mysql:host=$serverName;dbname=$database", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    //echo "Connected successfully";
-
-    }
-catch(PDOException $e)
-    {
-    echo "Connection failed: " . $e->getMessage();
-    }
   //Create the SQL command string
-  $sql = "UPDATE students SET first_name = '$inFirstName',last_name = '$inLastName',program = '$inProgram',website = '$inWebsite',hometown = '$inHometown',career = '$inCareer',three_words = '$inWords',repo = '$inRepo'";
-
+  $sql = "UPDATE students SET first_name = '$inFirstName', last_name = '$inLastName', program = '$inProgram',website = '$inWebsite', hometown = '$inHometown', career = '$inCareer', three_words = '$inWords', repo = '$inRepo' WHERE ID = '$studentID'";
 
   $query = $conn->prepare($sql);	//Prepares the query statement
   $query->execute();
@@ -245,22 +226,18 @@ catch(PDOException $e)
   //Run the SQL prepared statements
   if ($query->execute())
   {
-  $message = "<h1>Your record has been successfully updated to the database.</h1>";
+    header("Location: confirm.php");
 
   }
   else
   {
-  $message = "<h1>You have encountered a problem.</h1>";
+  echo "<h1>There has been a problem please try again later</h1>";
 
   }
 $query=null;
 $conn=null;	//closes the connection to the database once this page is complete
-header('Location: confirm.php');
 }
-}
-else
-{
-  //Form has not been seen by the user.  display the form
+
 }
  ?>
 <!DOCTYPE html>
@@ -274,9 +251,9 @@ else
   </style>
 </head>
 <body>
-<form name="form1" method="post" action="registerForm.php">
+<form name="form1" method="post" action="update.php">
   <fieldset>
-    <legend><h1>Contact Us.</h1></legend>
+    <legend><h1>Update Info.</h1></legend>
   <p>&nbsp;</p>
   <p>
     <label for="textfield">First Name:</label>

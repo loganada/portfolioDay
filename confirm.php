@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(isset($_POST["confirm"]))
 {
   header('Location: register.php');

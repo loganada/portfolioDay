@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 
 // testing branch merge
 //Variables
@@ -84,6 +86,7 @@ if ($validForm)
 
      /* Issue the real SELECT statement and work with the results */
         $stmt = "SELECT ID, email, first_name, last_name, program, website, hometown, career, three_words, repo FROM students WHERE email = '$inEmail'";
+
 // Reading and setting variables from the DB, to be inserted to form.
         foreach ($conn->query($stmt) as $row)
         {
@@ -97,7 +100,8 @@ if ($validForm)
           $inWords=$row['three_words'];
           $inRepo=$row['repo'];
         }
-
+        // grab the student id to be passed on to the update page
+        $_SESSION['student_id'] = $inID;
       }
       else
       {
@@ -429,6 +433,11 @@ else
   <p> <br>
     <input type="submit" name="submit" id="button" value="Submit"/>
     <input type="reset" name="reset" id="button2" value="Reset"/>
+  </p>
+  <p> <br>
+  <a href="update.php" value="<?php echo $studentInfo['student_id'];?>">
+  <button type="button" name="update" class="btn btn-dark btn-block">Update Info</button></a>
+  </form>
   </p>
 </fieldset>
 </form>

@@ -1,6 +1,7 @@
 <?php
 $inEmail = "";
 $emailErrMsg="";
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +14,7 @@ $emailErrMsg="";
       <legend><h1>Contact Us.</h1></legend>
     <p>
       <label for="textfield3">Your Email:</label>
-      <input type="text" name="inEmail" id="textfield3" value="<?php echo $inEmail; ?>" required/>
+      <input type="text" name="inEmail" id="textfield3" value="<?php echo $inEmail; ?>"/>
     <span>  <?php echo $emailErrMsg; ?></span>
     <input type="submit" name="submitEmail" value="Submit"/>
     </p>

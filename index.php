@@ -1,3 +1,8 @@
+<?php
+$inEmail = "";
+$emailErrMsg="";
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -47,10 +52,10 @@
             <img class="mix-logo" src="img/dmaccPortfolioDayLogo.svg">
 
             <h2>Signup for DMACC PORTFOLIO DAY</h2>
-            <form class="user-search">
+            <form class="user-search" action="registerForm.php" method="post">
                 <span class="search-icon"></span>
-                <input type="text" name="user-search" placeholder="Search your DMACC email" class="test">
-                <input type="submit" name="submit-user-search" value="Submit">
+                <input type="text" name="inEmail" placeholder="Search your DMACC email" class="test">
+                <input type="submit" name="submitEmail" value="Submit">
             </form>
         </div>
 

@@ -6,6 +6,7 @@ $validForm = "";
 $inFirstName="";
 $inLastName="";
 $inProgram="";
+$inEmail="";
 $inWebsite="";
 $inHometown="";
 $inCareer="";

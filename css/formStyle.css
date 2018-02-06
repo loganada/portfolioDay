@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@font-face {
+  font-family: 'Neoneon-Regular';
+  src: url("../fonts/neoneon/neoneon-webfont.woff2") format("woff2"), url("../fonts/neoneon/neoneon-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.mix-logo-container {
+  margin: 0;
+  padding: 0; }
+
+.mix-logo {
+  display: block;
+  width: 65%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; }
+
+.form-container {
+  max-width: 750px;
+  clear: both;
+  margin: 0 auto;
+  color: #5E4B8D;
+  letter-spacing: .03em;
+  border-radius: 2px; }
+  .form-container form {
+    border-radius: 2px;
+    -webkit-box-shadow: 0 0 2px #fff, 0 0 4px #FF1177, 0 0 6px #FF1177;
+    box-shadow: 0 0 2px #fff, 0 0 4px #FF1177, 0 0 6px #FF1177; }
+  .form-container fieldset {
+    border: none; }
+  .form-container .form-header {
+    margin: 25px 0 0 0;
+    padding: 0;
+    font-family: "Neoneon-Regular";
+    font-size: 2.5em; }
+  .form-container .form-label {
+    padding-left: 15px;
+    font-family: "Montserrat";
+    font-size: 1.2em;
+    text-align: left; }
+  .form-container input[type=text], .form-container textarea, .form-container select {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    width: 95%;
+    clear: both;
+    font-size: 1.2em;
+    border: none;
+    border: 2px solid #5E4B8D;
+    border-radius: 4px; }
+    .form-container input[type=text]:focus, .form-container textarea:focus, .form-container select:focus {
+      -webkit-box-shadow: 0 0 2px #fff, 0 0 4px #FF1177, 0 0 6px #FF1177;
+      box-shadow: 0 0 2px #fff, 0 0 4px #FF1177, 0 0 6px #FF1177; }
+  .form-container .form-buttons {
+    text-align: center; }
+    .form-container .form-buttons input[type=submit], .form-container .form-buttons input[type=reset] {
+      margin: 0 15px 0 15px;
+      padding: 7px 15px;
+      font-size: 1.2em;
+      -webkit-box-shadow: 0 0 5px #fff, 0 0 10px #FF1177, 0 0 15px #FF1177;
+      box-shadow: 0 0 5px #fff, 0 0 10px #FF1177, 0 0 15px #FF1177;
+      border: none;
+      border-radius: 4px;
+      color: #5E4B8D; }
+      .form-container .form-buttons input[type=submit]:hover, .form-container .form-buttons input[type=reset]:hover {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        cursor: pointer; }
+
+.email-note {
+  padding-left: 10px;
+  color: #FBAD2F; }
+
+@-webkit-keyframes neon-glowing {
+  from {
+    text-shadow: 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177; }
+  to {
+    text-shadow: 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177; } }
+
+@keyframes neon-glowing {
+  from {
+    text-shadow: 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177; }
+  to {
+    text-shadow: 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177; } }

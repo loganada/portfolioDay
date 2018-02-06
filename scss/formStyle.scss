@@ -1,0 +1,115 @@
+//SCSS IMPORTS
+@font-face {
+    font-family: 'Neoneon-Regular';
+    src: url('fonts/neoneon/neoneon-webfont.woff2') format('woff2'),
+         url('fonts/neoneon/neoneon-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+ @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+$primary-color: #5E4B8D;
+$nav-hover-color: #FBAD2F ;
+$neon-color: #FF1177;
+$link-color: #D4295E;
+
+$primary-font: 'Neoneon-Regular';
+$secondary-font: 'Montserrat';
+
+
+.mix-logo-container {
+	margin: 0;
+	padding: 0;
+}
+.mix-logo {
+	display: block;
+	width: 65%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.form-container {
+	max-width: 750px;
+	clear: both;
+	margin: 0 auto;
+	color: $primary-color;
+	letter-spacing: .03em;
+	border-radius: 2px;
+	form {
+		border-radius: 2px;
+	    box-shadow: 0 0 2px #fff, 0 0 4px $neon-color, 0 0 6px $neon-color;
+	}
+
+	fieldset {
+		border: none;
+
+	}
+	.form-header {
+		margin: 25px 0 0 0;
+		padding: 0;
+		font-family: $primary-font;
+		font-size: 2.5em;
+
+	}
+	.form-label {
+		padding-left: 15px;
+		font-family: $secondary-font;
+		font-size: 1.2em;
+		text-align: left;
+
+	}
+
+	input[type=text], textarea, select {
+		display: block;
+		background-color: rgba(255,255,255,0.8);
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 5px;
+		width: 95%;
+		clear: both;
+		font-size: 1.2em;
+		border: none;
+		border: 2px solid $primary-color;
+		border-radius: 4px;
+		&:focus {
+	    	box-shadow: 0 0 2px #fff, 0 0 4px $neon-color, 0 0 6px $neon-color;
+		}
+	}	
+	.form-buttons {
+		text-align: center;
+		input[type=submit], input[type=reset] {
+			margin: 0 15px 0 15px;
+			padding: 7px 15px;
+			font-size: 1.2em;
+	    	box-shadow: 0 0 5px #fff, 0 0 10px $neon-color, 0 0 15px $neon-color;
+	    	border: none;
+	    	border-radius: 4px;
+	    	color: $primary-color;
+	    	&:hover {
+	    		box-shadow: none;
+	    		cursor: pointer;
+	    	}
+		}
+	}
+
+}
+
+.email-note {
+	padding-left: 10px;
+	color: $nav-hover-color;
+
+}
+
+
+@keyframes neon-glowing {
+  from {
+    text-shadow:   0 0 30px #fff, 0 0 40px $neon-color, 0 0 70px $neon-color, 0 0 80px $neon-color, 0 0 100px $neon-color, 0 0 150px $neon-color;
+  }
+  to {
+    text-shadow: 0 0 15px #fff, 0 0 20px $neon-color, 0 0 35px $neon-color, 0 0 40px $neon-color, 0 0 50px $neon-color, 0 0 75px $neon-color;
+  }
+}
+

@@ -231,11 +231,21 @@ $programBlank=false;
   {
     global $validForm, $hometownErrMsg;		//Use the GLOBAL Version of these variables instead of making them local
     $hometownErrMsg = "";
-      if($inHometown=="")
-    {
+      $inHometown = filter_var($inHometown, FILTER_SANITIZE_STRING);
+      if(!preg_match('/^[a-zA-Z]+(([\'\,\.\-][a-zA-Z])?[a-zA-Z]*)*$/', $inHometown))
+      {
+        $validForm = false;
+        $HometownErrMsg = "special characters are not allowed.";
+      }
+      elseif($inHometown=="")
+      {
       $validForm = false;
-      $hometownErrMsg = "Enter your Hometown.";
-    }
+      $HometownErrMsg = "Your Hometown is required";
+      }
+      else
+      {
+  		$inHometown = ltrim($inHometown);
+  	  }
   }//end validateHometown()
 
   function validateCareer($inCareer)

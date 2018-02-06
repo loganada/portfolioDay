@@ -3,6 +3,7 @@ session_start();
 $inEmail = "";
 $emailErrMsg="";
 
+// create if statement that if email is not found go to register.php page else go the the update page
 ?>
 <!DOCTYPE html>
 <html>

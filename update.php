@@ -1,6 +1,6 @@
 <?php
 session_start();
-echo $_SESSION['student_id'];
+// echo $_SESSION['student_id'];
 
 // testing branch merge
 //Variables

@@ -383,8 +383,9 @@ else
   <p>
     <label class="form-label" for="textfield3">Your Email:</label>
     <input  size="40"  type="text" name="inEmail" id="textfield3" value="<?php echo $inEmail; ?>"/>
-  <br><span class = "errorText">  <?php echo $emailErrMsg; ?></span><br>
   <span class="email-note"> Personal email is recommended</span>
+  <br><span class = "errorText">  <?php echo $emailErrMsg; ?></span>
+
   </p>
   <p>
     <label class="form-label">Your Program:</label>

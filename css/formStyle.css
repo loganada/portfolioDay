@@ -71,9 +71,13 @@
         cursor: pointer; }
 
 .email-note {
-  padding-left: 10px;
-  color: #FBAD2F; }
-
+  padding-left: 15px;
+  color: #FBAD2F;
+ }
+.errorText {
+  color: red;
+  padding-left: 15px;
+}
 @-webkit-keyframes neon-glowing {
   from {
     text-shadow: 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177; }

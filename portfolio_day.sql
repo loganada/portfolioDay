@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 02, 2018 at 11:36 PM
+-- Generation Time: Feb 06, 2018 at 11:13 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -47,7 +47,12 @@ CREATE TABLE `students` (
 
 INSERT INTO `students` (`ID`, `email`, `first_name`, `last_name`, `program`, `website`, `hometown`, `career`, `three_words`, `repo`) VALUES
 (1, 'loganada5@gmail.com', 'Adam', 'Logan', 'Web Development', 'adamlogan.net', 'Urbandale, IA', 'Aspire to be a Drupal or PHP Developer.', 'Determined, Clever, Coach-able. ', 'https://github.com/loganada'),
-(2, 'djschneider1@dmacc.edu', 'Dan', 'Schneider', 'Web Development', '', '', '', '', '');
+(2, 'djschneider1@dmacc.edu', 'Dan', 'Schneider', 'Web Development', '', '', '', '', ''),
+(19, 'j', '', '', 'Please select and option', '', '      ', '', '      ', ''),
+(20, 'j', '', '', 'Please select and option', '', '      ', '      ', '            ', ''),
+(21, 'j', '', '', 'Please select and option', '', '            ', '      ', '                  ', ''),
+(22, 'k', '', '', 'Please select and option', '', '      ', '', '      ', ''),
+(23, 'loganada5@gmail.com', 'Adam', 'Logan', 'Photography', 'www.adamlogan.net', '             liek           ', 'urbandale', '               d         ', 'www.github.vom');
 
 --
 -- Indexes for dumped tables
@@ -67,7 +72,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

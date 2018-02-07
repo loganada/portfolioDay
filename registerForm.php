@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // testing branch merge
 //Variables
 $validForm = "";
@@ -29,7 +29,7 @@ $repoErrMsg="";
     $validForm=False;
     //get the email they entered on register.php
     $inEmail = $_POST['inEmail'];
-
+    $_SESSION["inEmail"] = $_POST['inEmail'];
     function validateEmail($inEmail)
     {
       global $validForm, $emailErrMsg;		//Use the GLOBAL Version of these variables instead of making them local
@@ -98,12 +98,15 @@ if ($validForm)
           $inWords=$row['three_words'];
           $inRepo=$row['repo'];
         }
+        $_SESSION["inID"] = $inID;
+
+        header('Location: update.php');
 
       }
       else
       {
         // if they do not already have an entry
-        echo "Please Enter Your INFO";
+        //echo "Please Enter Your INFO";
       }
 
       }

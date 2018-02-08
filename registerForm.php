@@ -429,16 +429,15 @@ else
 <br>  <span id="hometownErrMsg" class="errorText">  <?php echo $hometownErrMsg; ?></span><br>
   </p>
   <p>
-    <label for="textarea2" class="form-label">Career Goals:</label>
-    <textarea rows="3" cols="20" name="$inCareer" id="careerGoals">
-      <?php echo $inCareer; ?></textarea>
-<br>  <span class = "errorText">  <?php echo $careerErrMsg; ?></span><br>
+
+    <label for="careerGoals" class="form-label">Career Goals:</label>
+    <input size="40" type="text" name="inCareer" id="careerGoals" value="<?php echo $inCareer; ?>"/>
+  <br>  <span id="careerGoals" class = "errorText">  <?php echo $careerErrMsg; ?></span><br>
   </p>
   <p>
-    <label for="textarea3" class="form-label">Three Words That Describe You:</label>
-    <textarea rows="3" cols="20" name="$inWords" id="threeWordsDescribeYou">
-      <?php echo $inWords; ?></textarea>
-   <br><span class = "errorText">  <?php echo $wordsErrMsg; ?></span><br>
+    <label for="textfield7" class="form-label">Three Words That Describe You:</label>
+    <input size="40" type="text" name="inWords" id="threeWordsDescribeYou" value="<?php echo $inWords; ?>"/>
+  <br>  <span  id="threeWordsDescribeYou" class="errorText">  <?php echo $wordsErrMsg; ?></span><br>
   </p>
   <p>
     <label for="textfield8" class="form-label">Repository Address:</label>

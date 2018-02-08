@@ -14,6 +14,7 @@ $careerErrMsg="";
 $wordsErrMsg="";
 $repoErrMsg="";
 
+
 $serverName = "localhost";
 $username = "root";
 $password = "";
@@ -43,6 +44,163 @@ if (mysqli_connect_errno())
       $inCareer = $_POST['inCareer'];
       $inWords = $_POST['inWords'];
       $inRepo = $_POST['inRepo'];
+      $validForm=false;
+
+      /*	FORM VALIDATION PLAN
+
+      The page will validate the form fields according to the following validation tests.
+      First and Last Name Field:  Required, Check HTML special characters
+      Email Field: Required, Must be a valid email format.  Use a Regular Expression to validate the format.
+      Web Address: Not required, check for valid web address formatted
+      hometown: required.
+      program: required,
+      career goals: required:
+      three words: Required
+      repo: not required
+      */
+
+      //VALIDATION FUNCTIONS		Use functions to contain the code for the field validations.
+
+      function validateFirstName($inFirstName)
+      {
+        global $validForm, $firstNameErrMsg;		// GLOBAL Version
+        $firstNameErrMsg = "";
+      $inFirstName = filter_var($inFirstName, FILTER_SANITIZE_STRING);
+          if(!preg_match('/^[a-zA-Z]+(([\'\,\.\-][a-zA-Z])?[a-zA-Z]*)*$/', $inFirstName))
+          {
+            $validForm = false;
+            $firstNameErrMsg = "First Name is Invalid.";
+          }
+          elseif($inFirstName=="")
+          {
+          $validForm = false;
+          $firstNameErrMsg = "Your First Name is required";
+          }
+          else
+          {
+          $inFirstName = ltrim($inFirstName);
+          }
+      }//end validateFirstName()
+
+      function validateLastName($inLastName)
+      {
+        global $validForm, $lastNameErrMsg;		// GLOBAL Version
+        $lastNameErrMsg = "";
+        $inLastName = filter_var($inLastName, FILTER_SANITIZE_STRING);
+        if(!preg_match('/^[a-zA-Z]+(([\'\,\.\-][a-zA-Z])?[a-zA-Z]*)*$/', $inLastName))
+        {
+          $validForm = false;
+          $lastNameErrMsg = "Last Name is Invalid.";
+        }
+        elseif($inLastName=="")
+        {
+          $validForm = false;
+          $lastNameErrMsg = "Your Last Name is required";
+        }
+        else {
+          $inLastName = ltrim($inLastName);
+        }
+      }//end validateLastName()
+
+
+      function validateEmail($inEmail)
+      {
+        global $validForm, $emailErrMsg;		//Use the GLOBAL Version of these variables instead of making them local
+        $emailErrMsg = "";
+        if($inEmail=="")
+        {
+          $validForm = false;
+          $emailErrMsg = "E-mail is required";
+        }
+      elseif(!preg_match('/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/', $inEmail))
+        {
+          $validForm = false;
+          $emailErrMsg = "Email is invalid";
+        }
+      }//end validateEmail()
+
+
+      function validateWebsite($inWebsite)
+      {
+        global $validForm, $websiteErrMsg;		//Use the GLOBAL Version of these variables instead of making them local
+        $websiteErrMsg = "";
+        if(!preg_match('/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/', $inWebsite))
+        {
+          $validForm = false;
+          $websiteErrMsg = "Web Address is invalid";
+        }
+      }//end validateWebsite()
+
+      function validateProgram($inProgram)
+      {
+        global $validForm, $programErrMsg;		//Use the GLOBAL Version of these variables instead of making them local
+        $programErrMsg = "";
+          if($inProgram="")
+        {
+          $validForm = false;
+          $programErrMsg = "Enter your Program.";
+        }
+      }//end validateProgram()
+      $programBlank=false;
+      function validateHometown($inHometown)
+      {
+        global $validForm, $hometownErrMsg;		//Use the GLOBAL Version of these variables instead of making them local
+        $hometownErrMsg = "";
+          if($inHometown=="")
+        {
+          $validForm = false;
+          $hometownErrMsg = "Enter your Hometown.";
+        }
+      }//end validateHometown()
+
+      function validateCareer($inCareer)
+      {
+        global $validForm, $careerErrMsg;		//Use the GLOBAL Version of these variables instead of making them local
+        $careerErrMsg = "";
+          if($inCareer=="")
+        {
+          $validForm = false;
+          $careerErrMsg = "Enter your Career Goals.";
+        }
+      }//end validateCareer()
+
+      function validateWords($inWords)
+      {
+        global $validForm, $wordsErrMsg;		//Use the GLOBAL Version of these variables instead of making them local
+        $wordsErrMsg = "";
+          if($inWords=="")
+        {
+          $validForm = false;
+          $wordsErrMsg = "Enter your Three Words.";
+        }
+      }//end validateWords()
+
+      function validateRepo($inRepo)
+      {
+        global $validForm, $repoErrMsg;		//Use the GLOBAL Version of these variables instead of making them local
+        $repoErrMsg = "";
+        if(!preg_match('/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/', $inRepo))
+        {
+          $validForm = false;
+          $repoErrMsg = "Repo Address is invalid";
+        }
+      }//end validateRepo()
+
+
+      //VALIDATE FORM DATA  using functions defined above
+      $validForm = true;		//switch for keeping track of any form validation errors
+
+      validateFirstName($inFirstName);
+      validateLastName($inLastName);
+      validateEmail($inEmail);
+      validateWebsite($inWebsite);
+      validateProgram($inProgram);
+      validateHometown($inHometown);
+      validateCareer($inCareer);
+      validateWords($inWords);
+      validateRepo($inRepo);
+
+
 		//Create the SQL UPDATE query or command
 		$sql = "UPDATE students SET " ;
     $sql .= "email=?, ";
@@ -63,16 +221,21 @@ if (mysqli_connect_errno())
 		$query->bind_param('sssssssss', $inEmail, $inFirstName, $inLastName, $inProgram, $inWebsite, $inHometown, $inCareer, $inWords, $inRepo);
 		if ( $query->execute() )
 		{
-			$message = "<h1>Your record has been successfully UPDATED the database.</h1>";
-			$message .= "<p>Please <a href='index.php'>BACK</a> enter more.</p>";
+    header('Location: confirm.php');
+			//$message = "<h1>Your record has been successfully UPDATED the database.</h1>";
+			//$message .= "<p>Please <a href='index.php'>BACK</a> enter more.</p>";
 		}
+
 		else
 		{
 			$message = "<h1>You have encountered a problem.</h1>";
 			$message .= "<h2 style='color:red'>" . mysqli_error($link) . "</h2>";
 		}
 
+
+
 	}//end if submitted
+
 	else
 	{
 
@@ -94,7 +257,6 @@ if (mysqli_connect_errno())
 
 
 	}//end else submitted
-//end Valid User True
 
 ?>
 
@@ -172,16 +334,14 @@ else
 <br>  <span class = "errorText">  <?php echo $hometownErrMsg; ?></span><br>
 </p>
 <p>
-  <label for="textarea2" class="form-label">Career Goals:</label>
-  <textarea rows="3" cols="20" name="inCareer" id="textarea2">
-    <?php echo $inCareer; ?></textarea>
+  <label for="textfield6" class="form-label">Career Goals:</label>
+  <input size="40" type="text" name="inCareer" id="textfield6" value="<?php echo $inCareer; ?>"/>
 <br>  <span class = "errorText">  <?php echo $careerErrMsg; ?></span><br>
 </p>
 <p>
-  <label for="textarea3" class="form-label">Three Words That Describe You:</label>
-  <textarea rows="3" cols="20" name="inWords" id="textarea3">
-    <?php echo $inWords; ?></textarea>
- <br><span class = "errorText">  <?php echo $wordsErrMsg; ?></span><br>
+  <label for="textfield7" class="form-label">Three Words That Describe You:</label>
+  <input size="40" type="text" name="inWords" id="textfield7" value="<?php echo $inWords; ?>"/>
+<br>  <span class = "errorText">  <?php echo $wordsErrMsg; ?></span><br>
 </p>
 <p>
   <label for="textfield8" class="form-label">Repository Address:</label>
@@ -196,6 +356,7 @@ else
 </div>
 
 <?php
+
 }//end else submitted
 //$query->close();
 $connection->close();

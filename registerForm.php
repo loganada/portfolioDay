@@ -418,16 +418,14 @@ else
 <br>  <span class = "errorText">  <?php echo $hometownErrMsg; ?></span><br>
   </p>
   <p>
-    <label for="textarea2" class="form-label">Career Goals:</label>
-    <textarea rows="3" cols="20" name="$inCareer" id="textarea2">
-      <?php echo $inCareer; ?></textarea>
-<br>  <span class = "errorText">  <?php echo $careerErrMsg; ?></span><br>
+    <label for="textfield6" class="form-label">Career Goals:</label>
+    <input size="40" type="text" name="inCareer" id="textfield6" value="<?php echo $inCareer; ?>"/>
+  <br>  <span class = "errorText">  <?php echo $careerErrMsg; ?></span><br>
   </p>
   <p>
-    <label for="textarea3" class="form-label">Three Words That Describe You:</label>
-    <textarea rows="3" cols="20" name="$inWords" id="textarea3">
-      <?php echo $inWords; ?></textarea>
-   <br><span class = "errorText">  <?php echo $wordsErrMsg; ?></span><br>
+    <label for="textfield7" class="form-label">Three Words That Describe You:</label>
+    <input size="40" type="text" name="inWords" id="textfield7" value="<?php echo $inWords; ?>"/>
+  <br>  <span class = "errorText">  <?php echo $wordsErrMsg; ?></span><br>
   </p>
   <p>
     <label for="textfield8" class="form-label">Repository Address:</label>

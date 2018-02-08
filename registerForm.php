@@ -230,6 +230,8 @@ $programBlank=false;
   function validateHometown($inHometown)
   {
     global $validForm, $hometownErrMsg;		//Use the GLOBAL Version of these variables instead of making them local
+
+    $inHometown = filter_var($inHometown, FILTER_SANITIZE_STRING);
     $hometownErrMsg = "";
       if($inHometown=="")
     {
@@ -241,6 +243,8 @@ $programBlank=false;
   function validateCareer($inCareer)
   {
     global $validForm, $careerErrMsg;		//Use the GLOBAL Version of these variables instead of making them local
+    $inCareer = filter_var($inCareer, FILTER_SANITIZE_STRING);
+
     $careerErrMsg = "";
       if($inCareer=="")
     {
@@ -253,6 +257,8 @@ $programBlank=false;
   {
     global $validForm, $wordsErrMsg;		//Use the GLOBAL Version of these variables instead of making them local
     $wordsErrMsg = "";
+    $inWords = filter_var($inWords, FILTER_SANITIZE_STRING);
+
       if($inWords=="")
     {
       $validForm = false;
@@ -362,6 +368,11 @@ else
 
   <title>Register Form</title>
   <link rel="stylesheet" type="text/css" href="css/formStyle.css">
+
+<script
+        src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="form-container">
@@ -374,20 +385,20 @@ else
   <p>
 
     <label class="form-label" for="textfield">First Name:</label>
-      <input  type="text" name="inFirstName" id="textfield" value="<?php echo $inFirstName;  ?>"/>
-    <br>  <span class = "errorText"><?php echo $firstNameErrMsg; ?></span>
+      <input  type="text" name="inFirstName" id="firstName" value="<?php echo $inFirstName;  ?>"/>
+    <br>  <span id="firstNameErrMsg" class="errorText"><?php echo $firstNameErrMsg; ?></span>
 
   </p>
   <p>
     <label class="form-label" for="textfield2">Last Name:</label>
-      <input type="text" name="inLastName" id="textfield2" value="<?php echo $inLastName;  ?>" />
-      <br><span class = "errorText"><?php echo $lastNameErrMsg; ?></span>
+      <input type="text" name="inLastName" id="lastName" value="<?php echo $inLastName;  ?>" />
+      <br><span id="lastNameErrMsg" class = "errorText"><?php echo $lastNameErrMsg; ?></span>
   </p>
   <p>
     <label class="form-label" for="textfield3">Your Email:</label>
-    <input  size="40"  type="text" name="inEmail" id="textfield3" value="<?php echo $inEmail; ?>"/>
+    <input  size="40"  type="text" name="inEmail" id="emailAddress" placeholder="yourName@email.com" value="<?php echo $inEmail; ?>"/>
   <span class="email-note"> Personal email is recommended</span>
-  <br><span class = "errorText">  <?php echo $emailErrMsg; ?></span>
+  <br><span id="emailErrMsg" class = "errorText">  <?php echo $emailErrMsg; ?></span>
 
   </p>
   <p>
@@ -409,37 +420,38 @@ else
   </p>
   <p>
     <label for="textfield4" class="form-label">Web Address:</label>
-    <input size="40" type="text" name="$inWebsite" id="textfield4" value="<?php echo $inWebsite; ?>"/>
-  <br><span  class="errorText">  <?php echo $websiteErrMsg; ?></span><br>
+    <input size="40" type="text" name="$inWebsite" id="inWebsite" value="<?php echo $inWebsite; ?>" placeholder="www.google.com"/>
+  <br><span  id="websiteErrMsg" class="errorText">  <?php echo $websiteErrMsg; ?></span><br>
   </p>
   <p>
     <label for="textfield5" class="form-label">Hometown:</label>
-    <input size="40" type="text" name="$inHometown" id="textfield5" value="<?php echo $inHometown; ?>"/>
-<br>  <span class = "errorText">  <?php echo $hometownErrMsg; ?></span><br>
+    <input size="40" type="text" name="$inHometown" id="hometown" value="<?php echo $inHometown; ?>"/>
+<br>  <span id="hometownErrMsg" class="errorText">  <?php echo $hometownErrMsg; ?></span><br>
   </p>
   <p>
     <label for="textarea2" class="form-label">Career Goals:</label>
-    <textarea rows="3" cols="20" name="$inCareer" id="textarea2">
+    <textarea rows="3" cols="20" name="$inCareer" id="careerGoals">
       <?php echo $inCareer; ?></textarea>
 <br>  <span class = "errorText">  <?php echo $careerErrMsg; ?></span><br>
   </p>
   <p>
     <label for="textarea3" class="form-label">Three Words That Describe You:</label>
-    <textarea rows="3" cols="20" name="$inWords" id="textarea3">
+    <textarea rows="3" cols="20" name="$inWords" id="threeWordsDescribeYou">
       <?php echo $inWords; ?></textarea>
    <br><span class = "errorText">  <?php echo $wordsErrMsg; ?></span><br>
   </p>
   <p>
     <label for="textfield8" class="form-label">Repository Address:</label>
-    <input size="40" type="text" name="$inRepo" id="textfield8" value="<?php echo $inRepo; ?>"/>
+    <input size="40" type="text" name="$inRepo" id="studentSideWork" value="<?php echo $inRepo; ?>" placeholder="www.github.com"/>
   <br><span class = "errorText">  <?php echo $repoErrMsg; ?></span><br>
   </p>
   <p class="form-buttons"> <br>
-    <input type="submit" name="submit" id="button" value="Submit"/>
-    <input type="reset" name="reset" id="button2" value="Reset"/>
+    <input type="submit" name="submit" id="submit" value="Submit" />
+    <input type="reset" name="reset" id="reset" value="Reset"/>
   </p>
 </fieldset>
 </form>
 </div>
+<script src="validation.js"></script>
 </body>
 </html>

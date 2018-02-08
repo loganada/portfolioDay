@@ -62,7 +62,6 @@
 			if (!WebsiteRegEx.test(studentWebsite)) { //Valdiates Student Website
 				var validForm = false;
 				$('#websiteErrMsg').html("Please enter a valid URL");
-				alert('Website fail');
 			} else {
 				$('#websiteErrMsg').html(" ");
 			}

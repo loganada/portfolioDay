@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+@font-face {
+    font-family: Neoneon;
+    src: url("Neoneon.otf");
+}
+
+html, body {
+  min-height: 100%;
+  height: 100%;
+  
+}
+
+body {
+  background-color: #2B0059;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.box {
+  width: 33%;
+  position: relative;
+  height: 100%;
+}
+.box.small {
+  background-color: #86D0F2;
+}
+.box.medium {
+  background-color: #F4C4D5;
+}
+
+.glitch {
+  font-size: 130px;
+  line-height: 1;
+font-family: Neoneon;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
+  text-decoration: none;
+  color: #fff;
+}
+.glitch:before, .glitch:after {
+  display: block;
+  content: '10';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+}
+.glitch:after {
+  color: #f0f;
+  z-index: -2;
+}
+.glitch:before {
+  color: #0ff;
+  z-index: -1;
+}
+.glitch:hover:before {
+  -webkit-animation: glitch-left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+          animation: glitch-left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+.glitch:hover:after {
+  animation: glitch-left-2 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+.small .glitch {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.small .glitch:before, .small .glitch:after {
+  content: 'Start';
+}
+.small .glitch:after {
+  color: #F40080;
+}
+.small .glitch:before {
+  color: #7FA500;
+}
+.small .glitch:hover:before {
+  -webkit-animation: glitch-small 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+          animation: glitch-small 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+.small .glitch:hover:after {
+  animation: glitch-small 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+.medium .glitch {
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #4222F1;
+}
+.medium .glitch:before, .medium .glitch:after {
+  content: 'CSS Glitch';
+}
+.medium .glitch:after {
+  color: #C487C2;
+}
+.medium .glitch:before {
+  color: #00FF02;
+}
+.medium .glitch:hover:before {
+  -webkit-animation: glitch-medium 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+          animation: glitch-medium 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+.medium .glitch:hover:after {
+  animation: glitch-medium 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+
+@-webkit-keyframes glitch-small {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  33% {
+    -webkit-transform: translate(2px, 1px);
+            transform: translate(2px, 1px);
+  }
+  66% {
+    -webkit-transform: translate(-1px, -1px);
+            transform: translate(-1px, -1px);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes glitch-small {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  33% {
+    -webkit-transform: translate(2px, 1px);
+            transform: translate(2px, 1px);
+  }
+  66% {
+    -webkit-transform: translate(-1px, -1px);
+            transform: translate(-1px, -1px);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@-webkit-keyframes glitch-medium {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes glitch-medium {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@-webkit-keyframes glitch-left {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  33% {
+    -webkit-transform: translate(-5px, 3px);
+            transform: translate(-5px, 3px);
+  }
+  66% {
+    -webkit-transform: translate(5px, -3px);
+            transform: translate(5px, -3px);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes glitch-left {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  33% {
+    -webkit-transform: translate(-5px, 3px);
+            transform: translate(-5px, 3px);
+  }
+  66% {
+    -webkit-transform: translate(5px, -3px);
+            transform: translate(5px, -3px);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@-webkit-keyframes glitch-left-2 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  33% {
+    -webkit-transform: translate(-5px, -3px);
+            transform: translate(-5px, -3px);
+  }
+  66% {
+    -webkit-transform: translate(5px, 2px);
+            transform: translate(5px, 2px);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes glitch-left-2 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  33% {
+    -webkit-transform: translate(-5px, -3px);
+            transform: translate(-5px, -3px);
+  }
+  66% {
+    -webkit-transform: translate(5px, 2px);
+            transform: translate(5px, 2px);
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="box small">  <a href="#" class="glitch">Start</a></div><div class="box">  <a href="#" class="glitch">10</a></div><div class="box medium">  <a href="#" class="glitch">CSS Glitch</a></div>
+
+
+</body>
+</html>

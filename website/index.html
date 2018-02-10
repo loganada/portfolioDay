@@ -7,24 +7,61 @@
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
-
- <div id="accordion">
-   <h3>Web Development</h3>
-   <div>
-
-   </div>
-   <h3>Graphic Design</h3>
-   <div>
-
-   </div>
-   <h3>Photagraphy</h3>
-   <div>
-
-   </div>
- </div>
+  <script>
+  window.onload = function() {
+  callWebDev();
+}
+  </script>
+  <div id="accordion">
+    <h3 >Web Development</h3>
+    <div>
+      <p id="webDev"></p>
+    </div>
+    <h3  onclick="callGD()">Graphic Design</h3>
+    <div>
+      <p id="GD"></p>
+    </div>
+    <h3  onclick="callPhoto()">Photography</h3>
+    <div>
+      <p id="photo"></p>
+    </div>
+  </div>
 
  <script>
- $( "#accordion" ).accordion();
+ $( "#accordion" ).accordion({
+   heightStyle: "content", animate: 300
+ });
+
+ function callWebDev(){
+ var xmlhttp = new XMLHttpRequest();
+         xmlhttp.onreadystatechange = function() {
+             if (this.readyState == 4 && this.status == 200) {
+                 document.getElementById("webDev").innerHTML = this.responseText;
+             }
+         };
+         xmlhttp.open("GET", "webDev.php", true);
+         xmlhttp.send();
+       }
+       function callGD(){
+       var xmlhttp = new XMLHttpRequest();
+               xmlhttp.onreadystatechange = function() {
+                   if (this.readyState == 4 && this.status == 200) {
+                       document.getElementById("GD").innerHTML = this.responseText;
+                   }
+               };
+               xmlhttp.open("GET", "GD.php", true);
+               xmlhttp.send();
+             }
+             function callPhoto(){
+             var xmlhttp = new XMLHttpRequest();
+                     xmlhttp.onreadystatechange = function() {
+                         if (this.readyState == 4 && this.status == 200) {
+                             document.getElementById("photo").innerHTML = this.responseText;
+                         }
+                     };
+                     xmlhttp.open("GET", "photo.php", true);
+                     xmlhttp.send();
+                   }
  </script>
 </body>
 </html>

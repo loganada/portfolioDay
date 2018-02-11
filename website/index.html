@@ -2,34 +2,131 @@
 <html>
 <head>
   <title>DMACC PORTFOLIO DAY</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--FONTS-->
+  <link href='fonts/main-fonts.css' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-<script src="//code.jquery.com/jquery-1.12.4.js"></script>
-<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>
+    .center-people{
+      text-align:center;
+    }
+
+    /*----Accordion Styles----*/
+    .ui-accordion{
+      margin:-8px;
+    }
+    .ui-helper-reset{
+      border:none;
+    }
+    .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr, .ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl,
+    .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br,
+    .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+    .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+      border:1px solid black;
+    }
+    .ui-accordion .ui-accordion-header{
+      text-align:center;
+      font-size:2.5em;
+      border:none;
+      margin:1px 0;
+    }
+    .ui-accordion .ui-accordion-header .ui-icon { 
+      position: absolute; 
+      right: 100%; 
+      margin-right: -30px; 
+      top: 50%; 
+      margin-top: -8px; 
+    }
+    .ui-accordion-icons .ui-accordion-header a { 
+      padding-right: 1em; 
+    }
+    .ui-accordion-header:first-of-type{
+      background:#5e4b8d;
+    }  
+    #accordion .ui-accordion-header:nth-of-type(2){
+      background:#d4295e;
+    }  
+    #accordion .ui-accordion-header:nth-of-type(3){
+      background:#fbad2f;
+    }  
+    .graphic {
+      background: rgba(94,75,141,1);
+      background: -moz-linear-gradient(top, rgba(94,75,141,1) 0%, rgba(94,75,141,1) 27%, rgba(94,75,141,1) 54%, rgba(214,41,96,1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(94,75,141,1)), color-stop(27%, rgba(94,75,141,1)), color-stop(54%, rgba(94,75,141,1)), color-stop(100%, rgba(214,41,96,1)));
+      background: -webkit-linear-gradient(top, rgba(94,75,141,1) 0%, rgba(94,75,141,1) 27%, rgba(94,75,141,1) 54%, rgba(214,41,96,1) 100%);
+      background: -o-linear-gradient(top, rgba(94,75,141,1) 0%, rgba(94,75,141,1) 27%, rgba(94,75,141,1) 54%, rgba(214,41,96,1) 100%);
+      background: -ms-linear-gradient(top, rgba(94,75,141,1) 0%, rgba(94,75,141,1) 27%, rgba(94,75,141,1) 54%, rgba(214,41,96,1) 100%);
+      background: linear-gradient(to bottom, rgba(94,75,141,1) 0%, rgba(94,75,141,1) 27%, rgba(94,75,141,1) 54%, rgba(214,41,96,1) 100%);
+    }
+    .photo {
+      background: rgba(212,41,95,1);
+      background: -moz-linear-gradient(top, rgba(212,41,95,1) 0%, rgba(214,41,96,1) 60%, rgba(245,149,54,1) 93%, rgba(251,172,45,1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212,41,95,1)), color-stop(60%, rgba(214,41,96,1)), color-stop(93%, rgba(245,149,54,1)), color-stop(100%, rgba(251,172,45,1)));
+      background: -webkit-linear-gradient(top, rgba(212,41,95,1) 0%, rgba(214,41,96,1) 60%, rgba(245,149,54,1) 93%, rgba(251,172,45,1) 100%);
+      background: -o-linear-gradient(top, rgba(212,41,95,1) 0%, rgba(214,41,96,1) 60%, rgba(245,149,54,1) 93%, rgba(251,172,45,1) 100%);
+      background: -ms-linear-gradient(top, rgba(212,41,95,1) 0%, rgba(214,41,96,1) 60%, rgba(245,149,54,1) 93%, rgba(251,172,45,1) 100%);
+      background: linear-gradient(to bottom, rgba(212,41,95,1) 0%, rgba(214,41,96,1) 60%, rgba(245,149,54,1) 93%, rgba(251,172,45,1) 100%);
+    }
+    .web {
+      background: rgba(251,173,47,1);
+      background: -moz-linear-gradient(top, rgba(251,173,47,1) 0%, rgba(251,173,47,0.71) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251,173,47,1)), color-stop(100%, rgba(251,173,47,0.71)));
+      background: -webkit-linear-gradient(top, rgba(251,173,47,1) 0%, rgba(251,173,47,0.71) 100%);
+      background: -o-linear-gradient(top, rgba(251,173,47,1) 0%, rgba(251,173,47,0.71) 100%);
+      background: -ms-linear-gradient(top, rgba(251,173,47,1) 0%, rgba(251,173,47,0.71) 100%);
+      background: linear-gradient(to bottom, rgba(251,173,47,1) 0%, rgba(251,173,47,0.71) 100%);
+    }
+
+    /*----FONTS----*/
+    /*----Basic Neon Glow Text----*/
+    .neon {
+      font-family: 'neoneonregular';
+      text-align: center;
+      font-size: 120px;
+    }
+    .pink {
+      color: #ffffff;
+      text-shadow: 0px 0px 200px #ff91fc, 0px 0px 30px #ff49fb, -1px -1px 5px #fff, 10px 1px 100px #af00b2;
+    }
+    
+  </style>
 </head>
 <body>
   <script>
-  window.onload = function() {
-  callWebDev();
-}
+    window.onload = function() {
+      callGD();
+    }
   </script>
+  
   <div id="accordion">
-    <h3 >Web Development</h3>
-    <div>
-      <p id="webDev"></p>
-    </div>
-    <h3  onclick="callGD()">Graphic Design</h3>
-    <div>
+    <h3 class="neon pink" onclick="callGD()">Graphic Design</h3>
+    <div class="center-people graphic">
       <p id="GD"></p>
     </div>
-    <h3  onclick="callPhoto()">Photography</h3>
-    <div>
+    <h3 class="neon pink" onclick="callPhoto()">Photography</h3>
+    <div class="center-people photo">
       <p id="photo"></p>
+    </div>
+    <h3 class="neon pink" onclick="callWebDev()">Web Development</h3>
+    <div class="center-people web">
+      <p id="webDev"></p>
     </div>
   </div>
 
  <script>
  $( "#accordion" ).accordion({
-   heightStyle: "content", animate: 300
+   heightStyle: "content", 
+   animate: 300,
+   collapsible: true                   //collapsible tabs on click - take out if dont like
  });
 
  function callWebDev(){

@@ -1,1 +1,83 @@
-@font-face{font-family:'Neoneon-Regular';src:url("../fonts/neoneon/neoneon-webfont.woff2") format("woff2"), url("../fonts/neoneon/neoneon-webfont.woff") format("woff");font-weight:normal;font-style:normal}*{-webkit-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0}.mix-logo{display:block;width:75%;margin:0 auto}.desktop-menu-container .desktop-menu{list-style-type:none;margin:0;padding:0}.desktop-menu-container .desktop-menu .desktop-menu-item{display:inline-block;float:right}.desktop-menu-container .desktop-menu .desktop-menu-item:first-child{float:left}.desktop-menu-container .desktop-menu .desktop-menu-item a{float:right;padding:25px;font-weight:bold;text-transform:uppercase;text-decoration:none;color:white}.section1{height:100vh;background:#5E4B8D;position:relative}.section1 .mix-logo{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}.mix-info{height:100vh;background:white;position:relative}.mix-info .mix-info-container{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}.mix-info .mix-info-container .mix-info-title{margin-bottom:75px;font-family:"Neoneon-Regular";font-size:3em;text-align:center}.mix-info .mix-info-container .mix-heading{height:5em;margin-bottom:25px;text-align:center}.mix-info .mix-info-container .mix-heading h3{color:#D4295E}
+/* FONTS */
+
+@font-face {
+  font-family: 'Neoneon-Regular';
+  src: url("../fonts/neoneon/neoneon-webfont.woff2") format("woff2"), url("../fonts/neoneon/neoneon-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* SCSS VARIABLES */
+
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.mix-logo {
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+}
+
+/* Navigation Bar */
+
+/* Section 1 */
+
+.section1 {
+  height: 100vh;
+  background: #5E4B8D;
+  position: relative;
+}
+
+.section1 .mix-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* What is Mix? Section */
+
+.mix-info {
+  height: 100vh;
+  background: white;
+  position: relative;
+}
+
+.mix-info .mix-info-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mix-info .mix-info-container .mix-info-title {
+  margin-bottom: 75px;
+  font-family: "Neoneon-Regular";
+  font-size: 3em;
+  text-align: center;
+}
+
+.mix-info .mix-info-container .mix-heading {
+  height: 5em;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.mix-info .mix-info-container .mix-heading h3 {
+  color: #D4295E;
+}
+
+/* Graphic Design Students */
+
+/* Web Development Students  */
+
+/* Photography Students */
+
+/* Footer */
+
+/*# sourceMappingURL=main.css.map */

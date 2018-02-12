@@ -152,11 +152,11 @@
         <div class="center-people graphic">
             <p id="graphicDesignStudents"></p>
         </div>
-        <h3 class="neon pink" onclick="callPhoto()">Photography</h3>
+        <h3 class="neon pink" onclick="callPhotoStudents()">Photography</h3>
         <div class="center-people photo">
             <p id="photo"></p>
         </div>
-        <h3 class="neon pink" onclick="callWebDev()">Web Development</h3>
+        <h3 class="neon pink" onclick="callWebDevStudents()">Web Development</h3>
         <div class="center-people web">
             <p id="webDev"></p>
         </div>
@@ -169,7 +169,7 @@
 
     });
 
-    function callWebDev() {
+    function callWebDevStudents() {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -192,7 +192,7 @@
         xmlhttp.send();
     }
 
-    function callPhoto() {
+    function callPhotoStudents() {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {

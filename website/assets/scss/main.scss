@@ -36,28 +36,6 @@ $secondary-color3: #D4B04F;
 
 /* Navigation Bar */
 
-.desktop-menu-container {
-	.desktop-menu {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		.desktop-menu-item {
-			display: inline-block;
-			float: right;
-			&:first-child {
-				float: left;
-			}
-			a {
-				float: right;
-				padding: 25px;
-				font-weight: bold;
-				text-transform: uppercase;
-				text-decoration: none;
-				color: white;
-			}
-		}
-	}
-}
 
 /* Section 1 */
 

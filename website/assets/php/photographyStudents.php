@@ -1,5 +1,6 @@
 <?php
-for ($i=61; $i < 84; $i++) {
-echo "<img width='200px'  src='assets/img/MIX_logos_forWeb/MIX_Logo_Artboard $i _web.png'/>";
+for ($i=60; $i < 80; $i++) {
+echo "<img class='picture' onclick='modalDisplay()' id ='photo $i' width='200px' src='assets/img/girl.jpg'/>";
 }
+
 ?>

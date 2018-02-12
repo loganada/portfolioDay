@@ -35,27 +35,11 @@ $secondary-color3: #D4B04F;
 }
 
 /* Navigation Bar */
-
-.desktop-menu-container {
-	.desktop-menu {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		.desktop-menu-item {
-			display: inline-block;
-			float: right;
-			&:first-child {
-				float: left;
-			}
-			a {
-				float: right;
-				padding: 25px;
-				font-weight: bold;
-				text-transform: uppercase;
-				text-decoration: none;
-				color: white;
-			}
-		}
+.navbar {
+	margin: 0;
+	padding: 0;
+	.desktop-menu-item {
+		padding: 14px 17px;
 	}
 }
 
@@ -63,8 +47,8 @@ $secondary-color3: #D4B04F;
 
 .section1 {
 	height: 100vh;
+	position: relative;	
 	background: $primary-color1;
-	position: relative;
 	.mix-logo {
 	    position: absolute;
 	    top: 50%;
@@ -81,15 +65,20 @@ $secondary-color3: #D4B04F;
 	background: white;
 	position: relative;
 	.mix-info-container {
-	    position: absolute;
+	    position: relative;
 	    top: 50%;
 	    left: 50%;
 	    transform: translate(-50%, -50%);
 		.mix-info-title {
 			margin-bottom: 75px;
 			font-family: "Neoneon-Regular";
-			font-size: 3em;
+			font-size: 5em;
 			text-align: center;
+			font-weight: bold;
+		}
+		.mix-info-content {
+			margin: 0 auto;
+			padding: 0 5em;
 		}
 		.mix-heading {
 			height: 5em;
@@ -102,6 +91,7 @@ $secondary-color3: #D4B04F;
 
 	}
 }
+
 
 /* Graphic Design Students */
 

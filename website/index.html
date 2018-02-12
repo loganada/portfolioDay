@@ -6,13 +6,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="assets/js/countdown.js"></script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href='fonts/main-fonts.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
   <style>
 
     .center-people{
@@ -364,53 +366,79 @@
      }
   </style>
 
-
 </head>
 
 <body>
     <div class="section1">
-        <nav>
-            <div class="desktop-menu-container">
-                <ul class="desktop-menu">
-                    <li class="desktop-menu-item nav-lead"><a href="#home"> MIX LOGO</a></li>
-                    <li class="desktop-menu-item"><a href="#mix-info"> What is Mix?</a></li>
-                    <li class="desktop-menu-item"><a href="#graphic-designers"> Graphic Designers</a></li>
-                    <li class="desktop-menu-item"><a href="#photography"> Photography</a></li>
-                    <li class="desktop-menu-item"><a href="#web-developers"> Web Developers</a></li>
-                </ul>
-            </div>
-        </nav>
+        <!-- navigation -->
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="desktop-menu-item nav-lead">
+                            <a href="#home"> MIX LOGO</a>
+                        </li>
+                        <li class="desktop-menu-item">
+                            <a href="#mix-info"> What is Mix?</a>
+                        </li>
+                        <li class="desktop-menu-item">
+                            <a href="#graphic-designers"> Graphic Design</a>
+                        </li>
+                        <li class="desktop-menu-item">
+                            <a href="#photography"> Photography</a>
+                        </li>
+                        <li class="desktop-menu-item">
+                            <a href="#web-developers"> Web Development</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        <!-- logo -->
         <img class="mix-logo" src="assets/img/portfolioDayLogo.svg" title="MIX Logo" alt="Logo used for DMACC PORTFOLIO DAY 2018">
     </div>
     <div class="mix-info" id="mix-info">
         <div class="mix-info-container">
             <h1 class="mix-info-title">What is Mix?</h1>
             <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-md-6 col-12 ">
+                <div class="mix-info-content">
                     <div class="mix-heading">
-                        <h1 id="portfolioDayCountDown" ></h1>
+                        <h1 id="portfolioDayCountDown"></h1>
                     </div>
                     <div>
                         <p>
-                            Join us in the countdown to DMACCs 2018 portfolio day. Graphic Design, photography, web development, video and animation students are getting ready to mix up their lives. We as the seniors of our repesctive programs and would like to show you what we have done... come from di erent backgorunds - mixed up group of people (not in a bad way) di erent project types and di erent ideas - creativity mixed perspective, viewers eye. Come join us for lots of fun
+                            Join us in the countdown to DMACCs 2018 portfolio day. Graphic Design, photography, web development, video and animation
+                            students are getting ready to mix up their lives. We as the seniors of our repesctive programs
+                            and would like to show you what we have done... come from di erent backgorunds - mixed up group
+                            of people (not in a bad way) di erent project types and di erent ideas - creativity mixed perspective,
+                            viewers eye. Come join us for lots of fun
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6 col-12">
-                  <div class="mix-heading">
-                    <h3>April 12th 12:00 - 5:00PM, Thursday Des Moines Botanical Gardens, IA</h3>
-                  </div>
-                    <div>
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5967.463302416787!2d-93.61856742194209!3d41.5966877461963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x87ee99a457093b8d%3A0x2e0ddf50113251e7!2sdes+moines+botanical+center!3m2!1d41.596709!2d-93.614188!5e0!3m2!1sen!2sus!4v1518410108343" width="100%" height="192" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="col-md-6 col-12 ">
+                <div class="mix-info-content">
+                    <div class="mix-heading">
+                        <h3>April 12th 12:00 - 5:00PM, Thursday Des Moines Botanical Gardens, IA</h3>
                     </div>
+                    <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5967.463302416787!2d-93.61856742194209!3d41.5966877461963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x87ee99a457093b8d%3A0x2e0ddf50113251e7!2sdes+moines+botanical+center!3m2!1d41.596709!2d-93.614188!5e0!3m2!1sen!2sus!4v1518410108343"
+                            width="100%" height="192" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
     </div>
     <script>
-    window.onload = function() {
-        callGraphicDesignStudents();
-    }
+        window.onload = function () {
+            callGraphicDesignStudents();
+        }
     </script>
 
     <div id="accordion">
@@ -444,6 +472,7 @@
 
 </div>
     <script>
+<<<<<<< HEAD
     $("#accordion").accordion({
         heightStyle: "content",
         animate: 300,
@@ -510,7 +539,57 @@
         }
 
 
+=======
+        $("#accordion").accordion({
+            heightStyle: "content",
+            animate: 300,
+            collapsible: true //collapsible tabs on click - take out if dont like
+
+        });
+
+        function callWebDevStudents() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("webDev").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "assets/php/webDevStudents.php", true);
+            xmlhttp.send();
+        }
+
+
+        function callGraphicDesignStudents() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("graphicDesignStudents").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "assets/php/graphicDesignStudents.php", true);
+            xmlhttp.send();
+        }
+
+        function callPhotoStudents() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("photo").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "assets/php/photographyStudents.php", true);
+            xmlhttp.send();
+        }
+>>>>>>> 1afc9a22aebcacd276f2d20b6cbf2415c2cc9291
     </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/countdown.js"></script>
 </body>
 
 </html>

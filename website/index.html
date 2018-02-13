@@ -2,43 +2,61 @@
 <html>
 
 <head>
-    <title>DMACC PORTFOLIO DAY</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <title>DMACC PORTFOLIO DAY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
 
-    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link href='fonts/main-fonts.css' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link href='fonts/main-fonts.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
   <style>
-
-    .center-people{
-      text-align:center;
+    .center-people {
+      text-align: center;
     }
 
     /*----Accordion Styles----*/
-    .ui-accordion{
-      margin:-8px;
+
+    .ui-accordion {
+      margin: -8px;
     }
-    .ui-helper-reset{
-      border:none;
+
+    .ui-helper-reset {
+      border: none;
     }
-    .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr, .ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl,
-    .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br,
-    .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
-      border-radius:0px;
+
+    .ui-corner-all,
+    .ui-corner-top,
+    .ui-corner-right,
+    .ui-corner-tr,
+    .ui-corner-all,
+    .ui-corner-top,
+    .ui-corner-left,
+    .ui-corner-tl,
+    .ui-corner-all,
+    .ui-corner-bottom,
+    .ui-corner-right,
+    .ui-corner-br,
+    .ui-corner-all,
+    .ui-corner-bottom,
+    .ui-corner-left,
+    .ui-corner-bl {
+      border-radius: 0px;
     }
-    .ui-accordion .ui-accordion-header{
-      text-align:center;
-      font-size:2.5em;
-      border:none;
-      margin:1px 0;
+
+    .ui-accordion .ui-accordion-header {
+      text-align: center;
+      font-size: 2.5em;
+      border: none;
+      margin: 1px 0;
     }
+
     .ui-accordion .ui-accordion-header .ui-icon {
       position: absolute;
       right: 100%;
@@ -46,507 +64,547 @@
       top: 50%;
       margin-top: -8px;
     }
+
     .ui-accordion-icons .ui-accordion-header a {
       padding-right: 1em;
     }
-    .ui-accordion-header:first-of-type{
-      background:#5e4b8d;
+
+    .ui-accordion-header:first-of-type {
+      background: #5e4b8d;
     }
-    #accordion .ui-accordion-header:nth-of-type(2){
-      background:#d4295e;
+
+    #accordion .ui-accordion-header:nth-of-type(2) {
+      background: #d4295e;
     }
-    #accordion .ui-accordion-header:nth-of-type(3){
-      background:#fbad2f;
+
+    #accordion .ui-accordion-header:nth-of-type(3) {
+      background: #fbad2f;
     }
+
     .graphic {
-      background: rgba(94,75,141,1);
-      background: -moz-linear-gradient(top, rgba(94,75,141,1) 0%, rgba(94,75,141,1) 27%, rgba(94,75,141,1) 54%, rgba(214,41,96,1) 100%);
-      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(94,75,141,1)), color-stop(27%, rgba(94,75,141,1)), color-stop(54%, rgba(94,75,141,1)), color-stop(100%, rgba(214,41,96,1)));
-      background: -webkit-linear-gradient(top, rgba(94,75,141,1) 0%, rgba(94,75,141,1) 27%, rgba(94,75,141,1) 54%, rgba(214,41,96,1) 100%);
-      background: -o-linear-gradient(top, rgba(94,75,141,1) 0%, rgba(94,75,141,1) 27%, rgba(94,75,141,1) 54%, rgba(214,41,96,1) 100%);
-      background: -ms-linear-gradient(top, rgba(94,75,141,1) 0%, rgba(94,75,141,1) 27%, rgba(94,75,141,1) 54%, rgba(214,41,96,1) 100%);
-      background: linear-gradient(to bottom, rgba(94,75,141,1) 0%, rgba(94,75,141,1) 27%, rgba(94,75,141,1) 54%, rgba(214,41,96,1) 100%);
+      background: rgba(94, 75, 141, 1);
+      background: -moz-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(94, 75, 141, 1)), color-stop(27%, rgba(94, 75, 141, 1)), color-stop(54%, rgba(94, 75, 141, 1)), color-stop(100%, rgba(214, 41, 96, 1)));
+      background: -webkit-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
+      background: -o-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
+      background: -ms-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
+      background: linear-gradient(to bottom, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
     }
+
     .photo {
-      background: rgba(212,41,95,1);
-      background: -moz-linear-gradient(top, rgba(212,41,95,1) 0%, rgba(214,41,96,1) 60%, rgba(245,149,54,1) 93%, rgba(251,172,45,1) 100%);
-      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212,41,95,1)), color-stop(60%, rgba(214,41,96,1)), color-stop(93%, rgba(245,149,54,1)), color-stop(100%, rgba(251,172,45,1)));
-      background: -webkit-linear-gradient(top, rgba(212,41,95,1) 0%, rgba(214,41,96,1) 60%, rgba(245,149,54,1) 93%, rgba(251,172,45,1) 100%);
-      background: -o-linear-gradient(top, rgba(212,41,95,1) 0%, rgba(214,41,96,1) 60%, rgba(245,149,54,1) 93%, rgba(251,172,45,1) 100%);
-      background: -ms-linear-gradient(top, rgba(212,41,95,1) 0%, rgba(214,41,96,1) 60%, rgba(245,149,54,1) 93%, rgba(251,172,45,1) 100%);
-      background: linear-gradient(to bottom, rgba(212,41,95,1) 0%, rgba(214,41,96,1) 60%, rgba(245,149,54,1) 93%, rgba(251,172,45,1) 100%);
+      background: rgba(212, 41, 95, 1);
+      background: -moz-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212, 41, 95, 1)), color-stop(60%, rgba(214, 41, 96, 1)), color-stop(93%, rgba(245, 149, 54, 1)), color-stop(100%, rgba(251, 172, 45, 1)));
+      background: -webkit-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
+      background: -o-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
+      background: -ms-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
+      background: linear-gradient(to bottom, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
     }
+
     .web {
-      background: rgba(251,173,47,1);
-      background: -moz-linear-gradient(top, rgba(251,173,47,1) 0%, rgba(251,173,47,0.71) 100%);
-      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251,173,47,1)), color-stop(100%, rgba(251,173,47,0.71)));
-      background: -webkit-linear-gradient(top, rgba(251,173,47,1) 0%, rgba(251,173,47,0.71) 100%);
-      background: -o-linear-gradient(top, rgba(251,173,47,1) 0%, rgba(251,173,47,0.71) 100%);
-      background: -ms-linear-gradient(top, rgba(251,173,47,1) 0%, rgba(251,173,47,0.71) 100%);
-      background: linear-gradient(to bottom, rgba(251,173,47,1) 0%, rgba(251,173,47,0.71) 100%);
+      background: rgba(251, 173, 47, 1);
+      background: -moz-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251, 173, 47, 1)), color-stop(100%, rgba(251, 173, 47, 0.71)));
+      background: -webkit-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
+      background: -o-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
+      background: -ms-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
+      background: linear-gradient(to bottom, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
     }
 
     /*----FONTS----*/
+
     /*----Basic Neon Glow Text----*/
+
     .neon {
       font-family: 'neoneonregular';
       text-align: center;
       font-size: 120px;
     }
+
     .pink {
       color: #ffffff;
       text-shadow: 0px 0px 200px #ff91fc, 0px 0px 30px #ff49fb, -1px -1px 5px #fff, 10px 1px 100px #af00b2;
     }
+
     /* IMAGES*/
-      .picture{
-        margin: 4%;
-      }
+
+    .picture {
+      margin: 4%;
+    }
 
 
     /*MODAL*/
 
     /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
 
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
 
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+    /* Modal Content */
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
 
-#modalPhoto{
+    /* The Close Button */
 
-}
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
 
-.modal-content {
-	width: 100wh;
-	height: 90vh;
-	color: #fff;
-	background: linear-gradient(-45deg, #ffffff, #EE7752, #E73C7E, #23A6D5, #23D5AB, #fbad2f);
-	background-size: 400% 400%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
-}
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-@-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
+    #modalPhoto {}
 
-@-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
+    .modal-content {
+      width: 100wh;
+      height: 90vh;
+      color: #fff;
+      background: linear-gradient(-45deg, #ffffff, #EE7752, #E73C7E, #23A6D5, #23D5AB, #fbad2f);
+      background-size: 400% 400%;
+      -webkit-animation: Gradient 15s ease infinite;
+      -moz-animation: Gradient 15s ease infinite;
+      animation: Gradient 15s ease infinite;
+    }
 
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-/*---Glitch Text Effect 1----*/
-#modalText{
-  position: absolute;
-  right: 10%;
-  top: 40%;
-  font-family: 'proxima_nova_ltsemibold';
-  text-shadow: 1px 1px black;
-}
-.glitch{
-  font-family: 'proxima_nova_ltsemibold';
-        color: white;
-        font-size: 50px;
-        position: relative;
-        width: 400px;
-        margin: 0 auto;
-}
-     @keyframes noise-anim {
-       0% {
-         clip: rect(58px, 9999px, 3px, 0);
-       }
-       5% {
-         clip: rect(15px, 9999px, 9px, 0);
-       }
-       10% {
-         clip: rect(100px, 9999px, 44px, 0);
-       }
-       15% {
-         clip: rect(25px, 9999px, 40px, 0);
-       }
-       20% {
-         clip: rect(94px, 9999px, 14px, 0);
-       }
-       25% {
-         clip: rect(33px, 9999px, 63px, 0);
-       }
-       30% {
-         clip: rect(85px, 9999px, 55px, 0);
-       }
-       35% {
-         clip: rect(5px, 9999px, 96px, 0);
-       }
-       40% {
-         clip: rect(76px, 9999px, 37px, 0);
-       }
-       45% {
-         clip: rect(88px, 9999px, 44px, 0);
-       }
-       50% {
-         clip: rect(100px, 9999px, 88px, 0);
-       }
-       55% {
-         clip: rect(100px, 9999px, 12px, 0);
-       }
-       60% {
-         clip: rect(68px, 9999px, 23px, 0);
-       }
-       65% {
-         clip: rect(99px, 9999px, 18px, 0);
-       }
-       70% {
-         clip: rect(43px, 9999px, 81px, 0);
-       }
-       75% {
-         clip: rect(50px, 9999px, 57px, 0);
-       }
-       80% {
-         clip: rect(2px, 9999px, 72px, 0);
-       }
-       85% {
-         clip: rect(25px, 9999px, 79px, 0);
-       }
-       90% {
-         clip: rect(69px, 9999px, 75px, 0);
-       }
-       95% {
-         clip: rect(65px, 9999px, 16px, 0);
-       }
-       100% {
-         clip: rect(93px, 9999px, 77px, 0);
-       }
-     }
-     .glitch:after {
-       content: attr(data-text);
-       position: absolute;
-       left: 2px;
-       text-shadow: -1px 0 #fbad2f;
-       top: 0;
-       color: white;
-       background: transparent;
-       overflow: hidden;
-       clip: rect(0, 900px, 0, 0);
-       animation: noise-anim 2s infinite linear alternate-reverse;
-     }
+    @-webkit-keyframes Gradient {
+      0% {
+        background-position: 0% 50%
+      }
+      50% {
+        background-position: 100% 50%
+      }
+      100% {
+        background-position: 0% 50%
+      }
+    }
 
-     @keyframes noise-anim-2 {
-       0% {
-         clip: rect(92px, 9999px, 44px, 0);
-       }
-       5% {
-         clip: rect(27px, 9999px, 19px, 0);
-       }
-       10% {
-         clip: rect(27px, 9999px, 93px, 0);
-       }
-       15% {
-         clip: rect(45px, 9999px, 42px, 0);
-       }
-       20% {
-         clip: rect(21px, 9999px, 28px, 0);
-       }
-       25% {
-         clip: rect(55px, 9999px, 87px, 0);
-       }
-       30% {
-         clip: rect(88px, 9999px, 30px, 0);
-       }
-       35% {
-         clip: rect(10px, 9999px, 44px, 0);
-       }
-       40% {
-         clip: rect(66px, 9999px, 85px, 0);
-       }
-       45% {
-         clip: rect(63px, 9999px, 16px, 0);
-       }
-       50% {
-         clip: rect(60px, 9999px, 26px, 0);
-       }
-       55% {
-         clip: rect(27px, 9999px, 90px, 0);
-       }
-       60% {
-         clip: rect(72px, 9999px, 21px, 0);
-       }
-       65% {
-         clip: rect(72px, 9999px, 37px, 0);
-       }
-       70% {
-         clip: rect(84px, 9999px, 54px, 0);
-       }
-       75% {
-         clip: rect(26px, 9999px, 19px, 0);
-       }
-       80% {
-         clip: rect(25px, 9999px, 49px, 0);
-       }
-       85% {
-         clip: rect(96px, 9999px, 29px, 0);
-       }
-       90% {
-         clip: rect(61px, 9999px, 38px, 0);
-       }
-       95% {
-         clip: rect(45px, 9999px, 16px, 0);
-       }
-       100% {
-         clip: rect(77px, 9999px, 96px, 0);
-       }
-     }
-     .glitch:before {
-       content: attr(data-text);
-       position: absolute;
-       left: -2px;
-       text-shadow: 1px 0 #d4295e;
-       top: 0;
-       color: white;
-       background: transparent;
-       overflow: hidden;
-       clip: rect(0, 900px, 0, 0);
-       animation: noise-anim-2 3s infinite linear alternate-reverse;
-     }
+    @-moz-keyframes Gradient {
+      0% {
+        background-position: 0% 50%
+      }
+      50% {
+        background-position: 100% 50%
+      }
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    @keyframes Gradient {
+      0% {
+        background-position: 0% 50%
+      }
+      50% {
+        background-position: 100% 50%
+      }
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    /*---Glitch Text Effect 1----*/
+
+    #modalText {
+      position: absolute;
+      right: 10%;
+      top: 40%;
+      font-family: 'proxima_nova_ltsemibold';
+      text-shadow: 1px 1px black;
+    }
+
+    .glitch {
+      font-family: 'proxima_nova_ltsemibold';
+      color: white;
+      font-size: 50px;
+      position: relative;
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    @keyframes noise-anim {
+      0% {
+        clip: rect(58px, 9999px, 3px, 0);
+      }
+      5% {
+        clip: rect(15px, 9999px, 9px, 0);
+      }
+      10% {
+        clip: rect(100px, 9999px, 44px, 0);
+      }
+      15% {
+        clip: rect(25px, 9999px, 40px, 0);
+      }
+      20% {
+        clip: rect(94px, 9999px, 14px, 0);
+      }
+      25% {
+        clip: rect(33px, 9999px, 63px, 0);
+      }
+      30% {
+        clip: rect(85px, 9999px, 55px, 0);
+      }
+      35% {
+        clip: rect(5px, 9999px, 96px, 0);
+      }
+      40% {
+        clip: rect(76px, 9999px, 37px, 0);
+      }
+      45% {
+        clip: rect(88px, 9999px, 44px, 0);
+      }
+      50% {
+        clip: rect(100px, 9999px, 88px, 0);
+      }
+      55% {
+        clip: rect(100px, 9999px, 12px, 0);
+      }
+      60% {
+        clip: rect(68px, 9999px, 23px, 0);
+      }
+      65% {
+        clip: rect(99px, 9999px, 18px, 0);
+      }
+      70% {
+        clip: rect(43px, 9999px, 81px, 0);
+      }
+      75% {
+        clip: rect(50px, 9999px, 57px, 0);
+      }
+      80% {
+        clip: rect(2px, 9999px, 72px, 0);
+      }
+      85% {
+        clip: rect(25px, 9999px, 79px, 0);
+      }
+      90% {
+        clip: rect(69px, 9999px, 75px, 0);
+      }
+      95% {
+        clip: rect(65px, 9999px, 16px, 0);
+      }
+      100% {
+        clip: rect(93px, 9999px, 77px, 0);
+      }
+    }
+
+    .glitch:after {
+      content: attr(data-text);
+      position: absolute;
+      left: 2px;
+      text-shadow: -1px 0 #fbad2f;
+      top: 0;
+      color: white;
+      background: transparent;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+      animation: noise-anim 2s infinite linear alternate-reverse;
+    }
+
+    @keyframes noise-anim-2 {
+      0% {
+        clip: rect(92px, 9999px, 44px, 0);
+      }
+      5% {
+        clip: rect(27px, 9999px, 19px, 0);
+      }
+      10% {
+        clip: rect(27px, 9999px, 93px, 0);
+      }
+      15% {
+        clip: rect(45px, 9999px, 42px, 0);
+      }
+      20% {
+        clip: rect(21px, 9999px, 28px, 0);
+      }
+      25% {
+        clip: rect(55px, 9999px, 87px, 0);
+      }
+      30% {
+        clip: rect(88px, 9999px, 30px, 0);
+      }
+      35% {
+        clip: rect(10px, 9999px, 44px, 0);
+      }
+      40% {
+        clip: rect(66px, 9999px, 85px, 0);
+      }
+      45% {
+        clip: rect(63px, 9999px, 16px, 0);
+      }
+      50% {
+        clip: rect(60px, 9999px, 26px, 0);
+      }
+      55% {
+        clip: rect(27px, 9999px, 90px, 0);
+      }
+      60% {
+        clip: rect(72px, 9999px, 21px, 0);
+      }
+      65% {
+        clip: rect(72px, 9999px, 37px, 0);
+      }
+      70% {
+        clip: rect(84px, 9999px, 54px, 0);
+      }
+      75% {
+        clip: rect(26px, 9999px, 19px, 0);
+      }
+      80% {
+        clip: rect(25px, 9999px, 49px, 0);
+      }
+      85% {
+        clip: rect(96px, 9999px, 29px, 0);
+      }
+      90% {
+        clip: rect(61px, 9999px, 38px, 0);
+      }
+      95% {
+        clip: rect(45px, 9999px, 16px, 0);
+      }
+      100% {
+        clip: rect(77px, 9999px, 96px, 0);
+      }
+    }
+
+    .glitch:before {
+      content: attr(data-text);
+      position: absolute;
+      left: -2px;
+      text-shadow: 1px 0 #d4295e;
+      top: 0;
+      color: white;
+      background: transparent;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+      animation: noise-anim-2 3s infinite linear alternate-reverse;
+    }
   </style>
 
 </head>
 
 <body>
-    <div class="section1">
-        <!-- navigation -->
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="desktop-menu-item nav-lead">
-                            <a href="#home"> MIX LOGO</a>
-                        </li>
-                        <li class="desktop-menu-item">
-                            <a href="#mix-info"> What is Mix?</a>
-                        </li>
-                        <li class="desktop-menu-item">
-                            <a href="#graphic-designers"> Graphic Design</a>
-                        </li>
-                        <li class="desktop-menu-item">
-                            <a href="#photography"> Photography</a>
-                        </li>
-                        <li class="desktop-menu-item">
-                            <a href="#web-developers"> Web Development</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+  <div class="section1">
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="desktop-menu-item nav-lead">
+            <a href="#home"> MIX LOGO</a>
+          </li>
+          <li class="desktop-menu-item">
+            <a href="#mix-info"> What is Mix?</a>
+          </li>
+          <li class="desktop-menu-item">
+            <a href="#graphic-designers"> Graphic Design</a>
+          </li>
+          <li class="desktop-menu-item">
+            <a href="#photography"> Photography</a>
+          </li>
+          <li class="desktop-menu-item">
+            <a href="#web-developers"> Web Development</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--end navigation -->
 
-        <!-- logo -->
-        <img class="mix-logo" src="assets/img/portfolioDayLogo.svg" title="MIX Logo" alt="Logo used for DMACC PORTFOLIO DAY 2018">
-    </div>
-    <div class="mix-info" id="mix-info">
-        <div class="mix-info-container">
-            <h1 class="mix-info-title">What is Mix?</h1>
-            <div class="row">
-                <div class="col-md-6 col-12 ">
-                <div class="mix-info-content">
-                    <div class="mix-heading">
-                        <h1 id="portfolioDayCountDown"></h1>
-                    </div>
-                    <div>
-                        <p>
-                            Join us in the countdown to DMACCs 2018 portfolio day. Graphic Design, photography, web development, video and animation
-                            students are getting ready to mix up their lives. We as the seniors of our repesctive programs
-                            and would like to show you what we have done... come from di erent backgorunds - mixed up group
-                            of people (not in a bad way) di erent project types and di erent ideas - creativity mixed perspective,
-                            viewers eye. Come join us for lots of fun
-                        </p>
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-6 col-12 ">
-                <div class="mix-info-content">
-                    <div class="mix-heading">
-                        <h3>April 12th 12:00 - 5:00PM, Thursday Des Moines Botanical Gardens, IA</h3>
-                    </div>
-                    <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5967.463302416787!2d-93.61856742194209!3d41.5966877461963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x87ee99a457093b8d%3A0x2e0ddf50113251e7!2sdes+moines+botanical+center!3m2!1d41.596709!2d-93.614188!5e0!3m2!1sen!2sus!4v1518410108343"
-                            width="100%" height="192" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
-                </div>
-                </div>
+    <!-- logo -->
+    <div class="demo"></div>
+    <!-- *******  IMPORTANT ******
+      The var path will need to be changed to the live version path when not on localhost 
+    *******************************************************-->
+    <script>
+        var path = 'http://localhost/portfolioDay/website/assets/img/MIX_logos_forWeb/',
+            imgs = ['MIX_Logo_Artboard 1 _web.png','MIX_Logo_Artboard 2 _web.png','MIX_Logo_Artboard 3 _web.png', 'MIX_Logo_Artboard 4 _web.png', 'MIX_Logo_Artboard 5 _web.png','MIX_Logo_Artboard 6 _web.png','MIX_Logo_Artboard 7 _web.png', 'MIX_Logo_Artboard 8 _web.png', 'MIX_Logo_Artboard 9 _web.png','MIX_Logo_Artboard 10 _web.png','MIX_Logo_Artboard 11 _web.png', 'MIX_Logo_Artboard 12 _web.png', 'MIX_Logo_Artboard 13 _web.png','MIX_Logo_Artboard 14 _web.png','MIX_Logo_Artboard 15 _web.png', 'MIX_Logo_Artboard 16 _web.png', 'MIX_Logo_Artboard 17 _web.png','MIX_Logo_Artboard 18 _web.png','MIX_Logo_Artboard 19 _web.png', 'MIX_Logo_Artboard 20 _web.png', 'MIX_Logo_Artboard 21 _web.png','MIX_Logo_Artboard 22 _web.png','MIX_Logo_Artboard 23 _web.png', 'MIX_Logo_Artboard 24 _web.png', 'MIX_Logo_Artboard 25 _web.png','MIX_Logo_Artboard 26 _web.png','MIX_Logo_Artboard 27 _web.png', 'MIX_Logo_Artboard 28 _web.png', 'MIX_Logo_Artboard 29 _web.png','MIX_Logo_Artboard 30 _web.png','MIX_Logo_Artboard 31 _web.png', 'MIX_Logo_Artboard 32 _web.png', 'MIX_Logo_Artboard 33 _web.png','MIX_Logo_Artboard 34 _web.png','MIX_Logo_Artboard 35 _web.png', 'MIX_Logo_Artboard 36 _web.png', 'MIX_Logo_Artboard 37 _web.png','MIX_Logo_Artboard 38 _web.png','MIX_Logo_Artboard 39 _web.png', 'MIX_Logo_Artboard 40 _web.png', 'MIX_Logo_Artboard 41 _web.png','MIX_Logo_Artboard 42 _web.png','MIX_Logo_Artboard 43 _web.png', 'MIX_Logo_Artboard 44 _web.png', 'MIX_Logo_Artboard 45 _web.png','MIX_Logo_Artboard 46 _web.png','MIX_Logo_Artboard 47 _web.png', 'MIX_Logo_Artboard 48 _web.png', 'MIX_Logo_Artboard 49 _web.png','MIX_Logo_Artboard 50 _web.png','MIX_Logo_Artboard 51 _web.png', 'MIX_Logo_Artboard 52 _web.png', 'MIX_Logo_Artboard 53 _web.png','MIX_Logo_Artboard 54 _web.png','MIX_Logo_Artboard 55 _web.png', 'MIX_Logo_Artboard 56 _web.png', 'MIX_Logo_Artboard 57 _web.png','MIX_Logo_Artboard 58 _web.png','MIX_Logo_Artboard 59 _web.png', 'MIX_Logo_Artboard 60 _web.png', 'MIX_Logo_Artboard 61 _web.png','MIX_Logo_Artboard 62 _web.png','MIX_Logo_Artboard 63 _web.png', 'MIX_Logo_Artboard 64 _web.png', 'MIX_Logo_Artboard 65 _web.png','MIX_Logo_Artboard 66 _web.png','MIX_Logo_Artboard 67 _web.png', 'MIX_Logo_Artboard 68 _web.png', 'MIX_Logo_Artboard 69 _web.png','MIX_Logo_Artboard 70 _web.png','MIX_Logo_Artboard 71 _web.png', 'MIX_Logo_Artboard 72 _web.png', 'MIX_Logo_Artboard 73 _web.png','MIX_Logo_Artboard 74 _web.png','MIX_Logo_Artboard 75 _web.png', 'MIX_Logo_Artboard 76 _web.png', 'MIX_Logo_Artboard 77 _web.png','MIX_Logo_Artboard 78 _web.png','MIX_Logo_Artboard 79 _web.png', 'MIX_Logo_Artboard 80 _web.png', 'MIX_Logo_Artboard 81 _web.png', 'MIX_Logo_Artboard 82 _web.png', 'MIX_Logo_Artboard 83 _web.png']
+            i = Math.floor(Math.random()*imgs.length);
+        $('.demo').append("<img class='mix-logo' title='MIX Logo' alt='Logo used for DMACC PORTFOLIO DAY 2018' src='"+path+imgs[i]+"'>");
+      
+        
+        </script>
+
+  </div>
+  <!--end section 1 -->
+  <div class="mix-info" id="mix-info">
+    <div class="mix-info-container">
+      <h1 class="mix-info-title">What is Mix?</h1>
+      <div class="row">
+        <div class="col-md-6 col-12 ">
+          <div class="mix-info-content">
+            <div class="mix-heading">
+              <h1 id="portfolioDayCountDown"></h1>
             </div>
+            <div>
+              <p>
+                Join us in the countdown to DMACCs 2018 portfolio day. Graphic Design, photography, web development, video and animation
+                students are getting ready to mix up their lives. We as the seniors of our repesctive programs and would
+                like to show you what we have done... come from di erent backgorunds - mixed up group of people (not in a
+                bad way) di erent project types and di erent ideas - creativity mixed perspective, viewers eye. Come join
+                us for lots of fun
+              </p>
+            </div>
+          </div>
         </div>
+        <div class="col-md-6 col-12 ">
+          <div class="mix-info-content">
+            <div class="mix-heading">
+              <h3>April 12th 12:00 - 5:00PM, Thursday Des Moines Botanical Gardens, IA</h3>
+            </div>
+            <div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5967.463302416787!2d-93.61856742194209!3d41.5966877461963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x87ee99a457093b8d%3A0x2e0ddf50113251e7!2sdes+moines+botanical+center!3m2!1d41.596709!2d-93.614188!5e0!3m2!1sen!2sus!4v1518410108343"
+                width="100%" height="192" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script>
-        window.onload = function () {
-            callGraphicDesignStudents();
-        }
-    </script>
+  </div>
+  <script>
+    window.onload = function () {
+      callGraphicDesignStudents();
+    }
+  </script>
 
-    <div id="accordion">
-        <h3 class="neon pink" onclick="callGraphicDesignStudents()"> Graphic Design </h3>
-        <div class="center-people graphic">
-            <p id="graphicDesignStudents"></p>
-        </div>
-        <h3 class="neon pink" onclick="callPhotoStudents()">Photography </h3>
-        <div class="center-people photo">
-            <p id="photo"></p>
-        </div>
-        <h3 class="neon pink" onclick="callWebDevStudents()">Web Development</h3>
-        <div class="center-people web">
-            <p id="webDev"></p>
-        </div>
+  <div id="accordion">
+    <h3 class="neon pink" onclick="callGraphicDesignStudents()"> Graphic Design </h3>
+    <div class="center-people graphic">
+      <p id="graphicDesignStudents"></p>
     </div>
-    <!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <img  id="modalPhoto" width='400px'  src='assets/img/girl.jpg'/>
-
-    <div id="modalText">
-    <div class="glitch"  data-text="Jane Doe">Jane Doe</div>
-    <p id= "modalBody">Some text in the Modal..</p>
-    <p id= "modalFoot">janedoe.com | janedoe@gmail.com | (515) 555-5555</p>
+    <h3 class="neon pink" onclick="callPhotoStudents()">Photography </h3>
+    <div class="center-people photo">
+      <p id="photo"></p>
+    </div>
+    <h3 class="neon pink" onclick="callWebDevStudents()">Web Development</h3>
+    <div class="center-people web">
+      <p id="webDev"></p>
+    </div>
   </div>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalPhoto" width='400px' src='assets/img/girl.jpg' />
+
+      <div id="modalText">
+        <div class="glitch" data-text="Jane Doe">Jane Doe</div>
+        <p id="modalBody">Some text in the Modal..</p>
+        <p id="modalFoot">janedoe.com | janedoe@gmail.com | (515) 555-5555</p>
+      </div>
+    </div>
+
   </div>
-
-</div>
-    <script>
-
+  <script>
     $("#accordion").accordion({
-        heightStyle: "content",
-        animate: 300,
-        collapsible: true                   //collapsible tabs on click - take out if dont like
+      heightStyle: "content",
+      animate: 300,
+      collapsible: true //collapsible tabs on click - take out if dont like
 
     });
 
     function callWebDevStudents() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("webDev").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET", "assets/php/webDevStudents.php", true);
-        xmlhttp.send();
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("webDev").innerHTML = this.responseText;
+        }
+      };
+      xmlhttp.open("GET", "assets/php/webDevStudents.php", true);
+      xmlhttp.send();
     }
 
 
     function callGraphicDesignStudents() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("graphicDesignStudents").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET", "assets/php/graphicDesignStudents.php", true);
-        xmlhttp.send();
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("graphicDesignStudents").innerHTML = this.responseText;
+        }
+      };
+      xmlhttp.open("GET", "assets/php/graphicDesignStudents.php", true);
+      xmlhttp.send();
     }
 
     function callPhotoStudents() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("photo").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET", "assets/php/photographyStudents.php", true);
-        xmlhttp.send();
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("photo").innerHTML = this.responseText;
+        }
+      };
+      xmlhttp.open("GET", "assets/php/photographyStudents.php", true);
+      xmlhttp.send();
+    }
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    function modalDisplay() {
+      modal.style.display = "block";
+
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+
       }
-        // Get the modal
-        var modal = document.getElementById('myModal');
+    }
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
 
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal
-         function modalDisplay() {
-            modal.style.display = "block";
-
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-
-            }
-        }
-
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-
-    <script src="assets/js/countdown.js"></script>
+  <script src="assets/js/countdown.js"></script>
 </body>
 
 </html>

@@ -490,7 +490,6 @@
 
     <!-- logo -->
     <div class="cycleThroughLogos">
-        <img class="mix-logo" title="MIX Logo" alt="Logo used for DMACC PORTFOLIO DAY 2018" src="assets/img/MIX_logos_forWeb/MIX_Logo_Artboard 10 _web.png">
     </div>
     <!-- *******  IMPORTANT ******
       currently on refresh
@@ -503,7 +502,7 @@
             
             function cycleThroughImages(){
               i = Math.floor(Math.random()*imgs.length);
-              $('.cycleThroughLogos').append("<img class='mix-logo' title='MIX Logo' alt='Logo used for DMACC PORTFOLIO DAY 2018' src='"+path+imgs[i]+"'>");
+              $('.cycleThroughLogos').html("<img class='mix-logo' title='MIX Logo' alt='Logo used for DMACC PORTFOLIO DAY 2018' src='"+path+imgs[i]+"'>");
             }
   
     </script>

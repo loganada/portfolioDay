@@ -489,16 +489,23 @@
     <!--end navigation -->
 
     <!-- logo -->
-    <div class="cycleThroughLogos"></div>
+    <div class="cycleThroughLogos">
+        <img class="mix-logo" title="MIX Logo" alt="Logo used for DMACC PORTFOLIO DAY 2018" src="assets/img/MIX_logos_forWeb/MIX_Logo_Artboard 10 _web.png">
+    </div>
     <!-- *******  IMPORTANT ******
       currently on refresh
       The var path will need to be changed to the live version path when not on localhost 
     *******************************************************-->
     <script>
+      var myVar = setInterval(cycleThroughImages,1000);
         var path = 'assets/img/MIX_logos_forWeb/',
             imgs = ['MIX_Logo_Artboard 1 _web.png','MIX_Logo_Artboard 2 _web.png','MIX_Logo_Artboard 3 _web.png', 'MIX_Logo_Artboard 4 _web.png', 'MIX_Logo_Artboard 5 _web.png','MIX_Logo_Artboard 6 _web.png','MIX_Logo_Artboard 7 _web.png', 'MIX_Logo_Artboard 8 _web.png', 'MIX_Logo_Artboard 9 _web.png','MIX_Logo_Artboard 10 _web.png','MIX_Logo_Artboard 11 _web.png', 'MIX_Logo_Artboard 12 _web.png', 'MIX_Logo_Artboard 13 _web.png','MIX_Logo_Artboard 14 _web.png','MIX_Logo_Artboard 15 _web.png', 'MIX_Logo_Artboard 16 _web.png', 'MIX_Logo_Artboard 17 _web.png','MIX_Logo_Artboard 18 _web.png','MIX_Logo_Artboard 19 _web.png', 'MIX_Logo_Artboard 20 _web.png', 'MIX_Logo_Artboard 21 _web.png','MIX_Logo_Artboard 22 _web.png','MIX_Logo_Artboard 23 _web.png', 'MIX_Logo_Artboard 24 _web.png', 'MIX_Logo_Artboard 25 _web.png','MIX_Logo_Artboard 26 _web.png','MIX_Logo_Artboard 27 _web.png', 'MIX_Logo_Artboard 28 _web.png', 'MIX_Logo_Artboard 29 _web.png','MIX_Logo_Artboard 30 _web.png','MIX_Logo_Artboard 31 _web.png', 'MIX_Logo_Artboard 32 _web.png', 'MIX_Logo_Artboard 33 _web.png','MIX_Logo_Artboard 34 _web.png','MIX_Logo_Artboard 35 _web.png', 'MIX_Logo_Artboard 36 _web.png', 'MIX_Logo_Artboard 37 _web.png','MIX_Logo_Artboard 38 _web.png','MIX_Logo_Artboard 39 _web.png', 'MIX_Logo_Artboard 40 _web.png', 'MIX_Logo_Artboard 41 _web.png','MIX_Logo_Artboard 42 _web.png','MIX_Logo_Artboard 43 _web.png', 'MIX_Logo_Artboard 44 _web.png', 'MIX_Logo_Artboard 45 _web.png','MIX_Logo_Artboard 46 _web.png','MIX_Logo_Artboard 47 _web.png', 'MIX_Logo_Artboard 48 _web.png', 'MIX_Logo_Artboard 49 _web.png','MIX_Logo_Artboard 50 _web.png','MIX_Logo_Artboard 51 _web.png', 'MIX_Logo_Artboard 52 _web.png', 'MIX_Logo_Artboard 53 _web.png','MIX_Logo_Artboard 54 _web.png','MIX_Logo_Artboard 55 _web.png', 'MIX_Logo_Artboard 56 _web.png', 'MIX_Logo_Artboard 57 _web.png','MIX_Logo_Artboard 58 _web.png','MIX_Logo_Artboard 59 _web.png', 'MIX_Logo_Artboard 60 _web.png', 'MIX_Logo_Artboard 61 _web.png','MIX_Logo_Artboard 62 _web.png','MIX_Logo_Artboard 63 _web.png', 'MIX_Logo_Artboard 64 _web.png', 'MIX_Logo_Artboard 65 _web.png','MIX_Logo_Artboard 66 _web.png','MIX_Logo_Artboard 67 _web.png', 'MIX_Logo_Artboard 68 _web.png', 'MIX_Logo_Artboard 69 _web.png','MIX_Logo_Artboard 70 _web.png','MIX_Logo_Artboard 71 _web.png', 'MIX_Logo_Artboard 72 _web.png', 'MIX_Logo_Artboard 73 _web.png','MIX_Logo_Artboard 74 _web.png','MIX_Logo_Artboard 75 _web.png', 'MIX_Logo_Artboard 76 _web.png', 'MIX_Logo_Artboard 77 _web.png','MIX_Logo_Artboard 78 _web.png','MIX_Logo_Artboard 79 _web.png', 'MIX_Logo_Artboard 80 _web.png', 'MIX_Logo_Artboard 81 _web.png', 'MIX_Logo_Artboard 82 _web.png', 'MIX_Logo_Artboard 83 _web.png']
-            i = Math.floor(Math.random()*imgs.length);
-        $('.cycleThroughLogos').append("<img class='mix-logo' title='MIX Logo' alt='Logo used for DMACC PORTFOLIO DAY 2018' src='"+path+imgs[i]+"'>");
+            
+            function cycleThroughImages(){
+              i = Math.floor(Math.random()*imgs.length);
+              $('.cycleThroughLogos').append("<img class='mix-logo' title='MIX Logo' alt='Logo used for DMACC PORTFOLIO DAY 2018' src='"+path+imgs[i]+"'>");
+            }
+  
     </script>
 
   </div>

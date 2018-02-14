@@ -537,6 +537,71 @@
     });
   </script>
 
+<style>
+
+  .section1 .portfolioDayTextDMACC {
+    color:white;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    /* -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+   }
+
+   .section1 .portfolioDayTextPortfolio {
+    color:white;
+    position: absolute;
+    top: 55%;
+    left: 80%;
+    /* -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+   }
+
+   .section1 .portfolioDayTextDay {
+    color:white;
+    position: absolute;
+    top: 60%;
+    left: 82%;
+    /* -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+   }
+
+   @media only screen and (max-width: 1024px) {
+    .section1 .portfolioDayTextDMACC {
+    color:white;
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    /* -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+   }
+
+   .section1 .portfolioDayTextPortfolio {
+    color:white;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    /* -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+   }
+
+   .section1 .portfolioDayTextDay {
+    color:white;
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    /* -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+   }
+}
+
+</style>
 </head>
 
 <body id="page-top">
@@ -572,7 +637,11 @@
 
     <!-- logo -->
     <div class="cycleThroughLogos">
+      
     </div>
+    <h1 class="portfolioDayTextDMACC">DMACC</h1>
+    <h1 class="portfolioDayTextPortfolio">Portfolio</h1>
+    <h1 class="portfolioDayTextDay">Day</h1>
     <!-- *******  IMPORTANT ******
       currently on refresh
       The var path will need to be changed to the live version path when not on localhost 
@@ -608,8 +677,7 @@
           'MIX_Logo_Artboard 73 _web.png', 'MIX_Logo_Artboard 74 _web.png', 'MIX_Logo_Artboard 75 _web.png',
           'MIX_Logo_Artboard 76 _web.png', 'MIX_Logo_Artboard 77 _web.png', 'MIX_Logo_Artboard 78 _web.png',
           'MIX_Logo_Artboard 79 _web.png', 'MIX_Logo_Artboard 80 _web.png', 'MIX_Logo_Artboard 81 _web.png',
-          'MIX_Logo_Artboard 82 _web.png', 'MIX_Logo_Artboard 83 _web.png'
-        ]
+          'MIX_Logo_Artboard 82 _web.png', 'MIX_Logo_Artboard 83 _web.png'];
 
       function cycleThroughImages() {
         i = Math.floor(Math.random() * imgs.length);

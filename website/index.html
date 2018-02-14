@@ -781,6 +781,9 @@
     });
     function openPhotosAccordion()
     {
+      $( "#accordion" ).accordion({
+  active: 2
+});
       var active =   $("#accordion").accordion( "option", "active" );
       // Setter
       $("#accordion").accordion( "option", "active", 1 );
@@ -788,6 +791,9 @@
     }
     function openGDAccordion()
     {
+      $( "#accordion" ).accordion({
+  active: 2
+});
       var active =   $("#accordion").accordion( "option", "active" );
       // Setter
       $("#accordion").accordion( "option", "active", 0 );
@@ -796,7 +802,7 @@
 
 function openWebAccordion(){
   $( "#accordion" ).accordion({
-  active: 0
+  active: 2
 });
   // Getter
 var active =   $("#accordion").accordion( "option", "active" );

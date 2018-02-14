@@ -759,6 +759,31 @@
       }
     }
 
+    @media only screen and (max-width:640px){
+    .header-container {
+        display: block;
+/*        align-items: center;
+        justify-content: center;*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+      }
+      .mix-logo {
+        width: 100vw;
+      }
+
+      .header-container h2 {
+        position: relative;
+        padding-left: 0.5em;
+        /*padding-left to make heading align up with the logo*/
+        font-family: 'proxima_nova_ltsemibold';
+        font-size: 3em;
+        color: #EFEFEF;
+      }
+    }
+
     /* Footer */
     footer{
       background:rgba(0,0,0,.7);

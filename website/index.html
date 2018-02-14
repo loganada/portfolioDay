@@ -121,11 +121,8 @@
     .navbar-light .navbar-toggler {
       background: rgba(157, 157, 157, .4);
     }
-
-    /*----Navigation Scrolled Effect----*/
-
-    .navbar-default.scrolled {
-      background: #000;
+    .navbar-default{
+      background:rgba(0,0,0,.7);
     }
 
     .section1 {
@@ -783,19 +780,11 @@
   <script>
     // On Up button click animated scroll to top of page
     $(document).ready(function() {
-      $('#toTopBtn').click(function() {
+      $('#toTopBtn,.navbar-brand').click(function() {
         $("html, body").animate({
           scrollTop:0 
         }, 1000)
       });
-    });
-    // On scroll down from top nav bar black background appears, when toggle nav bar is present remove background bar
-    $(window).scroll(function () {
-      $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
-      var current_width = $(window).width();
-      if (current_width < 992) {
-        $('nav').removeClass('scrolled');
-      }
     });
   </script>
 

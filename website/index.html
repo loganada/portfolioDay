@@ -783,6 +783,21 @@
         color: #EFEFEF;
       }
     }
+    @media only screen and (max-width:767px){
+      .mix-info {
+        height: 100%;
+      }
+    }
+    @media only screen and (max-width:493px){
+      iframe {
+        margin-top: 56px;
+      }
+      .mix-info .mix-info-container .mix-info-content {
+        padding: 0 2em;
+      }
+    }
+
+
 
     /* Footer */
     footer{
@@ -842,6 +857,8 @@
       background-color:rgba(0,0,0,.8);
       box-shadow: 0px 0px 0px 0px rgba(75, 75, 75, 0.5);
     }
+
+
   </style>
   <script>
     // On Up button click animated scroll to top of page
@@ -1000,7 +1017,7 @@
   <div class="mix-info" id="mix-info">
     <div class="mix-info-container">
       <h1 class="mix-info-title">What is Mix?</h1>
-      <div class="row">
+      <div class="row noPadding">
         <div class="col-md-6 col-12 ">
           <div class="mix-info-content">
             <div class="mix-heading">

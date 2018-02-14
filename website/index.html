@@ -4,7 +4,9 @@
 <head>
   <title>DMACC PORTFOLIO DAY</title>
   <meta charset="utf-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
   <!-- Bootstrap CSS -->
@@ -557,13 +559,13 @@
             <a class="nav-link" href="#mix-info"> WHAT IS MIX?</a>
           </li>
           <li class="desktop-menu-item">
-            <a class="nav-link" href="#graphic-design"> GRAPHIC DESIGN</a>
+            <a class="nav-link" href="#graphic-design" onclick="openGDAccordion()"> GRAPHIC DESIGN</a>
           </li>
           <li class="desktop-menu-item">
-            <a class="nav-link" href="#photography"> PHOTOGRAPHY</a>
+            <a class="nav-link" href="#photography" onclick="openPhotosAccordion()"> PHOTOGRAPHY</a>
           </li>
           <li class="desktop-menu-item">
-            <a class="nav-link" href="#web-development"> WEB DEVELOPMENT</a>
+            <a class="nav-link" href="#web-development" onclick="openWebAccordion()"> WEB DEVELOPMENT</a>
           </li>
         </ul>
       </div>
@@ -575,7 +577,7 @@
     </div>
     <!-- *******  IMPORTANT ******
       currently on refresh
-      The var path will need to be changed to the live version path when not on localhost 
+      The var path will need to be changed to the live version path when not on localhost
       to change the speed on myVar change the 500 to a smaller number for faster and a bigger number for slower
     *******************************************************-->
     <script>
@@ -695,9 +697,19 @@
     $("#accordion").accordion({
       heightStyle: "content",
       animate: 300,
-      collapsible: true //collapsible tabs on click - take out if dont like
-
+      collapsible: true, //collapsible tabs on click - take out if dont like
+      active:false
     });
+
+    
+function openWebAccordion(){
+  // Getter
+var active =   $("#accordion").accordion( "option", "active" );
+// Setter
+$("#accordion").accordion( "option", "active", 2 );
+callWebDevStudents();
+
+}
 
     function callWebDevStudents() {
       var xmlhttp = new XMLHttpRequest();

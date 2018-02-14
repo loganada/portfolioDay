@@ -648,7 +648,7 @@
 
     <!-- logo -->
     <div class="cycleThroughLogos">
-      
+
     </div>
     <h1 class="portfolioDayTextDMACC">DMACC</h1>
     <h1 class="portfolioDayTextPortfolio">Portfolio</h1>
@@ -777,8 +777,20 @@
       collapsible: true, //collapsible tabs on click - take out if dont like
       active:false
     });
-
-    
+    function openPhotosAccordion()
+    {
+      var active =   $("#accordion").accordion( "option", "active" );
+      // Setter
+      $("#accordion").accordion( "option", "active", 1 );
+      callPhotoStudents();
+    }
+    function openGDAccordion()
+    {
+      var active =   $("#accordion").accordion( "option", "active" );
+      // Setter
+      $("#accordion").accordion( "option", "active", 0 );
+      callGraphicDesignStudents();
+    }
 function openWebAccordion(){
   // Getter
 var active =   $("#accordion").accordion( "option", "active" );

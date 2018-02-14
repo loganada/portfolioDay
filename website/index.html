@@ -26,9 +26,7 @@
       font-family: 'proxima_nova_ltsemibold';
     }
 
-    .mix-logo {
-      z-index: 10;
-    }
+
 
     /*----Old TV Scanlines Screen Effect----*/
 
@@ -133,6 +131,48 @@
       height: 100vh;
       position: relative;
       background: url("assets/img/retro_80s_arcade.jpg") no-repeat;
+    }
+/*    .header-container {
+      position: absolute;
+      margin: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border:2px solid red;
+    }
+    img.mix-logo {
+      width: 75%;
+      vertical-align: middle;
+      border: 2px solid green;
+    }
+    .header-container h2 {
+      display: inline-block;
+      border: 2px solid white;
+      color: white;
+    }
+    .cycleThroughLogos {
+      border:2px solid yellow;
+    }*/
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+    .mix-logo {
+      width: 50vw;
+    }
+
+    .header-container h2 {
+      position: relative;
+      z-index: 100;
+      font-family: 'proxima_nova_ltsemibold';
+      font-size: 4em;
+      color: #9d9d9d;
     }
 
     /*----Accordion Styles----*/
@@ -605,6 +645,31 @@
       }
     }
 
+    @media only screen and (max-width:1000px){
+    .header-container {
+        display: block;
+/*        align-items: center;
+        justify-content: center;*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+      }
+      .mix-logo {
+        width: 50vw;
+      }
+
+      .header-container h2 {
+        position: relative;
+        padding-left: 0.5em;
+        /*padding-left to make heading align up with the logo*/
+        font-family: 'proxima_nova_ltsemibold';
+        font-size: 3em;
+        color: #9d9d9d;
+      }
+    }
+
     /* Up Button */
     #fixedBtn {
       position: fixed;
@@ -652,7 +717,7 @@
     });
   </script>
 
-  <style>
+<!--   <style>
     .section1 .portfolioDayTextDMACC {
       z-index: 10;
       font-family: 'proxima_nova_ltsemibold';
@@ -705,7 +770,7 @@
        
       }
     }
-  </style>
+  </style> -->
 </head>
 
 <body id="page-top">
@@ -741,14 +806,16 @@
     <!--end navigation -->
 
     <!-- logo -->
-
-    <div class="cycleThroughLogos"></div>
+    <div class="header-container">
+        <span class="cycleThroughLogos"></span>
+        <h2>DMACC <br> PORTFOLIO <br> DAY</h2>
+    </div>
   
-        <h2 class="portfolioDayTextDMACC">DMACC</h2>
+<!--         <h2 class="portfolioDayTextDMACC">DMACC</h2>
 
         <h2 class="portfolioDayTextPortfolio">Portfolio</h2>
 
-        <h2 class="portfolioDayTextDay">Day</h2>
+        <h2 class="portfolioDayTextDay">Day</h2> -->
     
     <!-- *******  IMPORTANT ******
       currently on refresh
@@ -756,7 +823,7 @@
       to change the speed on myVar change the 500 to a smaller number for faster and a bigger number for slower
     *******************************************************-->
     <script>
-      var myVar = setInterval(cycleThroughImages, 500);
+      var myVar = setInterval(cycleThroughImages, 1200);
       var path = 'assets/img/MIX_logos_forWeb/',
         imgs = ['MIX_Logo_Artboard 1 _web.png', 'MIX_Logo_Artboard 2 _web.png', 'MIX_Logo_Artboard 3 _web.png',
           'MIX_Logo_Artboard 4 _web.png', 'MIX_Logo_Artboard 5 _web.png', 'MIX_Logo_Artboard 6 _web.png',

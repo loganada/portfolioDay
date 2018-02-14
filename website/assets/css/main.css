@@ -29,7 +29,8 @@
 .section1 {
   height: 100vh;
   position: relative;
-  background: #5E4B8D; }
+  background: #5E4B8D;
+  background: url("../img/retro_80s_arcade.jpg") no-repeat; }
   .section1 .mix-logo {
     position: absolute;
     top: 50%;
@@ -40,16 +41,12 @@
 
 /* What is Mix? Section */
 .mix-info {
-  height: 100vh;
+  height: 50em;
   background: white;
-  position: relative; }
+  margin-top: 0.7em; }
   .mix-info .mix-info-container {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    margin-top: 5%;
+    margin-bottom: 5%; }
     .mix-info .mix-info-container .mix-info-title {
       margin-bottom: 75px;
       font-family: "Neoneon-Regular";

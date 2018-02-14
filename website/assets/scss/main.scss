@@ -49,6 +49,7 @@ $secondary-color3: #D4B04F;
 	height: 100vh;
 	position: relative;	
 	background: $primary-color1;
+    background: url("../img/retro_80s_arcade.jpg") no-repeat;
 	.mix-logo {
 	    position: absolute;
 	    top: 50%;
@@ -61,14 +62,12 @@ $secondary-color3: #D4B04F;
 /* What is Mix? Section */
 
 .mix-info {
-	height: 100vh;
+	height: 50em;
 	background: white;
-	position: relative;
+	margin-top: 0.7em;
 	.mix-info-container {
-	    position: relative;
-	    top: 50%;
-	    left: 50%;
-	    transform: translate(-50%, -50%);
+		margin-top: 5%;
+		margin-bottom: 5%;
 		.mix-info-title {
 			margin-bottom: 75px;
 			font-family: "Neoneon-Regular";

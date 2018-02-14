@@ -127,12 +127,6 @@
       background: #000;
     }
 
-    @media screen and (max-width:992px) {
-      .navbar-default.scrolled {
-        display: none;
-      }
-    }
-
     /*----Section 1----*/
 
     .section1 {
@@ -235,38 +229,41 @@
       background: linear-gradient(to bottom, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
     }
 
+    /* Accordion Bio Images Effects */
+    .bioImageEffect:hover {
+      filter: contrast(1.4) saturate(1.8) sepia(.6);
+        -webkit-filter: contrast(1.4) saturate(1.8) sepia(.6);
+    }
+
+    /* Accordion Images */
+    .picture {
+      margin: 4%;
+    }
+
     /*----FONTS----*/
 
-    /*----Basic Neon Glow Text----*/
+    /*----Accordian Headers Basic Neon Glow Text----*/
 
     .neon {
       font-family: 'neoneonregular';
       text-align: center;
       font-size: 120px;
     }
-
     .pink {
       color: #ffffff;
       text-shadow: 0px 0px 200px #ff91fc, 0px 0px 30px #ff49fb, -1px -1px 5px #fff, 10px 1px 100px #af00b2;
     }
 
-    /* IMAGES*/
-
-    .picture {
-      margin: 4%;
-    }
-
-
     /*MODAL*/
 
     /* The Modal (background) */
 
-    .modal {
+    .bioModal {
       display: none;
       /* Hidden by default */
       position: fixed;
       /* Stay in place */
-      z-index: 1;
+      z-index: 12;
       /* Sit on top */
       padding-top: 100px;
       /* Location of the box */
@@ -280,47 +277,54 @@
       /* Enable scroll if needed */
       background-color: rgb(0, 0, 0);
       /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.7);
       /* Black w/ opacity */
     }
 
-    /* Modal Content */
-
-    .modal-content {
-      background-color: #fefefe;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-    }
-
-    /* The Close Button */
+    /* Modal Close Button */
 
     .close {
-      color: #aaaaaa;
-      float: right;
-      font-size: 28px;
+      background-color:rgba(0,0,0,.8);
+      padding:2px 8px 8px 9px;
+      color: #9d9d9d;
+      position:absolute;
+      top:0px;
+      right:0px;
+      z-index:13;
+      font-size: 2em;
       font-weight: bold;
+      border-radius:2px 0 2px 2px;
     }
 
     .close:hover,
     .close:focus {
-      color: #000;
+      color: #ffffff;
       text-decoration: none;
       cursor: pointer;
     }
+    
 
-    #modalPhoto {}
-
-    .modal-content {
-      width: 100wh;
-      height: 90vh;
+    /* Modal Content */
+    .modalContent {
+      border-radius:2px;
+      position:relative;
+      box-shadow: 0px 0px 1px 1px #191919;
+      width:90%;
+      margin:0 auto;
       color: #fff;
       background: linear-gradient(-45deg, #ffffff, #EE7752, #E73C7E, #23A6D5, #23D5AB, #fbad2f);
       background-size: 400% 400%;
       -webkit-animation: Gradient 15s ease infinite;
       -moz-animation: Gradient 15s ease infinite;
       animation: Gradient 15s ease infinite;
+    }
+
+    #modalPhoto img{
+      display:block;
+      width:80%;
+      margin-left:auto;
+      margin-right:auto;
+      padding:7% 6% 6% 6%;
     }
 
     @-webkit-keyframes Gradient {
@@ -359,23 +363,43 @@
       }
     }
 
-    /*---Glitch Text Effect 1----*/
-
+    /* Modal Text */
     #modalText {
-      position: absolute;
-      right: 10%;
-      top: 40%;
+      padding:6%;      
       font-family: 'proxima_nova_ltsemibold';
-      text-shadow: 1px 1px black;
+      color:#f5f5f5;
+    }
+    #modalText p{
+      font-size:1.3em;
+    }
+    .bioFooter{
+      list-style-type:none;
+      text-align:center;
+      font-size:1.8em;
+      padding-bottom:2%;
+    }
+    .bioFooter li{
+      display:inline;
+      padding:2%;
+    }
+    .bioFooter a{
+      color:#5E4B8D;
+      font-style:italic;
+      font-family: 'proxima_nova_ltsemibold';
+    }
+    .bioFooter a:hover{
+      color:#ffffff;
     }
 
+    /*---Modal Name Glitch Text Effect----*/
     .glitch {
       font-family: 'proxima_nova_ltsemibold';
       color: white;
       font-size: 50px;
       position: relative;
-      width: 400px;
+      padding-bottom:3%;
       margin: 0 auto;
+      text-shadow: 1px 1px black;
     }
 
     @keyframes noise-anim {
@@ -535,8 +559,90 @@
       clip: rect(0, 900px, 0, 0);
       animation: noise-anim-2 3s infinite linear alternate-reverse;
     }
+
+    /* Modal Media Queries */
+    @media only screen and (max-width:991px){
+      #modalPhoto img{
+        width:70%;
+        padding-bottom:3%;
+      }
+      #modalText{
+        padding:0 6% 2% 6%;
+        width:70%;
+        margin:0 auto;
+      }
+      .bioFooter li{
+        display:block;
+        padding:0;
+      }
+    }
+    @media only screen and (max-width:600px){
+      .modalContent{
+        width:100%;
+      }
+      #modalPhoto img{
+        width:95%;
+        padding-bottom:1%;
+      }
+      #modalText{
+        padding:0 6% 2% 6%;
+        width:95%;
+        margin:0 auto;
+      }
+    }
+    @media only screen and (max-width:425px){
+      .glitch{
+        font-size:2.5em;
+      }
+      #modalText h3{
+        font-size:1.3em;
+      }
+      #modalText p{
+        font-size:1.2em;
+      }
+      .bioFooter{
+        font-size:1.3em;
+      }
+    }
+
+    /* Up Button */
+    #fixedBtn {
+      position: fixed;
+      bottom: 8%;
+      right: 1.5%;
+      z-index: 15;
+    }
+    #toTopBtn {
+      border-radius:2px;
+      font-family: Georgia;
+      color: #9d9d9d;
+      font-size: 26px;
+      font-weight: bold;
+      background-color:rgba(0,0,0,.6);
+      padding: 7px 10px 1px 10px;
+      -webkit-box-shadow: 0px 0px 6px 1px rgba(75, 75, 75, 0.5);
+      -moz-box-shadow: 0px 0px 6px 1px rgba(75, 75, 75, 0.5);
+      box-shadow: 0px 0px 6px 1px rgba(75, 75, 75, 0.5);
+      text-decoration: none;
+      transition: 0.6s ease;
+    }
+    #toTopBtn:hover {
+      color: #ffffff;
+      text-decoration: none;
+      background-color:rgba(0,0,0,.8);
+      box-shadow: 0px 0px 0px 0px rgba(75, 75, 75, 0.5);
+    }
   </style>
   <script>
+    // On Up button click animated scroll to top of page
+    $(document).ready(function() {
+      $('#toTopBtn').click(function() {
+        $("html, body").animate({
+          scrollTop:0 
+        }, 1000)
+      });
+    });
+    // On scroll down from top nav bar black background appears, when toggle nav bar is present remove background bar
     $(window).scroll(function () {
       $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
       var current_width = $(window).width();
@@ -603,6 +709,7 @@
 </head>
 
 <body id="page-top">
+  <!--Section 1-->
   <div class="section1 scanlines">
     <!--Navigation-->
     <nav class="navbar navbar-default navbar-expand-lg navbar-light fixed-top">
@@ -636,18 +743,12 @@
     <!-- logo -->
 
     <div class="cycleThroughLogos"></div>
-
-    
-     
+  
         <h2 class="portfolioDayTextDMACC">DMACC</h2>
 
         <h2 class="portfolioDayTextPortfolio">Portfolio</h2>
 
         <h2 class="portfolioDayTextDay">Day</h2>
-
-   
-    
-    
     
     <!-- *******  IMPORTANT ******
       currently on refresh
@@ -692,9 +793,9 @@
           "'>");
       }
     </script>
-
-  </div>
-  <!--end section 1 -->
+  </div><!--end section 1 -->
+  
+  <!--Section 2-->
   <div class="mix-info" id="mix-info">
     <div class="mix-info-container">
       <h1 class="mix-info-title">What is Mix?</h1>
@@ -728,13 +829,9 @@
         </div>
       </div>
     </div>
-  </div>
-  <script>
-    window.onload = function () {
-      callGraphicDesignStudents();
-    }
-  </script>
+  </div><!--End Section 2-->
 
+  <!--Section 3 Accordion-->
   <div id="accordion">
     <h3 class="neon pink" id="graphic-design" onclick="callGraphicDesignStudents()">Graphic Design</h3>
     <div class="center-people graphic">
@@ -748,36 +845,60 @@
     <div class="center-people web">
       <p id="webDev"></p>
     </div>
-  </div>
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <img id="modalPhoto" width='400px' src='assets/img/girl.jpg' />
-
-      <div id="modalText">
-        <div class="glitch" data-text="Jane Doe">Jane Doe</div>
-        <p id="modalBody">Some text in the Modal..</p>
-        <p id="modalFoot">janedoe.com | janedoe@gmail.com | (515) 555-5555</p>
-      </div>
-    </div>
-
-  </div>
+  </div><!--End Section 3-->
+  
+  <!-- The Bio Modal -->
+  <div id="myModal" class="bioModal">
+      <div class ="container-fluid">
+        <!-- Modal content -->
+        <div class="modalContent">
+          <div class="row">
+            <span class="close">&times;</span>
+            <div id="modalPhoto" class="col-lg-6 col-12">
+              <img width='400px' src='assets/img/girl.jpg'/>
+            </div>
+            <div class="col-lg-6 col-12">
+              <div id="modalText">
+                <div class="glitch" data-text="JANE DOE">JANE DOE</div>
+                <h3>MAJOR</h3>
+                <p>Web Development</p>
+                <h3>HOMETOWN</h3>
+                <p>Des Moines, Iowa</p>
+                <h3>CAREER GOALS</h3>
+                <p>Just being totally awesome at my job!</p>
+                <h3>THREE WORDS TO DESCRIBE ME</h3>
+                <p>Smart, Really Smart, &amp; Uber Smart</p>
+              </div>
+            </div>
+          </div><!--End Row -->
+          <div class="row">
+            <div class="col-12">
+              <ul class="bioFooter">
+                <li><a href="#">MY PORTFOLIO</a></li>
+                <li><a href="#">MY REPO</a></li>
+                <li><a href="#">JANEDOE@GMAIL.COM</a></li>
+              </ul>
+            </div>
+          </div><!--End Row-->
+        </div>
+     </div>
+    </div><!--End Bio Modal-->
+  
+    <!--Up Page Button-->
+    <p id="fixedBtn"><a id="toTopBtn" href="#">^</a></p>
   <script>
     $("#accordion").accordion({
       heightStyle: "content",
       animate: 300,
-      collapsible: true, //collapsible tabs on click - take out if dont like
+      collapsible: true, 
       active:false
     });
     function openPhotosAccordion()
     {
       $( "#accordion" ).accordion({
-  active: 2
-});
-      var active =   $("#accordion").accordion( "option", "active" );
+       active: 2
+      });
+      var active = $("#accordion").accordion( "option", "active" );
       // Setter
       $("#accordion").accordion( "option", "active", 1 );
       callPhotoStudents();
@@ -785,25 +906,25 @@
     function openGDAccordion()
     {
       $( "#accordion" ).accordion({
-  active: 2
-});
-      var active =   $("#accordion").accordion( "option", "active" );
+        active: 2
+      });
+      var active = $("#accordion").accordion( "option", "active" );
       // Setter
       $("#accordion").accordion( "option", "active", 0 );
       callGraphicDesignStudents();
     }
 
-function openWebAccordion(){
-  $( "#accordion" ).accordion({
-  active: 2
-});
-  // Getter
-var active =   $("#accordion").accordion( "option", "active" );
-// Setter
-$("#accordion").accordion( "option", "active", 2 );
-callWebDevStudents();
-
-}
+    function openWebAccordion()
+    {
+      $( "#accordion" ).accordion({
+      active: 2
+      });
+        // Getter
+      var active = $("#accordion").accordion( "option", "active" );
+      // Setter
+      $("#accordion").accordion( "option", "active", 2 );
+      callWebDevStudents();
+    }
 
     function callWebDevStudents() {
       var xmlhttp = new XMLHttpRequest();
@@ -815,7 +936,6 @@ callWebDevStudents();
       xmlhttp.open("GET", "assets/php/webDevStudents.php", true);
       xmlhttp.send();
     }
-
 
     function callGraphicDesignStudents() {
       var xmlhttp = new XMLHttpRequest();
@@ -838,28 +958,27 @@ callWebDevStudents();
       xmlhttp.open("GET", "assets/php/photographyStudents.php", true);
       xmlhttp.send();
     }
+    //Modal Scripts 
     // Get the modal
-    var modal = document.getElementById('myModal');
+    var bioModal = document.getElementById('myModal');
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks the button, open the modal
     function modalDisplay() {
-      modal.style.display = "block";
-
+      bioModal.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
-      modal.style.display = "none";
+      bioModal.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-
+      if (event.target ==bioModal) {
+        bioModal.style.display = "none";
       }
     }
   </script>

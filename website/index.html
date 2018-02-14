@@ -19,10 +19,9 @@
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
   <style>
-    /* font family for content */
+    /* Main Font */
 
-    .mix-info-content,
-    .model-content p {
+    .mix-info-content{
       font-family: 'proxima_nova_ltsemibold';
     }
 
@@ -101,6 +100,10 @@
     }
 
     /*----Navigation----*/
+    /* Navbar Brand Logo Invert Color On Hover */
+    .navbar-brand:hover{
+      filter:invert(100%);
+    }
 
     .navbar-light .navbar-nav .nav-link {
       color: #9d9d9d;
@@ -126,8 +129,6 @@
     .navbar-default.scrolled {
       background: #000;
     }
-
-    /*----Section 1----*/
 
     .section1 {
       height: 100vh;
@@ -229,17 +230,98 @@
       background: linear-gradient(to bottom, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
     }
 
-    /* Accordion Bio Images Effects */
-    .bioImageEffect:hover {
-      filter: contrast(1.4) saturate(1.8) sepia(.6);
-        -webkit-filter: contrast(1.4) saturate(1.8) sepia(.6);
+    
+    /* Accordion Images Effects */
+    #graphicDesignStudents img:hover,#photo img:hover,#webDev img:hover{
+      filter: contrast(2);
+      -webkit-filter: contrast(2);
+      cursor:pointer;
     }
-
-    /* Accordion Images */
     .picture {
-      margin: 4%;
+      -webkit-transition: all .3s;
+          transition: all .3s;
     }
-
+    /* Accordion Glitch Image Border */
+    .imageBorder {
+      margin: 4%;
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      z-index: 1;
+    }
+    .imageBorder:before,
+    .imageBorder:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .imageBorder:before {
+      background-color: #00ffff;
+      z-index: -1;
+    }
+    .imageBorder:after {
+      background-color: #ff00ff;
+      z-index: -2;
+    }
+    .imageBorder:hover .link-inner {
+      -webkit-animation: glitchy 0.5s ease 1;
+              animation: glitchy 0.5s ease 1;
+    }
+    .imageBorder:hover:before {
+      -webkit-animation: glitchy 0.5s ease 0.5s infinite;
+              animation: glitchy 0.5s ease 0.5s infinite;
+    }
+    .imageBorder:hover:after {
+      animation: glitchy 0.5s ease infinite reverse;
+    }
+    @-webkit-keyframes glitchy {
+      0% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+      }
+      25% {
+        -webkit-transform: translate(-2px, -2px);
+                transform: translate(-2px, -2px);
+      }
+      50% {
+        -webkit-transform: translate(2px, 2px);
+                transform: translate(2px, 2px);
+      }
+      75% {
+        -webkit-transform: translate(2px, -2px);
+                transform: translate(2px, -2px);
+      }
+      100% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+      }
+    }
+    @keyframes glitchy {
+      0% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+      }
+      25% {
+        -webkit-transform: translate(-2px, -2px);
+                transform: translate(-2px, -2px);
+      }
+      50% {
+        -webkit-transform: translate(2px, 2px);
+                transform: translate(2px, 2px);
+      }
+      75% {
+        -webkit-transform: translate(2px, -2px);
+                transform: translate(2px, -2px);
+      }
+      100% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+      }
+    }
+    
     /*----FONTS----*/
 
     /*----Accordian Headers Basic Neon Glow Text----*/
@@ -750,12 +832,8 @@
 
         <h2 class="portfolioDayTextDay">Day</h2>
     
-    <!-- *******  IMPORTANT ******
-      currently on refresh
-      The var path will need to be changed to the live version path when not on localhost
-      to change the speed on myVar change the 500 to a smaller number for faster and a bigger number for slower
-    *******************************************************-->
     <script>
+      //Main MIX logo animation rotate
       var myVar = setInterval(cycleThroughImages, 500);
       var path = 'assets/img/MIX_logos_forWeb/',
         imgs = ['MIX_Logo_Artboard 1 _web.png', 'MIX_Logo_Artboard 2 _web.png', 'MIX_Logo_Artboard 3 _web.png',

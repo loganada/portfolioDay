@@ -844,12 +844,16 @@
     }
   </style>
   <script>
-    // On Up button click animated scroll to top of page
+    // on nav links or up button click animated easy scroll to section
     $(document).ready(function() {
-      $('#toTopBtn,.navbar-brand').click(function() {
-        $("html, body").animate({
-          scrollTop:0 
-        }, 1000)
+      $("a[href^='#']").click(function(e) {
+        e.preventDefault();
+
+        var position = $($(this).attr("href")).offset().top;
+      
+        $("body, html").animate({
+          scrollTop: position
+        }, 1000 );
       });
     });
   </script>
@@ -1092,7 +1096,7 @@
     </footer>
 
     <!--Up Page Button-->
-    <p id="fixedBtn"><a id="toTopBtn" href="#">^</a></p>
+    <p id="fixedBtn"><a id="toTopBtn" href="#page-top">^</a></p>
   <script>
     $("#accordion").accordion({
       heightStyle: "content",

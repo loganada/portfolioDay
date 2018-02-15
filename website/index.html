@@ -20,18 +20,45 @@
 
   <script>
     // on nav links or up button click animated easy scroll to section
-    $(document).ready(function() {
-      $("a[href^='#']").click(function(e) {
+    $(document).ready(function () {
+      $("a[href^='#']").click(function (e) {
         e.preventDefault();
 
-        var position = $($(this).attr("href")).offset().top -71;
-      
+        var position = $($(this).attr("href")).offset().top - 71;
+
         $("body, html").animate({
           scrollTop: position
-        }, 1000 );
+        }, 1000);
       });
     });
   </script>
+
+
+<!-- mix text, to keep it in place when switching between logos -->
+  <style>
+  .header-text {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-family: 'proxima_nova_ltsemibold';
+    font-size: 3em;
+    color: #9d9d9d;
+  }
+
+@media only screen and (max-width: 640px) {
+  .header-text {
+    display: block;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; 
+  }
+}
+  </style>
 </head>
 
 <body id="page-top">
@@ -68,10 +95,14 @@
 
     <!-- logo -->
     <div class="header-container">
-        <span class="cycleThroughLogos"></span>
-        <h2>DMACC <br> PORTFOLIO <br> DAY</h2>
+      <span class="cycleThroughLogos"></span>
     </div>
     
+<div class="header-text">
+  <h2>DMACC
+    <br> PORTFOLIO
+    <br> DAY</h2>
+</div>
     <script>
       //Main MIX logo animation rotate
       var myVar = setInterval(cycleThroughImages, 1200);
@@ -82,27 +113,27 @@
           'MIX_Logo_Artboard 7 _web.png', 'MIX_Logo_Artboard 8 _web.png', 'MIX_Logo_Artboard 9 _web.png',
           'MIX_Logo_Artboard 10 _web.png', 'MIX_Logo_Artboard 11 _web.png', 'MIX_Logo_Artboard 12 _web.png',
           'MIX_Logo_Artboard 13 _web.png', 'MIX_Logo_Artboard 14 _web.png', 'MIX_Logo_Artboard 15 _web.png',
-          'MIX_Logo_Artboard 16 _web.png', 'MIX_Logo_Artboard 17 _web.png',
-          'MIX_Logo_Artboard 19 _web.png', 'MIX_Logo_Artboard 20 _web.png', 'MIX_Logo_Artboard 21 _web.png',
-          'MIX_Logo_Artboard 22 _web.png', 'MIX_Logo_Artboard 23 _web.png', 'MIX_Logo_Artboard 24 _web.png',
-          'MIX_Logo_Artboard 25 _web.png', 'MIX_Logo_Artboard 26 _web.png', 'MIX_Logo_Artboard 27 _web.png',
-          'MIX_Logo_Artboard 28 _web.png', 'MIX_Logo_Artboard 29 _web.png', 'MIX_Logo_Artboard 30 _web.png',
-          'MIX_Logo_Artboard 31 _web.png', 'MIX_Logo_Artboard 32 _web.png', 'MIX_Logo_Artboard 33 _web.png',
-          'MIX_Logo_Artboard 34 _web.png', 'MIX_Logo_Artboard 35 _web.png', 'MIX_Logo_Artboard 36 _web.png',
-          'MIX_Logo_Artboard 37 _web.png', 'MIX_Logo_Artboard 38 _web.png', 'MIX_Logo_Artboard 39 _web.png',
-          'MIX_Logo_Artboard 40 _web.png', 'MIX_Logo_Artboard 41 _web.png', 'MIX_Logo_Artboard 42 _web.png',
-          'MIX_Logo_Artboard 44 _web.png', 'MIX_Logo_Artboard 45 _web.png', 'MIX_Logo_Artboard 46 _web.png', 
-          'MIX_Logo_Artboard 47 _web.png', 'MIX_Logo_Artboard 48 _web.png', 'MIX_Logo_Artboard 49 _web.png', 
-          'MIX_Logo_Artboard 50 _web.png', 'MIX_Logo_Artboard 51 _web.png','MIX_Logo_Artboard 52 _web.png', 
-          'MIX_Logo_Artboard 54 _web.png', 'MIX_Logo_Artboard 55 _web.png', 'MIX_Logo_Artboard 56 _web.png', 
-          'MIX_Logo_Artboard 58 _web.png', 'MIX_Logo_Artboard 59 _web.png', 'MIX_Logo_Artboard 60 _web.png', 
-          'MIX_Logo_Artboard 61 _web.png', 'MIX_Logo_Artboard 62 _web.png', 'MIX_Logo_Artboard 63 _web.png',
-          'MIX_Logo_Artboard 64 _web.png', 'MIX_Logo_Artboard 65 _web.png', 'MIX_Logo_Artboard 66 _web.png',
-          'MIX_Logo_Artboard 68 _web.png', 'MIX_Logo_Artboard 69 _web.png', 'MIX_Logo_Artboard 70 _web.png', 
-          'MIX_Logo_Artboard 71 _web.png', 'MIX_Logo_Artboard 72 _web.png', 'MIX_Logo_Artboard 73 _web.png', 
-          'MIX_Logo_Artboard 74 _web.png', 'MIX_Logo_Artboard 75 _web.png','MIX_Logo_Artboard 76 _web.png', 
-          'MIX_Logo_Artboard 77 _web.png', 'MIX_Logo_Artboard 78 _web.png', 'MIX_Logo_Artboard 80 _web.png', 
-          'MIX_Logo_Artboard 81 _web.png', 'MIX_Logo_Artboard 82 _web.png', 'MIX_Logo_Artboard 83 _web.png'
+          'MIX_Logo_Artboard 16 _web.png', 'MIX_Logo_Artboard 17 _web.png', 'MIX_Logo_Artboard 19 _web.png',
+          'MIX_Logo_Artboard 20 _web.png', 'MIX_Logo_Artboard 21 _web.png', 'MIX_Logo_Artboard 22 _web.png', 
+          'MIX_Logo_Artboard 23 _web.png', 'MIX_Logo_Artboard 24 _web.png','MIX_Logo_Artboard 25 _web.png', 
+          'MIX_Logo_Artboard 26 _web.png', 'MIX_Logo_Artboard 27 _web.png','MIX_Logo_Artboard 28 _web.png', 
+          'MIX_Logo_Artboard 29 _web.png', 'MIX_Logo_Artboard 30 _web.png','MIX_Logo_Artboard 31 _web.png', 
+          'MIX_Logo_Artboard 32 _web.png', 'MIX_Logo_Artboard 33 _web.png','MIX_Logo_Artboard 34 _web.png', 
+          'MIX_Logo_Artboard 35 _web.png', 'MIX_Logo_Artboard 36 _web.png','MIX_Logo_Artboard 37 _web.png', 
+          'MIX_Logo_Artboard 38 _web.png', 'MIX_Logo_Artboard 39 _web.png','MIX_Logo_Artboard 40 _web.png', 
+          'MIX_Logo_Artboard 41 _web.png', 'MIX_Logo_Artboard 42 _web.png','MIX_Logo_Artboard 44 _web.png', 
+          'MIX_Logo_Artboard 45 _web.png', 'MIX_Logo_Artboard 46 _web.png','MIX_Logo_Artboard 47 _web.png', 
+          'MIX_Logo_Artboard 48 _web.png', 'MIX_Logo_Artboard 49 _web.png','MIX_Logo_Artboard 50 _web.png', 
+          'MIX_Logo_Artboard 51 _web.png', 'MIX_Logo_Artboard 52 _web.png','MIX_Logo_Artboard 54 _web.png', 
+          'MIX_Logo_Artboard 55 _web.png', 'MIX_Logo_Artboard 56 _web.png','MIX_Logo_Artboard 58 _web.png', 
+          'MIX_Logo_Artboard 59 _web.png', 'MIX_Logo_Artboard 60 _web.png','MIX_Logo_Artboard 61 _web.png', 
+          'MIX_Logo_Artboard 62 _web.png', 'MIX_Logo_Artboard 63 _web.png','MIX_Logo_Artboard 64 _web.png', 
+          'MIX_Logo_Artboard 65 _web.png', 'MIX_Logo_Artboard 66 _web.png','MIX_Logo_Artboard 68 _web.png', 
+          'MIX_Logo_Artboard 69 _web.png', 'MIX_Logo_Artboard 70 _web.png','MIX_Logo_Artboard 71 _web.png', 
+          'MIX_Logo_Artboard 72 _web.png', 'MIX_Logo_Artboard 73 _web.png','MIX_Logo_Artboard 74 _web.png', 
+          'MIX_Logo_Artboard 75 _web.png', 'MIX_Logo_Artboard 76 _web.png','MIX_Logo_Artboard 77 _web.png', 
+          'MIX_Logo_Artboard 78 _web.png', 'MIX_Logo_Artboard 80 _web.png','MIX_Logo_Artboard 81 _web.png', 
+          'MIX_Logo_Artboard 82 _web.png', 'MIX_Logo_Artboard 83 _web.png'
         ];
 
       function cycleThroughImages() {
@@ -112,8 +143,9 @@
           "'>");
       }
     </script>
-  </div><!--end section 1 -->
-  
+  </div>
+  <!--end section 1 -->
+
   <!--Section 2-->
   <div class="mix-info" id="mix-info">
     <div class="mix-info-container">
@@ -148,7 +180,8 @@
         </div>
       </div>
     </div>
-  </div><!--End Section 2-->
+  </div>
+  <!--End Section 2-->
 
   <!--Section 3 Accordion-->
   <div id="accordion">
@@ -164,90 +197,103 @@
     <div class="center-people web">
       <p id="webDev"></p>
     </div>
-  </div><!--End Section 3-->
-  
+  </div>
+  <!--End Section 3-->
+
   <!-- The Bio Modal -->
   <div id="myModal" class="bioModal">
-      <div class ="container-fluid">
-        <!-- Modal content -->
-        <div class="modalContent">
-          <div class="row">
-            <span class="close">&times;</span>
-            <div id="modalPhoto" class="col-lg-6 col-12">
-              <img width='400px' src='assets/img/girl.jpg'/>
+    <div class="container-fluid">
+      <!-- Modal content -->
+      <div class="modalContent">
+        <div class="row">
+          <span class="close">&times;</span>
+          <div id="modalPhoto" class="col-lg-6 col-12">
+            <img width='400px' src='assets/img/girl.jpg' />
+          </div>
+          <div class="col-lg-6 col-12">
+            <div id="modalText">
+              <div class="glitch" data-text="JANE DOE">JANE DOE</div>
+              <h3>MAJOR</h3>
+              <p>Web Development</p>
+              <h3>HOMETOWN</h3>
+              <p>Des Moines, Iowa</p>
+              <h3>CAREER GOALS</h3>
+              <p>Just being totally awesome at my job!</p>
+              <h3>THREE WORDS TO DESCRIBE ME</h3>
+              <p>Smart, Really Smart, &amp; Uber Smart</p>
             </div>
-            <div class="col-lg-6 col-12">
-              <div id="modalText">
-                <div class="glitch" data-text="JANE DOE">JANE DOE</div>
-                <h3>MAJOR</h3>
-                <p>Web Development</p>
-                <h3>HOMETOWN</h3>
-                <p>Des Moines, Iowa</p>
-                <h3>CAREER GOALS</h3>
-                <p>Just being totally awesome at my job!</p>
-                <h3>THREE WORDS TO DESCRIBE ME</h3>
-                <p>Smart, Really Smart, &amp; Uber Smart</p>
-              </div>
-            </div>
-          </div><!--End Row -->
-          <div class="row">
-            <div class="col-12">
-              <ul class="bioFooter">
-                <li><a href="#">MY PORTFOLIO</a></li>
-                <li><a href="#">MY REPO</a></li>
-                <li><a href="#">JANEDOE@GMAIL.COM</a></li>
-              </ul>
-            </div>
-          </div><!--End Row-->
+          </div>
         </div>
-     </div>
-    </div><!--End Bio Modal-->
-  
-    <footer>
-      <p>DMACC PORTFOLIO DAY 2018</p>
-      <p>Developed &amp; Designed by Students</p>
-      <p><a href="https://www.behance.net/gallery/55332529/NEONEON-FREE-FONT">Neoneon Font developed by Bakoom Studio</a></p>
-    </footer>
+        <!--End Row -->
+        <div class="row">
+          <div class="col-12">
+            <ul class="bioFooter">
+              <li>
+                <a href="#">MY PORTFOLIO</a>
+              </li>
+              <li>
+                <a href="#">MY REPO</a>
+              </li>
+              <li>
+                <a href="#">JANEDOE@GMAIL.COM</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--End Row-->
+      </div>
+    </div>
+  </div>
+  <!--End Bio Modal-->
 
-    <!--Up Page Button-->
-    <p id="fixedBtn"><a id="toTopBtn" href="#page-top">^</a></p>
+  <footer>
+    <p>DMACC PORTFOLIO DAY 2018</p>
+    <p>Developed &amp; Designed by Students</p>
+    <p>
+      <a href="https://www.behance.net/gallery/55332529/NEONEON-FREE-FONT">Neoneon Font developed by Bakoom Studio</a>
+    </p>
+  </footer>
+
+  <!--Up Page Button-->
+  <p id="fixedBtn">
+    <a id="toTopBtn" href="#page-top">^</a>
+  </p>
   <script>
     $("#accordion").accordion({
       heightStyle: "content",
       animate: 300,
-      collapsible: true, 
-      active:false
+      collapsible: true,
+      active: false
     });
-    function openPhotosAccordion()
-    {
-      $( "#accordion" ).accordion({
-       active: 2
-      });
-      var active = $("#accordion").accordion( "option", "active" );
-      // Setter
-      $("#accordion").accordion( "option", "active", 1 );
-      callPhotoStudents();
-    }
-    function openGDAccordion()
-    {
-      $( "#accordion" ).accordion({
+
+    function openPhotosAccordion() {
+      $("#accordion").accordion({
         active: 2
       });
-      var active = $("#accordion").accordion( "option", "active" );
+      var active = $("#accordion").accordion("option", "active");
       // Setter
-      $("#accordion").accordion( "option", "active", 0 );
+      $("#accordion").accordion("option", "active", 1);
+      callPhotoStudents();
+    }
+
+    function openGDAccordion() {
+      $("#accordion").accordion({
+        active: 2
+      });
+      var active = $("#accordion").accordion("option", "active");
+      // Setter
+      $("#accordion").accordion("option", "active", 0);
       callGraphicDesignStudents();
     }
 
-    function openWebAccordion()
-    {
-      $( "#accordion" ).accordion({
-      active: 2
+    function openWebAccordion() {
+      $("#accordion").accordion({
+        active: 2
       });
-        // Getter
-      var active = $("#accordion").accordion( "option", "active" );
+      // Getter
+      var active = $("#accordion").accordion("option", "active");
       // Setter
-      $("#accordion").accordion( "option", "active", 2 );
+      $("#accordion").accordion("option", "active", 2);
       callWebDevStudents();
     }
 
@@ -302,7 +348,7 @@
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-      if (event.target ==bioModal) {
+      if (event.target == bioModal) {
         bioModal.style.display = "none";
       }
     }

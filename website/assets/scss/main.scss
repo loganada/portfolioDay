@@ -1,13 +1,3 @@
-
-/* FONTS */
-@font-face {
-    font-family: 'Neoneon-Regular';
-    src: url('../fonts/neoneon/neoneon-webfont.woff2') format('woff2'),
-         url('../fonts/neoneon/neoneon-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* SCSS VARIABLES */
 
 $primary-color1: #5E4B8D;
@@ -28,74 +18,854 @@ $secondary-color3: #D4B04F;
 	padding: 0;
 }
 
-.mix-logo {
-	display: block;
-	width: 75%;
-	margin: 0 auto;
+body {
+      letter-spacing: .03em;
 }
 
+
+
 /* Navigation Bar */
-.navbar {
-	margin: 0;
-	padding: 0;
-	.desktop-menu-item {
-		padding: 14px 17px;
+	.navbar {
+		margin: 0;
+		padding: 0;
+		.desktop-menu-item {
+			padding: 14px 17px;
+		}
 	}
-}
+
+    /* Navbar Brand Logo Invert Color On Hover */
+    .navbar-brand:hover{
+      filter:invert(100%);
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+      color: #9d9d9d;
+      font-size: 1.2em;
+      font-family: 'proxima_nova_ltsemibold';
+      font-weight: bold;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: #ffffff;
+    }
+
+    .navbar-toggler {
+      margin: 1% 3%;
+    }
+
+    .navbar-light .navbar-toggler {
+      background: rgba(157, 157, 157, .4);
+    }
+    .navbar-default{
+      background:rgba(0,0,0,.7);
+    }
 
 /* Section 1 */
 
-.section1 {
-	height: 100vh;
-	position: relative;	
-	background: $primary-color1;
-    background: url("../img/retro_80s_arcade.jpg") no-repeat;
-	.mix-logo {
-	    position: absolute;
-	    top: 50%;
-	    left: 50%;
-	    transform: translate(-50%, -50%);
+	.section1 {
+		height: 100vh;
+		position: relative;	
+		background: $primary-color1;
+	    background: url("../img/retro_80s_arcade.jpg") no-repeat;
 	}
-}
 
+    .header-container {
+      display: -webkit-box; 
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex; 
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+    .mix-logo {
+      width: 50vw;
+    }
+
+    .header-container h2 {
+      position: relative;
+      z-index: 100;
+      font-family: 'proxima_nova_ltsemibold';
+      font-size: 4em;
+      color: #9d9d9d;
+    }
+
+    /*----Old TV Scanlines Screen Effect----*/
+
+    .scanlines {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scanlines:before,
+    .scanlines:after {
+      display: block;
+      pointer-events: none;
+      content: '';
+      position: absolute;
+    }
+
+    .scanlines:before {
+      width: 100%;
+      height: 12px;
+      z-index: 5;
+      background: rgba(0, 0, 0, 0.3);
+      opacity: 0.75;
+      -webkit-animation: scanline 6s linear infinite;
+      animation: scanline 6s linear infinite;
+    }
+
+    .scanlines:after {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 4;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(51%, rgba(0, 0, 0, 0.3)));
+      background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 51%);
+      background-size: 100% 8px;
+      -webkit-animation: scanlines 1s steps(60) infinite;
+      animation: scanlines 1s steps(60) infinite;
+    }
+
+    /* ANIMATE UNIQUE SCANLINE */
+
+    @-webkit-keyframes scanline {
+      0% {
+        -webkit-transform: translate3d(0, 200000%, 0);
+        transform: translate3d(0, 200000%, 0);
+      }
+    }
+
+    @keyframes scanline {
+      0% {
+        -webkit-transform: translate3d(0, 200000%, 0);
+        transform: translate3d(0, 200000%, 0);
+      }
+    }
+
+    @-webkit-keyframes scanlines {
+      0% {
+        background-position: 0 50%;
+      }
+    }
+
+    @keyframes scanlines {
+      0% {
+        background-position: 0 50%;
+      }
+    }
 
 /* What is Mix? Section */
 
-.mix-info {
-	height: 50em;
-	background: white;
-	margin-top: 0.7em;
-	.mix-info-container {
-		margin-top: 5%;
-		margin-bottom: 5%;
-		.mix-info-title {
-			margin-bottom: 75px;
-			font-family: "Neoneon-Regular";
-			font-size: 5em;
-			text-align: center;
-			font-weight: bold;
-		}
-		.mix-info-content {
-			margin: 0 auto;
-			padding: 0 5em;
-		}
-		.mix-heading {
-			height: 5em;
-			margin-bottom: 25px;
-			text-align: center;
-			h3 {
-				color: $primary-color3;
+	.mix-info {
+		height: 50em;
+		background: white;
+		margin-top: 0.7em;
+		.mix-info-container {
+			margin-top: 5%;
+			margin-bottom: 5%;
+			.mix-info-title {
+				margin-bottom: 75px;
+				font-family: "neoneonregular";
+				font-size: 5em;
+				text-align: center;
+				font-weight: bold;
 			}
+			.mix-info-content {
+				margin: 0 auto;
+				padding: 0 5em;
+      			font-family: 'proxima_nova_ltsemibold';
+			}
+			.mix-heading {
+				height: 5em;
+				margin-bottom: 25px;
+				text-align: center;
+				h3 {
+					color: $primary-color3;
+				}
+			}
+
 		}
-
 	}
-}
 
+/*----Accordion Styles----*/
 
-/* Graphic Design Students */
+    .center-people {
+      text-align: center;
+    }
 
-/* Web Development Students  */
+    .ui-accordion {
+      margin: -8px;
+    }
 
-/* Photography Students */
+    .ui-helper-reset {
+      border: none;
+    }
 
-/* Footer */
+    .ui-corner-all,
+    .ui-corner-top,
+    .ui-corner-right,
+    .ui-corner-tr,
+    .ui-corner-all,
+    .ui-corner-top,
+    .ui-corner-left,
+    .ui-corner-tl,
+    .ui-corner-all,
+    .ui-corner-bottom,
+    .ui-corner-right,
+    .ui-corner-br,
+    .ui-corner-all,
+    .ui-corner-bottom,
+    .ui-corner-left,
+    .ui-corner-bl {
+      border-radius: 0px;
+    }
+
+    .ui-accordion .ui-accordion-header {
+      text-align: center;
+      font-size: 2.5em;
+      border: none;
+      margin: 1px 0;
+    }
+
+    .ui-accordion .ui-accordion-header .ui-icon {
+      position: absolute;
+      right: 100%;
+      margin-right: -30px;
+      top: 50%;
+      margin-top: -8px;
+    }
+
+    .ui-accordion-icons .ui-accordion-header a {
+      padding-right: 1em;
+    }
+
+    .ui-accordion-header:first-of-type {
+      background: #5e4b8d;
+    }
+
+    #accordion .ui-accordion-header:nth-of-type(2) {
+      background: #d4295e;
+    }
+
+    #accordion .ui-accordion-header:nth-of-type(3) {
+      background: #fbad2f;
+    }
+
+    .graphic {
+      background: rgba(94, 75, 141, 1);
+      background: -moz-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(94, 75, 141, 1)), color-stop(27%, rgba(94, 75, 141, 1)), color-stop(54%, rgba(94, 75, 141, 1)), color-stop(100%, rgba(214, 41, 96, 1)));
+      background: -webkit-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
+      background: -o-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
+      background: -ms-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
+      background: linear-gradient(to bottom, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
+    }
+
+    .photo {
+      background: rgba(212, 41, 95, 1);
+      background: -moz-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212, 41, 95, 1)), color-stop(60%, rgba(214, 41, 96, 1)), color-stop(93%, rgba(245, 149, 54, 1)), color-stop(100%, rgba(251, 172, 45, 1)));
+      background: -webkit-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
+      background: -o-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
+      background: -ms-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
+      background: linear-gradient(to bottom, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
+    }
+
+    .web {
+      background: rgba(251, 173, 47, 1);
+      background: -moz-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251, 173, 47, 1)), color-stop(100%, rgba(251, 173, 47, 0.71)));
+      background: -webkit-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
+      background: -o-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
+      background: -ms-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
+      background: linear-gradient(to bottom, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
+    }
+
+    
+    /* Accordion Images Effects */
+    #graphicDesignStudents img:hover,#photo img:hover,#webDev img:hover{
+      filter: contrast(2);
+      -webkit-filter: contrast(2);
+      cursor:pointer;
+    }
+    .picture {
+      -webkit-transition: all .3s;
+          transition: all .3s;
+    }
+    /* Accordion Glitch Image Border */
+    .imageBorder {
+      margin: 4%;
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      z-index: 1;
+    }
+    .imageBorder:before,
+    .imageBorder:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .imageBorder:before {
+      background-color: #00ffff;
+      z-index: -1;
+    }
+    .imageBorder:after {
+      background-color: #ff00ff;
+      z-index: -2;
+    }
+    .imageBorder:hover .link-inner {
+      -webkit-animation: glitchy 0.5s ease 1;
+              animation: glitchy 0.5s ease 1;
+    }
+    .imageBorder:hover:before {
+      -webkit-animation: glitchy 0.5s ease 0.5s infinite;
+              animation: glitchy 0.5s ease 0.5s infinite;
+    }
+    .imageBorder:hover:after {
+      animation: glitchy 0.5s ease infinite reverse;
+    }
+    @-webkit-keyframes glitchy {
+      0% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+      }
+      25% {
+        -webkit-transform: translate(-2px, -2px);
+                transform: translate(-2px, -2px);
+      }
+      50% {
+        -webkit-transform: translate(2px, 2px);
+                transform: translate(2px, 2px);
+      }
+      75% {
+        -webkit-transform: translate(2px, -2px);
+                transform: translate(2px, -2px);
+      }
+      100% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+      }
+    }
+    @keyframes glitchy {
+      0% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+      }
+      25% {
+        -webkit-transform: translate(-2px, -2px);
+                transform: translate(-2px, -2px);
+      }
+      50% {
+        -webkit-transform: translate(2px, 2px);
+                transform: translate(2px, 2px);
+      }
+      75% {
+        -webkit-transform: translate(2px, -2px);
+                transform: translate(2px, -2px);
+      }
+      100% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+      }
+    }
+    /*----Accordian Headers Basic Neon Glow Text----*/
+
+    .neon {
+      font-family: 'neoneonregular';
+      text-align: center;
+      font-size: 120px;
+    }
+    .pink {
+      color: #ffffff;
+      text-shadow: 0px 0px 200px #ff91fc, 0px 0px 30px #ff49fb, -1px -1px 5px #fff, 10px 1px 100px #af00b2;
+    }
+
+    /*MODAL*/
+
+    /* The Modal (background) */
+
+    .bioModal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 12;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.7);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Close Button */
+
+    .close {
+      background-color:rgba(0,0,0,.8);
+      padding:2px 8px 8px 9px;
+      color: #9d9d9d;
+      position:absolute;
+      top:0px;
+      right:0px;
+      z-index:13;
+      font-size: 2em;
+      font-weight: bold;
+      border-radius:2px 0 2px 2px;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #ffffff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+
+    /* Modal Content */
+    .modalContent {
+      border-radius:2px;
+      position:relative;
+      box-shadow: 0px 0px 1px 1px #191919;
+      width:90%;
+      margin:0 auto;
+      color: #fff;
+      background: linear-gradient(-45deg, #ffffff, #EE7752, #E73C7E, #23A6D5, #23D5AB, #fbad2f);
+      background-size: 400% 400%;
+      -webkit-animation: Gradient 15s ease infinite;
+      -moz-animation: Gradient 15s ease infinite;
+      animation: Gradient 15s ease infinite;
+    }
+
+    #modalPhoto img{
+      display:block;
+      width:80%;
+      margin-left:auto;
+      margin-right:auto;
+      padding:7% 6% 6% 6%;
+    }
+
+    @-webkit-keyframes Gradient {
+      0% {
+        background-position: 0% 50%
+      }
+      50% {
+        background-position: 100% 50%
+      }
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    @-moz-keyframes Gradient {
+      0% {
+        background-position: 0% 50%
+      }
+      50% {
+        background-position: 100% 50%
+      }
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    @keyframes Gradient {
+      0% {
+        background-position: 0% 50%
+      }
+      50% {
+        background-position: 100% 50%
+      }
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    /* Modal Text */
+    #modalText {
+      padding:6%;      
+      font-family: 'proxima_nova_ltsemibold';
+      color:#f5f5f5;
+    }
+    #modalText p{
+      font-size:1.3em;
+    }
+    .bioFooter{
+      list-style-type:none;
+      text-align:center;
+      font-size:1.8em;
+      padding-bottom:2%;
+    }
+    .bioFooter li{
+      display:inline;
+      padding:2%;
+    }
+    .bioFooter a{
+      color:#5E4B8D;
+      font-style:italic;
+      font-family: 'proxima_nova_ltsemibold';
+    }
+    .bioFooter a:hover{
+      color:#ffffff;
+    }
+
+    /*---Modal Name Glitch Text Effect----*/
+    .glitch {
+      font-family: 'proxima_nova_ltsemibold';
+      color: white;
+      font-size: 50px;
+      position: relative;
+      padding-bottom:3%;
+      margin: 0 auto;
+      text-shadow: 1px 1px black;
+    }
+
+    @keyframes noise-anim {
+      0% {
+        clip: rect(58px, 9999px, 3px, 0);
+      }
+      5% {
+        clip: rect(15px, 9999px, 9px, 0);
+      }
+      10% {
+        clip: rect(100px, 9999px, 44px, 0);
+      }
+      15% {
+        clip: rect(25px, 9999px, 40px, 0);
+      }
+      20% {
+        clip: rect(94px, 9999px, 14px, 0);
+      }
+      25% {
+        clip: rect(33px, 9999px, 63px, 0);
+      }
+      30% {
+        clip: rect(85px, 9999px, 55px, 0);
+      }
+      35% {
+        clip: rect(5px, 9999px, 96px, 0);
+      }
+      40% {
+        clip: rect(76px, 9999px, 37px, 0);
+      }
+      45% {
+        clip: rect(88px, 9999px, 44px, 0);
+      }
+      50% {
+        clip: rect(100px, 9999px, 88px, 0);
+      }
+      55% {
+        clip: rect(100px, 9999px, 12px, 0);
+      }
+      60% {
+        clip: rect(68px, 9999px, 23px, 0);
+      }
+      65% {
+        clip: rect(99px, 9999px, 18px, 0);
+      }
+      70% {
+        clip: rect(43px, 9999px, 81px, 0);
+      }
+      75% {
+        clip: rect(50px, 9999px, 57px, 0);
+      }
+      80% {
+        clip: rect(2px, 9999px, 72px, 0);
+      }
+      85% {
+        clip: rect(25px, 9999px, 79px, 0);
+      }
+      90% {
+        clip: rect(69px, 9999px, 75px, 0);
+      }
+      95% {
+        clip: rect(65px, 9999px, 16px, 0);
+      }
+      100% {
+        clip: rect(93px, 9999px, 77px, 0);
+      }
+    }
+
+    .glitch:after {
+      content: attr(data-text);
+      position: absolute;
+      left: 2px;
+      text-shadow: -1px 0 #fbad2f;
+      top: 0;
+      color: white;
+      background: transparent;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+      animation: noise-anim 2s infinite linear alternate-reverse;
+    }
+
+    @keyframes noise-anim-2 {
+      0% {
+        clip: rect(92px, 9999px, 44px, 0);
+      }
+      5% {
+        clip: rect(27px, 9999px, 19px, 0);
+      }
+      10% {
+        clip: rect(27px, 9999px, 93px, 0);
+      }
+      15% {
+        clip: rect(45px, 9999px, 42px, 0);
+      }
+      20% {
+        clip: rect(21px, 9999px, 28px, 0);
+      }
+      25% {
+        clip: rect(55px, 9999px, 87px, 0);
+      }
+      30% {
+        clip: rect(88px, 9999px, 30px, 0);
+      }
+      35% {
+        clip: rect(10px, 9999px, 44px, 0);
+      }
+      40% {
+        clip: rect(66px, 9999px, 85px, 0);
+      }
+      45% {
+        clip: rect(63px, 9999px, 16px, 0);
+      }
+      50% {
+        clip: rect(60px, 9999px, 26px, 0);
+      }
+      55% {
+        clip: rect(27px, 9999px, 90px, 0);
+      }
+      60% {
+        clip: rect(72px, 9999px, 21px, 0);
+      }
+      65% {
+        clip: rect(72px, 9999px, 37px, 0);
+      }
+      70% {
+        clip: rect(84px, 9999px, 54px, 0);
+      }
+      75% {
+        clip: rect(26px, 9999px, 19px, 0);
+      }
+      80% {
+        clip: rect(25px, 9999px, 49px, 0);
+      }
+      85% {
+        clip: rect(96px, 9999px, 29px, 0);
+      }
+      90% {
+        clip: rect(61px, 9999px, 38px, 0);
+      }
+      95% {
+        clip: rect(45px, 9999px, 16px, 0);
+      }
+      100% {
+        clip: rect(77px, 9999px, 96px, 0);
+      }
+    }
+
+    .glitch:before {
+      content: attr(data-text);
+      position: absolute;
+      left: -2px;
+      text-shadow: 1px 0 #d4295e;
+      top: 0;
+      color: white;
+      background: transparent;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+      animation: noise-anim-2 3s infinite linear alternate-reverse;
+    }
+
+    /* Footer */
+    footer{
+      background:rgba(0,0,0,.7);
+      margin:7px 0px;
+      text-align:center;
+      padding:4% 2% 3% 2%;
+      font-family: 'proxima_nova_ltsemibold';
+      font-size:1.2em;
+    }
+    footer p{
+      margin-bottom:.5em;
+      color:#9d9d9d;
+    }
+    footer a{
+      color:#f5f5f5;
+      font-style:italic;
+    }
+    footer a:hover{
+      color:#d4295e;
+    }
+
+    /* Up Button */
+    #fixedBtn {
+      position: fixed;
+      bottom: 8%;
+      right: 1.5%;
+      z-index: 15;
+    }
+    #toTopBtn {
+      border-radius:2px;
+      font-family: Georgia;
+      color: #9d9d9d;
+      font-size: 26px;
+      font-weight: bold;
+      background-color:rgba(0,0,0,.6);
+      padding: 7px 10px 1px 10px;
+      -webkit-box-shadow: 0px 0px 6px 1px rgba(75, 75, 75, 0.5);
+      -moz-box-shadow: 0px 0px 6px 1px rgba(75, 75, 75, 0.5);
+      box-shadow: 0px 0px 6px 1px rgba(75, 75, 75, 0.5);
+      text-decoration: none;
+      transition: 0.6s ease;
+    }
+    #toTopBtn:hover {
+      color: #ffffff;
+      text-decoration: none;
+      background-color:rgba(0,0,0,.8);
+      box-shadow: 0px 0px 0px 0px rgba(75, 75, 75, 0.5);
+    }
+
+/* MEDIA QUERIES */
+
+    /*Section 1 Media Queries*/
+    @media only screen and (max-width:1000px){
+    .header-container {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+      }
+      .mix-logo {
+        width: 50vw;
+      }
+
+      .header-container h2 {
+        position: relative;
+        padding-left: 0.5em;
+        /*padding-left to make heading align up with the logo*/
+        font-family: 'proxima_nova_ltsemibold';
+        font-size: 3em;
+        color: #9d9d9d;
+      }
+    }
+    @media only screen and (max-width:640px){
+    .header-container {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+      }
+      .mix-logo {
+        width: 100vw;
+      }
+
+      .header-container h2 {
+        position: relative;
+        padding-left: 0.5em;
+        /*padding-left to make heading align up with the logo*/
+        font-family: 'proxima_nova_ltsemibold';
+        font-size: 3em;
+        color: #EFEFEF;
+      }
+    }
+    /* What is Mix Section Media Queries */
+    @media only screen and (max-width:767px){
+      .mix-info {
+        height: 100%;
+      }
+    }
+    @media only screen and (max-width:493px){
+      iframe {
+        margin-top: 56px;
+      }
+      .mix-info .mix-info-container .mix-info-content {
+        padding: 0 2em;
+      }
+    }
+
+    /* Modal Media Queries */
+    @media only screen and (max-width:991px){
+      #modalPhoto img{
+        width:70%;
+        padding-bottom:3%;
+      }
+      #modalText{
+        padding:0 6% 2% 6%;
+        width:70%;
+        margin:0 auto;
+      }
+      .bioFooter li{
+        display:block;
+        padding:0;
+      }
+    }
+    @media only screen and (max-width:600px){
+      .modalContent{
+        width:100%;
+      }
+      #modalPhoto img{
+        width:95%;
+        padding-bottom:1%;
+      }
+      #modalText{
+        padding:0 6% 2% 6%;
+        width:95%;
+        margin:0 auto;
+      }
+    }
+    @media only screen and (max-width:425px){
+      .glitch{
+        font-size:2.5em;
+      }
+      #modalText h3{
+        font-size:1.3em;
+      }
+      #modalText p{
+        font-size:1.2em;
+      }
+      .bioFooter{
+        font-size:1.3em;
+      }
+    }
+    /*Footer Media Query*/
+    @media only screen and (max-width:768px){
+      footer{
+        padding-top:6%;
+      }
+    }
+    @media only screen and (max-width:400px){
+      footer{
+        padding-top:8%;
+      }
+    }

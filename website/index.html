@@ -15,610 +15,54 @@
 
   <script src="//code.jquery.com/jquery-1.12.4.js"></script>
   <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <link href='fonts/main-fonts.css' rel='stylesheet' type='text/css'>
+  <link href='assets/fonts/main-fonts.css' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
-  <style>
-    /* font family for content */
-
-    .mix-info-content,
-    .model-content p {
-      font-family: 'proxima_nova_ltsemibold';
-    }
-
-    .mix-logo {
-      z-index: 10;
-    }
-
-    /*----Old TV Scanlines Screen Effect----*/
-
-    .scanlines {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .scanlines:before,
-    .scanlines:after {
-      display: block;
-      pointer-events: none;
-      content: '';
-      position: absolute;
-    }
-
-    .scanlines:before {
-      width: 100%;
-      height: 12px;
-      z-index: 5;
-      background: rgba(0, 0, 0, 0.3);
-      opacity: 0.75;
-      -webkit-animation: scanline 6s linear infinite;
-      animation: scanline 6s linear infinite;
-    }
-
-    .scanlines:after {
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 4;
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(51%, rgba(0, 0, 0, 0.3)));
-      background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 51%);
-      background-size: 100% 8px;
-      -webkit-animation: scanlines 1s steps(60) infinite;
-      animation: scanlines 1s steps(60) infinite;
-    }
-
-    /* ANIMATE UNIQUE SCANLINE */
-
-    @-webkit-keyframes scanline {
-      0% {
-        -webkit-transform: translate3d(0, 200000%, 0);
-        transform: translate3d(0, 200000%, 0);
-      }
-    }
-
-    @keyframes scanline {
-      0% {
-        -webkit-transform: translate3d(0, 200000%, 0);
-        transform: translate3d(0, 200000%, 0);
-      }
-    }
-
-    @-webkit-keyframes scanlines {
-      0% {
-        background-position: 0 50%;
-      }
-    }
-
-    @keyframes scanlines {
-      0% {
-        background-position: 0 50%;
-      }
-    }
-
-    body {
-      letter-spacing: .03em;
-    }
-
-    /*----Navigation----*/
-
-    .navbar-light .navbar-nav .nav-link {
-      color: #9d9d9d;
-      font-size: 1.2em;
-      font-family: 'proxima_nova_ltsemibold';
-      font-weight: bold;
-    }
-
-    .navbar-light .navbar-nav .nav-link:hover {
-      color: #ffffff;
-    }
-
-    .navbar-toggler {
-      margin: 1% 3%;
-    }
-
-    .navbar-light .navbar-toggler {
-      background: rgba(157, 157, 157, .4);
-    }
-
-    /*----Navigation Scrolled Effect----*/
-
-    .navbar-default.scrolled {
-      background: #000;
-    }
-
-    @media screen and (max-width:992px) {
-      .navbar-default.scrolled {
-        display: none;
-      }
-    }
-
-    /*----Section 1----*/
-
-    .section1 {
-      height: 100vh;
-      position: relative;
-      background: url("assets/img/retro_80s_arcade.jpg") no-repeat;
-    }
-
-    /*----Accordion Styles----*/
-
-    .center-people {
-      text-align: center;
-    }
-
-    .ui-accordion {
-      margin: -8px;
-    }
-
-    .ui-helper-reset {
-      border: none;
-    }
-
-    .ui-corner-all,
-    .ui-corner-top,
-    .ui-corner-right,
-    .ui-corner-tr,
-    .ui-corner-all,
-    .ui-corner-top,
-    .ui-corner-left,
-    .ui-corner-tl,
-    .ui-corner-all,
-    .ui-corner-bottom,
-    .ui-corner-right,
-    .ui-corner-br,
-    .ui-corner-all,
-    .ui-corner-bottom,
-    .ui-corner-left,
-    .ui-corner-bl {
-      border-radius: 0px;
-    }
-
-    .ui-accordion .ui-accordion-header {
-      text-align: center;
-      font-size: 2.5em;
-      border: none;
-      margin: 1px 0;
-    }
-
-    .ui-accordion .ui-accordion-header .ui-icon {
-      position: absolute;
-      right: 100%;
-      margin-right: -30px;
-      top: 50%;
-      margin-top: -8px;
-    }
-
-    .ui-accordion-icons .ui-accordion-header a {
-      padding-right: 1em;
-    }
-
-    .ui-accordion-header:first-of-type {
-      background: #5e4b8d;
-    }
-
-    #accordion .ui-accordion-header:nth-of-type(2) {
-      background: #d4295e;
-    }
-
-    #accordion .ui-accordion-header:nth-of-type(3) {
-      background: #fbad2f;
-    }
-
-    .graphic {
-      background: rgba(94, 75, 141, 1);
-      background: -moz-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
-      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(94, 75, 141, 1)), color-stop(27%, rgba(94, 75, 141, 1)), color-stop(54%, rgba(94, 75, 141, 1)), color-stop(100%, rgba(214, 41, 96, 1)));
-      background: -webkit-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
-      background: -o-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
-      background: -ms-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
-      background: linear-gradient(to bottom, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
-    }
-
-    .photo {
-      background: rgba(212, 41, 95, 1);
-      background: -moz-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
-      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212, 41, 95, 1)), color-stop(60%, rgba(214, 41, 96, 1)), color-stop(93%, rgba(245, 149, 54, 1)), color-stop(100%, rgba(251, 172, 45, 1)));
-      background: -webkit-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
-      background: -o-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
-      background: -ms-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
-      background: linear-gradient(to bottom, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
-    }
-
-    .web {
-      background: rgba(251, 173, 47, 1);
-      background: -moz-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
-      background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251, 173, 47, 1)), color-stop(100%, rgba(251, 173, 47, 0.71)));
-      background: -webkit-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
-      background: -o-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
-      background: -ms-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
-      background: linear-gradient(to bottom, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
-    }
-
-    /*----FONTS----*/
-
-    /*----Basic Neon Glow Text----*/
-
-    .neon {
-      font-family: 'neoneonregular';
-      text-align: center;
-      font-size: 120px;
-    }
-
-    .pink {
-      color: #ffffff;
-      text-shadow: 0px 0px 200px #ff91fc, 0px 0px 30px #ff49fb, -1px -1px 5px #fff, 10px 1px 100px #af00b2;
-    }
-
-    /* IMAGES*/
-
-    .picture {
-      margin: 4%;
-    }
-
-
-    /*MODAL*/
-
-    /* The Modal (background) */
-
-    .modal {
-      display: none;
-      /* Hidden by default */
-      position: fixed;
-      /* Stay in place */
-      z-index: 1;
-      /* Sit on top */
-      padding-top: 100px;
-      /* Location of the box */
-      left: 0;
-      top: 0;
-      width: 100%;
-      /* Full width */
-      height: 100%;
-      /* Full height */
-      overflow: auto;
-      /* Enable scroll if needed */
-      background-color: rgb(0, 0, 0);
-      /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.4);
-      /* Black w/ opacity */
-    }
-
-    /* Modal Content */
-
-    .modal-content {
-      background-color: #fefefe;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-    }
-
-    /* The Close Button */
-
-    .close {
-      color: #aaaaaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    #modalPhoto {}
-
-    .modal-content {
-      width: 100wh;
-      height: 90vh;
-      color: #fff;
-      background: linear-gradient(-45deg, #ffffff, #EE7752, #E73C7E, #23A6D5, #23D5AB, #fbad2f);
-      background-size: 400% 400%;
-      -webkit-animation: Gradient 15s ease infinite;
-      -moz-animation: Gradient 15s ease infinite;
-      animation: Gradient 15s ease infinite;
-    }
-
-    @-webkit-keyframes Gradient {
-      0% {
-        background-position: 0% 50%
-      }
-      50% {
-        background-position: 100% 50%
-      }
-      100% {
-        background-position: 0% 50%
-      }
-    }
-
-    @-moz-keyframes Gradient {
-      0% {
-        background-position: 0% 50%
-      }
-      50% {
-        background-position: 100% 50%
-      }
-      100% {
-        background-position: 0% 50%
-      }
-    }
-
-    @keyframes Gradient {
-      0% {
-        background-position: 0% 50%
-      }
-      50% {
-        background-position: 100% 50%
-      }
-      100% {
-        background-position: 0% 50%
-      }
-    }
-
-    /*---Glitch Text Effect 1----*/
-
-    #modalText {
-      position: absolute;
-      right: 10%;
-      top: 40%;
-      font-family: 'proxima_nova_ltsemibold';
-      text-shadow: 1px 1px black;
-    }
-
-    .glitch {
-      font-family: 'proxima_nova_ltsemibold';
-      color: white;
-      font-size: 50px;
-      position: relative;
-      width: 400px;
-      margin: 0 auto;
-    }
-
-    @keyframes noise-anim {
-      0% {
-        clip: rect(58px, 9999px, 3px, 0);
-      }
-      5% {
-        clip: rect(15px, 9999px, 9px, 0);
-      }
-      10% {
-        clip: rect(100px, 9999px, 44px, 0);
-      }
-      15% {
-        clip: rect(25px, 9999px, 40px, 0);
-      }
-      20% {
-        clip: rect(94px, 9999px, 14px, 0);
-      }
-      25% {
-        clip: rect(33px, 9999px, 63px, 0);
-      }
-      30% {
-        clip: rect(85px, 9999px, 55px, 0);
-      }
-      35% {
-        clip: rect(5px, 9999px, 96px, 0);
-      }
-      40% {
-        clip: rect(76px, 9999px, 37px, 0);
-      }
-      45% {
-        clip: rect(88px, 9999px, 44px, 0);
-      }
-      50% {
-        clip: rect(100px, 9999px, 88px, 0);
-      }
-      55% {
-        clip: rect(100px, 9999px, 12px, 0);
-      }
-      60% {
-        clip: rect(68px, 9999px, 23px, 0);
-      }
-      65% {
-        clip: rect(99px, 9999px, 18px, 0);
-      }
-      70% {
-        clip: rect(43px, 9999px, 81px, 0);
-      }
-      75% {
-        clip: rect(50px, 9999px, 57px, 0);
-      }
-      80% {
-        clip: rect(2px, 9999px, 72px, 0);
-      }
-      85% {
-        clip: rect(25px, 9999px, 79px, 0);
-      }
-      90% {
-        clip: rect(69px, 9999px, 75px, 0);
-      }
-      95% {
-        clip: rect(65px, 9999px, 16px, 0);
-      }
-      100% {
-        clip: rect(93px, 9999px, 77px, 0);
-      }
-    }
-
-    .glitch:after {
-      content: attr(data-text);
-      position: absolute;
-      left: 2px;
-      text-shadow: -1px 0 #fbad2f;
-      top: 0;
-      color: white;
-      background: transparent;
-      overflow: hidden;
-      clip: rect(0, 900px, 0, 0);
-      animation: noise-anim 2s infinite linear alternate-reverse;
-    }
-
-    @keyframes noise-anim-2 {
-      0% {
-        clip: rect(92px, 9999px, 44px, 0);
-      }
-      5% {
-        clip: rect(27px, 9999px, 19px, 0);
-      }
-      10% {
-        clip: rect(27px, 9999px, 93px, 0);
-      }
-      15% {
-        clip: rect(45px, 9999px, 42px, 0);
-      }
-      20% {
-        clip: rect(21px, 9999px, 28px, 0);
-      }
-      25% {
-        clip: rect(55px, 9999px, 87px, 0);
-      }
-      30% {
-        clip: rect(88px, 9999px, 30px, 0);
-      }
-      35% {
-        clip: rect(10px, 9999px, 44px, 0);
-      }
-      40% {
-        clip: rect(66px, 9999px, 85px, 0);
-      }
-      45% {
-        clip: rect(63px, 9999px, 16px, 0);
-      }
-      50% {
-        clip: rect(60px, 9999px, 26px, 0);
-      }
-      55% {
-        clip: rect(27px, 9999px, 90px, 0);
-      }
-      60% {
-        clip: rect(72px, 9999px, 21px, 0);
-      }
-      65% {
-        clip: rect(72px, 9999px, 37px, 0);
-      }
-      70% {
-        clip: rect(84px, 9999px, 54px, 0);
-      }
-      75% {
-        clip: rect(26px, 9999px, 19px, 0);
-      }
-      80% {
-        clip: rect(25px, 9999px, 49px, 0);
-      }
-      85% {
-        clip: rect(96px, 9999px, 29px, 0);
-      }
-      90% {
-        clip: rect(61px, 9999px, 38px, 0);
-      }
-      95% {
-        clip: rect(45px, 9999px, 16px, 0);
-      }
-      100% {
-        clip: rect(77px, 9999px, 96px, 0);
-      }
-    }
-
-    .glitch:before {
-      content: attr(data-text);
-      position: absolute;
-      left: -2px;
-      text-shadow: 1px 0 #d4295e;
-      top: 0;
-      color: white;
-      background: transparent;
-      overflow: hidden;
-      clip: rect(0, 900px, 0, 0);
-      animation: noise-anim-2 3s infinite linear alternate-reverse;
-    }
-  </style>
   <script>
-    $(window).scroll(function () {
-      $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
-      var current_width = $(window).width();
-      if (current_width < 992) {
-        $('nav').removeClass('scrolled');
-      }
+    // on nav links or up button click animated easy scroll to section
+    $(document).ready(function () {
+      $("a[href^='#']").click(function (e) {
+        e.preventDefault();
+
+        var position = $($(this).attr("href")).offset().top - 71;
+
+        $("body, html").animate({
+          scrollTop: position
+        }, 1000);
+      });
     });
   </script>
 
+
+<!-- mix text, to keep it in place when switching between logos -->
   <style>
-    .section1 .portfolioDayTextDMACC {
-      z-index: 10;
-      font-family: 'proxima_nova_ltsemibold';
-      color: #9d9d9d;
-      position: absolute;
-      top: 50%;
-      left: 80%;
-      /* -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
-    }
+  .header-text {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-family: 'proxima_nova_ltsemibold';
+    font-size: 3em;
+    color: #9d9d9d;
+  }
 
-    .section1 .portfolioDayTextPortfolio {
-      z-index: 10;
-      font-family: 'proxima_nova_ltsemibold';
-      color: #9d9d9d;
-      position: absolute;
-      top: 55%;
-      left: 80%;
-      /* -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
-    }
-
-    .section1 .portfolioDayTextDay {
-      z-index: 10;
-      font-family: 'proxima_nova_ltsemibold';
-      color: #9d9d9d;
-      position: absolute;
-      top: 60%;
-      left: 82%;
-      /* -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
-    }
-
-    @media only screen and (max-width: 1024px) {
-      .section1 .portfolioDayTextDMACC {
-        color: white;
-        position: absolute;
-        top: 60%;
-        left: 20%;
-        /* -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
-      }
-
-      .section1 .portfolioDayTextPortfolio {
-        color: white;
-        position: absolute;
-        top: 60%;
-        left: 40%;
-        /* -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
-      }
-
-      .section1 .portfolioDayTextDay {
-        color: white;
-        font-family: 'proxima_nova_ltsemibold';
-        position: absolute;
-        top: 60%;
-        left: 60%;
-        /* -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
-      }
-    }
+@media only screen and (max-width: 640px) {
+  .header-text {
+    display: block;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+}
   </style>
 </head>
 
 <body id="page-top">
+  <!--Section 1-->
   <div class="section1 scanlines">
     <!--Navigation-->
     <nav class="navbar navbar-default navbar-expand-lg navbar-light fixed-top">
@@ -650,25 +94,26 @@
     <!--end navigation -->
 
     <!-- logo -->
-    <div class="cycleThroughLogos">
-
+    <div class="header-container">
+      <span class="cycleThroughLogos"></span>
     </div>
-    <h1 class="portfolioDayTextDMACC">DMACC</h1>
-    <h1 class="portfolioDayTextPortfolio">Portfolio</h1>
-    <h1 class="portfolioDayTextDay">Day</h1>
-    <!-- *******  IMPORTANT ******
-      currently on refresh
-      The var path will need to be changed to the live version path when not on localhost
-      to change the speed on myVar change the 500 to a smaller number for faster and a bigger number for slower
-    *******************************************************-->
+
+<div class="header-text">
+  <h2>DMACC
+    <br> PORTFOLIO
+    <br> DAY 2018</h2>
+</div>
     <script>
-      var myVar = setInterval(cycleThroughImages, 500);
+      //Main MIX logo animation rotate
+      var myVar = setInterval(cycleThroughImages, 1200);
+
       var path = 'assets/img/MIX_logos_forWeb/',
         imgs = ['MIX_Logo_Artboard 1 _web.png', 'MIX_Logo_Artboard 2 _web.png', 'MIX_Logo_Artboard 3 _web.png',
           'MIX_Logo_Artboard 4 _web.png', 'MIX_Logo_Artboard 5 _web.png', 'MIX_Logo_Artboard 6 _web.png',
           'MIX_Logo_Artboard 7 _web.png', 'MIX_Logo_Artboard 8 _web.png', 'MIX_Logo_Artboard 9 _web.png',
           'MIX_Logo_Artboard 10 _web.png', 'MIX_Logo_Artboard 11 _web.png', 'MIX_Logo_Artboard 12 _web.png',
           'MIX_Logo_Artboard 13 _web.png', 'MIX_Logo_Artboard 14 _web.png', 'MIX_Logo_Artboard 15 _web.png',
+
           'MIX_Logo_Artboard 16 _web.png', 'MIX_Logo_Artboard 17 _web.png',
           'MIX_Logo_Artboard 19 _web.png', 'MIX_Logo_Artboard 20 _web.png', 'MIX_Logo_Artboard 21 _web.png',
           'MIX_Logo_Artboard 22 _web.png', 'MIX_Logo_Artboard 23 _web.png', 'MIX_Logo_Artboard 24 _web.png',
@@ -692,6 +137,7 @@
           'MIX_Logo_Artboard 81 _web.png', 'MIX_Logo_Artboard 82 _web.png', 'MIX_Logo_Artboard 83 _web.png'
         ];
 
+
       function cycleThroughImages() {
         i = Math.floor(Math.random() * imgs.length);
         $('.cycleThroughLogos').html(
@@ -699,13 +145,14 @@
           "'>");
       }
     </script>
-
   </div>
   <!--end section 1 -->
+
+  <!--Section 2-->
   <div class="mix-info" id="mix-info">
     <div class="mix-info-container">
       <h1 class="mix-info-title">What is Mix?</h1>
-      <div class="row">
+      <div class="row noPadding">
         <div class="col-md-6 col-12 ">
           <div class="mix-info-content">
             <div class="mix-heading">
@@ -725,7 +172,7 @@
         <div class="col-md-6 col-12 ">
           <div class="mix-info-content">
             <div class="mix-heading">
-              <h3>April 12th 12:00 - 5:00PM, Thursday Des Moines Botanical Gardens, IA</h3>
+              <h3>Thursday April 12th <br> 12:00 - 5:00PM <br> Thursday Des Moines Botanical Gardens, IA</h3>
             </div>
             <div>
               <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5967.463302416787!2d-93.61856742194209!3d41.5966877461963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x87ee99a457093b8d%3A0x2e0ddf50113251e7!2sdes+moines+botanical+center!3m2!1d41.596709!2d-93.614188!5e0!3m2!1sen!2sus!4v1518410108343"
@@ -736,14 +183,11 @@
       </div>
     </div>
   </div>
-  <script>
-    window.onload = function () {
-      callGraphicDesignStudents();
-    }
-  </script>
+  <!--End Section 2-->
 
+  <!--Section 3 Accordion-->
   <div id="accordion">
-    
+
     <h3 class="neon pink" id="graphic-design" onclick="callGraphicDesignStudents()">Graphic Design</h3>
     <div class="center-people graphic">
       <p id="graphicDesignStudents"></p>
@@ -759,55 +203,104 @@
       <p id="webDev"></p>
     </div>
   </div>
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
+  <!--End Section 3-->
 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <img id="modalPhoto" width='400px' src='assets/img/girl.jpg' />
-
-      <div id="modalText">
-        <div class="glitch" data-text="Jane Doe">Jane Doe</div>
-        <p id="modalBody">Some text in the Modal..</p>
-        <p id="modalFoot">janedoe.com | janedoe@gmail.com | (515) 555-5555</p>
+  <!-- The Bio Modal -->
+  <div id="myModal" class="bioModal">
+    <div class="container-fluid">
+      <!-- Modal content -->
+      <div class="modalContent">
+        <div class="row">
+          <span class="close">&times;</span>
+          <div id="modalPhoto" class="col-lg-6 col-12">
+            <img width='400px' src='assets/img/girl.jpg' />
+          </div>
+          <div class="col-lg-6 col-12">
+            <div id="modalText">
+              <div class="glitch" data-text="JANE DOE">JANE DOE</div>
+              <h3>MAJOR</h3>
+              <p>Web Development</p>
+              <h3>HOMETOWN</h3>
+              <p>Des Moines, Iowa</p>
+              <h3>CAREER GOALS</h3>
+              <p>Just being totally awesome at my job!</p>
+              <h3>THREE WORDS TO DESCRIBE ME</h3>
+              <p>Smart, Really Smart, &amp; Uber Smart</p>
+            </div>
+          </div>
+        </div>
+        <!--End Row -->
+        <div class="row">
+          <div class="col-12">
+            <ul class="bioFooter">
+              <li>
+                <a href="#">MY PORTFOLIO</a>
+              </li>
+              <li>
+                <a href="#">MY REPO</a>
+              </li>
+              <li>
+                <a href="#">JANEDOE@GMAIL.COM</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--End Row-->
       </div>
     </div>
-
   </div>
+  <!--End Bio Modal-->
+
+  <footer>
+    <p>DMACC PORTFOLIO DAY 2018</p>
+    <p>Developed &amp; Designed by Students</p>
+    <p>
+      <a href="https://www.behance.net/gallery/55332529/NEONEON-FREE-FONT">Neoneon Font developed by Bakoom Studio</a>
+    </p>
+  </footer>
+
+  <!--Up Page Button-->
+  <p id="fixedBtn">
+    <a id="toTopBtn" href="#page-top">^</a>
+  </p>
   <script>
     $("#accordion").accordion({
       heightStyle: "content",
       animate: 300,
-      collapsible: true, //collapsible tabs on click - take out if dont like
-      active:false
+      collapsible: true,
+      active: false
     });
-    function openPhotosAccordion()
-    {
-      var active =   $("#accordion").accordion( "option", "active" );
+
+    function openPhotosAccordion() {
+      $("#accordion").accordion({
+        active: 2
+      });
+      var active = $("#accordion").accordion("option", "active");
       // Setter
-      $("#accordion").accordion( "option", "active", 1 );
+      $("#accordion").accordion("option", "active", 1);
       callPhotoStudents();
     }
-    function openGDAccordion()
-    {
-      var active =   $("#accordion").accordion( "option", "active" );
+
+    function openGDAccordion() {
+      $("#accordion").accordion({
+        active: 2
+      });
+      var active = $("#accordion").accordion("option", "active");
       // Setter
-      $("#accordion").accordion( "option", "active", 0 );
+      $("#accordion").accordion("option", "active", 0);
       callGraphicDesignStudents();
     }
 
-function openWebAccordion(){
-  $( "#accordion" ).accordion({
-  active: 0
-});
-  // Getter
-var active =   $("#accordion").accordion( "option", "active" );
-// Setter
-$("#accordion").accordion( "option", "active", 2 );
-callWebDevStudents();
-
-}
+    function openWebAccordion() {
+      $("#accordion").accordion({
+        active: 2
+      });
+      // Getter
+      var active = $("#accordion").accordion("option", "active");
+      // Setter
+      $("#accordion").accordion("option", "active", 2);
+      callWebDevStudents();
+    }
 
     function callWebDevStudents() {
       var xmlhttp = new XMLHttpRequest();
@@ -819,7 +312,6 @@ callWebDevStudents();
       xmlhttp.open("GET", "assets/php/webDevStudents.php", true);
       xmlhttp.send();
     }
-
 
     function callGraphicDesignStudents() {
       var xmlhttp = new XMLHttpRequest();
@@ -842,28 +334,27 @@ callWebDevStudents();
       xmlhttp.open("GET", "assets/php/photographyStudents.php", true);
       xmlhttp.send();
     }
+    //Modal Scripts
     // Get the modal
-    var modal = document.getElementById('myModal');
+    var bioModal = document.getElementById('myModal');
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks the button, open the modal
     function modalDisplay() {
-      modal.style.display = "block";
-
+      bioModal.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
-      modal.style.display = "none";
+      bioModal.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-
+      if (event.target == bioModal) {
+        bioModal.style.display = "none";
       }
     }
   </script>

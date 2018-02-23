@@ -46,8 +46,7 @@ html, body {
 .section1 {
   height: 100vh;
   position: relative;
-  background: #5E4B8D;
-  background: url("../img/retro_80s_arcade.jpg") no-repeat; }
+  background: #5E4B8D; }
 
 .header-container {
   display: -webkit-box;
@@ -80,56 +79,9 @@ html, body {
   color: #9d9d9d; }
 
 /*----Old TV Scanlines Screen Effect----*/
-.scanlines {
-  position: relative;
-  overflow: hidden; }
-
-.scanlines:before,
-.scanlines:after {
-  display: block;
-  pointer-events: none;
-  content: '';
-  position: absolute; }
-
-.scanlines:before {
-  width: 100%;
-  height: 12px;
-  z-index: 5;
-  background: rgba(0, 0, 0, 0.3);
-  opacity: 0.75;
-  -webkit-animation: scanline 6s linear infinite;
-  animation: scanline 6s linear infinite; }
-
-.scanlines:after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 4;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(51%, rgba(0, 0, 0, 0.3)));
-  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 51%);
-  background-size: 100% 8px;
-  -webkit-animation: scanlines 1s steps(60) infinite;
-  animation: scanlines 1s steps(60) infinite; }
-
 /* ANIMATE UNIQUE SCANLINE */
-@-webkit-keyframes scanline {
-  0% {
-    -webkit-transform: translate3d(0, 200000%, 0);
-    transform: translate3d(0, 200000%, 0); } }
-@keyframes scanline {
-  0% {
-    -webkit-transform: translate3d(0, 200000%, 0);
-    transform: translate3d(0, 200000%, 0); } }
-@-webkit-keyframes scanlines {
-  0% {
-    background-position: 0 50%; } }
-@keyframes scanlines {
-  0% {
-    background-position: 0 50%; } }
 /* What is Mix? Section */
 .mix-info {
-  height: 50em;
   background: white;
   margin-top: 0.7em; }
   .mix-info .mix-info-container {
@@ -371,7 +323,7 @@ html, body {
   width: 90%;
   margin: 0 auto;
   color: #fff;
-  background: linear-gradient(-45deg, #ffffff, #EE7752, #E73C7E, #23A6D5, #23D5AB, #fbad2f);
+  background: linear-gradient(-45deg, #FBAD2F, #5E4B8D, #D4295E);
   background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
@@ -441,116 +393,6 @@ html, body {
   padding-bottom: 3%;
   margin: 0 auto;
   text-shadow: 1px 1px black; }
-
-@keyframes noise-anim {
-  0% {
-    clip: rect(58px, 9999px, 3px, 0); }
-  5% {
-    clip: rect(15px, 9999px, 9px, 0); }
-  10% {
-    clip: rect(100px, 9999px, 44px, 0); }
-  15% {
-    clip: rect(25px, 9999px, 40px, 0); }
-  20% {
-    clip: rect(94px, 9999px, 14px, 0); }
-  25% {
-    clip: rect(33px, 9999px, 63px, 0); }
-  30% {
-    clip: rect(85px, 9999px, 55px, 0); }
-  35% {
-    clip: rect(5px, 9999px, 96px, 0); }
-  40% {
-    clip: rect(76px, 9999px, 37px, 0); }
-  45% {
-    clip: rect(88px, 9999px, 44px, 0); }
-  50% {
-    clip: rect(100px, 9999px, 88px, 0); }
-  55% {
-    clip: rect(100px, 9999px, 12px, 0); }
-  60% {
-    clip: rect(68px, 9999px, 23px, 0); }
-  65% {
-    clip: rect(99px, 9999px, 18px, 0); }
-  70% {
-    clip: rect(43px, 9999px, 81px, 0); }
-  75% {
-    clip: rect(50px, 9999px, 57px, 0); }
-  80% {
-    clip: rect(2px, 9999px, 72px, 0); }
-  85% {
-    clip: rect(25px, 9999px, 79px, 0); }
-  90% {
-    clip: rect(69px, 9999px, 75px, 0); }
-  95% {
-    clip: rect(65px, 9999px, 16px, 0); }
-  100% {
-    clip: rect(93px, 9999px, 77px, 0); } }
-.glitch:after {
-  content: attr(data-text);
-  position: absolute;
-  left: 2px;
-  text-shadow: -1px 0 #fbad2f;
-  top: 0;
-  color: white;
-  background: transparent;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-anim 2s infinite linear alternate-reverse; }
-
-@keyframes noise-anim-2 {
-  0% {
-    clip: rect(92px, 9999px, 44px, 0); }
-  5% {
-    clip: rect(27px, 9999px, 19px, 0); }
-  10% {
-    clip: rect(27px, 9999px, 93px, 0); }
-  15% {
-    clip: rect(45px, 9999px, 42px, 0); }
-  20% {
-    clip: rect(21px, 9999px, 28px, 0); }
-  25% {
-    clip: rect(55px, 9999px, 87px, 0); }
-  30% {
-    clip: rect(88px, 9999px, 30px, 0); }
-  35% {
-    clip: rect(10px, 9999px, 44px, 0); }
-  40% {
-    clip: rect(66px, 9999px, 85px, 0); }
-  45% {
-    clip: rect(63px, 9999px, 16px, 0); }
-  50% {
-    clip: rect(60px, 9999px, 26px, 0); }
-  55% {
-    clip: rect(27px, 9999px, 90px, 0); }
-  60% {
-    clip: rect(72px, 9999px, 21px, 0); }
-  65% {
-    clip: rect(72px, 9999px, 37px, 0); }
-  70% {
-    clip: rect(84px, 9999px, 54px, 0); }
-  75% {
-    clip: rect(26px, 9999px, 19px, 0); }
-  80% {
-    clip: rect(25px, 9999px, 49px, 0); }
-  85% {
-    clip: rect(96px, 9999px, 29px, 0); }
-  90% {
-    clip: rect(61px, 9999px, 38px, 0); }
-  95% {
-    clip: rect(45px, 9999px, 16px, 0); }
-  100% {
-    clip: rect(77px, 9999px, 96px, 0); } }
-.glitch:before {
-  content: attr(data-text);
-  position: absolute;
-  left: -2px;
-  text-shadow: 1px 0 #d4295e;
-  top: 0;
-  color: white;
-  background: transparent;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-anim-2 3s infinite linear alternate-reverse; }
 
 /* Footer */
 footer {

@@ -647,6 +647,25 @@ footer a:hover {
 
   .mix-info .mix-info-container .mix-info-content {
     padding: 0 2em; } }
+/* Accordion & Images Media Queries */
+@media only screen and (max-width: 851px) {
+  .picture {
+    width: 150px; }
+
+  .imageBorder {
+    margin: 3%; }
+
+  .ui-accordion .ui-accordion-content {
+    padding: 2%; } }
+@media only screen and (max-width: 600px) {
+  .imageBorder {
+    margin: 2%; }
+
+  .ui-accordion .ui-accordion-content {
+    padding: 1%; } }
+@media only screen and (max-width: 330px) {
+  .imageBorder {
+    margin: 1.5%; } }
 /* Modal Media Queries */
 @media only screen and (max-width: 991px) {
   #modalPhoto img {

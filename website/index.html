@@ -334,28 +334,37 @@
       xmlhttp.send();
     // }
     //Modal Scripts
-    // Get the modal
-    var bioModal = document.getElementById('myModal');
+      // Get the modal
+      var bioModal = document.getElementById('myModal');
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks the button, open the modal
-    function modalDisplay() {
-      bioModal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      bioModal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == bioModal) {
-        bioModal.style.display = "none";
+      // When the user clicks the button, open the modal
+      function modalDisplay() {
+        bioModal.classList.add('expand');
+        bioModal.style.display = "block";
       }
-    }
+
+      // When the user clicks on <span> (x), close the modal 
+      span.onclick = function () {
+        bioModal.classList.add('collapse');
+        //remove added animation classes after set amound of time
+        setTimeout(function(){
+          bioModal.classList.remove('expand','collapse');
+        }, 1250);
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == bioModal) {
+          bioModal.classList.add('collapse');
+         //remove added animation classes after set amount of time
+          setTimeout(function(){
+            bioModal.classList.remove('expand','collapse');
+          }, 1250);
+        }
+      }
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>

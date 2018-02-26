@@ -566,13 +566,12 @@ footer {
 border-radius: 50%;
   text-decoration: none;
   margin: 10% 5%;
-  transition: border 1s, opacity 1s;
+  transition: border .9s, opacity 1s, color 1s;
 }
 
 .fa:hover {
-    opacity: 0.8;
+    opacity: 0.7;
     border: white solid 2px;
-    border-radius: 50%;
     color: black;
 }
   .fa-facebook {

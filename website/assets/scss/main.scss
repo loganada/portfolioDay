@@ -391,6 +391,53 @@ html, body {
       text-shadow: 0px 0px 200px #ff91fc, 0px 0px 30px #ff49fb, -1px -1px 5px #fff, 10px 1px 100px #af00b2;
     }
 
+
+    /* BOX HOVER */
+ 
+    .student-overlay {
+      position: relative;
+      .student-overlay-info {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+        -webkit-transition: -webkit-transform 0.4s, opacity 0.2s 0.2s;
+        -moz-transition: -moz-transform 0.4s, opacity 0.2s 0.2s;
+        transition: transform 0.4s, opacity 0.2s 0.2s;
+       }
+      h3 {
+        background: rgba(1, 1, 1, 0.5);
+         //Use RGBA when changing the background because adding more spans and divs will cause some problems
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin:0;
+        padding: 5px;
+        opacity: 1;
+        font-family: 'proxima_nova_scosfthin';
+        color: white;
+
+      }
+    }
+    .student-overlay:hover .student-overlay-info  {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      transform: translateY(0px);
+      -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+      -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+      transition: transform 0.4s, opacity 0.1s;
+    }
+
+
     /*MODAL*/
 
     /* The Modal (background) */
@@ -418,6 +465,7 @@ html, body {
       /* Black w/ opacity */
       transform: scale(0);
     }
+
     
     /* Modal Close Button */
 

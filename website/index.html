@@ -6,14 +6,14 @@
   <meta charset="utf-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
   <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <link href='assets/fonts/main-fonts.css' rel='stylesheet' type='text/css'>
@@ -35,30 +35,42 @@
   </script>
 
 
-<!-- mix text, to keep it in place when switching between logos -->
+  <!-- mix text, to keep it in place when switching between logos -->
   <style>
-  .header-text {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 85%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    font-family: 'proxima_nova_ltsemibold';
-    font-size: 3em;
-    color: #EFEFEF;
-  }
+    .header-text {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 85%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      font-family: 'proxima_nova_ltsemibold';
+      font-size: 3em;
+      color: #EFEFEF;
+    }
 
-@media only screen and (max-width: 640px) {
-  .header-text {
-    display: block;
-    position: absolute;
-    top: 70%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-  }
-}
+    @media only screen and (max-width: 640px) {
+      .header-text {
+        display: block;
+        position: absolute;
+        top: 70%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+      }
+    }
+
+     @media only screen and (max-width: 603px) {
+     .mobilePadding {
+       padding-bottom: 20px;
+     }
+    }
+
+    @media only screen and (orientation: landscape) {
+     .mobilePadding {
+       padding-bottom: 20px;
+     }
+    }
   </style>
 </head>
 
@@ -81,10 +93,10 @@
             <a class="nav-link" href="#mix-info"> WHAT IS MIX?</a>
           </li>
           <li class="desktop-menu-item">
-            <a class="nav-link" href="#graphic-design" > GRAPHIC DESIGN</a>
+            <a class="nav-link" href="#graphic-design"> GRAPHIC DESIGN</a>
           </li>
           <li class="desktop-menu-item">
-            <a class="nav-link" href="#photography" > PHOTOGRAPHY</a>
+            <a class="nav-link" href="#photography"> PHOTOGRAPHY</a>
           </li>
           <li class="desktop-menu-item">
             <a class="nav-link" href="#web-development"> WEB DEVELOPMENT</a>
@@ -99,11 +111,11 @@
       <span class="cycleThroughLogos"></span>
     </div>
 
-<div class="header-text">
-  <h2>DMACC
-    <br> PORTFOLIO
-    <br> DAY 2018</h2>
-</div>
+    <div class="header-text">
+      <h2>DMACC
+        <br> PORTFOLIO
+        <br> DAY 2018</h2>
+    </div>
     <script>
       //Main MIX logo animation rotate
       var myVar = setInterval(cycleThroughImages, 1200);
@@ -126,14 +138,14 @@
           'MIX_Logo_Artboard 40 _web.png', 'MIX_Logo_Artboard 41 _web.png', 'MIX_Logo_Artboard 42 _web.png',
           'MIX_Logo_Artboard 44 _web.png', 'MIX_Logo_Artboard 45 _web.png', 'MIX_Logo_Artboard 46 _web.png',
           'MIX_Logo_Artboard 47 _web.png', 'MIX_Logo_Artboard 48 _web.png', 'MIX_Logo_Artboard 49 _web.png',
-          'MIX_Logo_Artboard 50 _web.png', 'MIX_Logo_Artboard 51 _web.png','MIX_Logo_Artboard 52 _web.png',
+          'MIX_Logo_Artboard 50 _web.png', 'MIX_Logo_Artboard 51 _web.png', 'MIX_Logo_Artboard 52 _web.png',
           'MIX_Logo_Artboard 54 _web.png', 'MIX_Logo_Artboard 55 _web.png', 'MIX_Logo_Artboard 56 _web.png',
           'MIX_Logo_Artboard 58 _web.png', 'MIX_Logo_Artboard 59 _web.png', 'MIX_Logo_Artboard 60 _web.png',
           'MIX_Logo_Artboard 61 _web.png', 'MIX_Logo_Artboard 62 _web.png', 'MIX_Logo_Artboard 63 _web.png',
           'MIX_Logo_Artboard 64 _web.png', 'MIX_Logo_Artboard 65 _web.png', 'MIX_Logo_Artboard 66 _web.png',
           'MIX_Logo_Artboard 68 _web.png', 'MIX_Logo_Artboard 69 _web.png', 'MIX_Logo_Artboard 70 _web.png',
           'MIX_Logo_Artboard 71 _web.png', 'MIX_Logo_Artboard 72 _web.png', 'MIX_Logo_Artboard 73 _web.png',
-          'MIX_Logo_Artboard 74 _web.png', 'MIX_Logo_Artboard 75 _web.png','MIX_Logo_Artboard 76 _web.png',
+          'MIX_Logo_Artboard 74 _web.png', 'MIX_Logo_Artboard 75 _web.png', 'MIX_Logo_Artboard 76 _web.png',
           'MIX_Logo_Artboard 77 _web.png', 'MIX_Logo_Artboard 78 _web.png', 'MIX_Logo_Artboard 80 _web.png',
           'MIX_Logo_Artboard 81 _web.png', 'MIX_Logo_Artboard 82 _web.png', 'MIX_Logo_Artboard 83 _web.png'
         ];
@@ -153,35 +165,42 @@
   <div class="mix-info" id="mix-info">
     <div class="mix-info-container">
       <h1 class="mix-info-title">What is Mix?</h1>
-      <div class="row noPadding">
-        <div class="col-md-6 col-12 ">
+      <div class="row ">
+        <div class="col-12 ">
           <div class="mix-info-content">
             <div class="mix-heading">
               <h1 id="portfolioDayCountDown"></h1>
             </div>
-            <div>
-              <p>
-                Join us in the countdown to DMACCs 2018 portfolio day. Graphic Design, photography, web development, video and animation
-                students are getting ready to mix up their lives. We as the seniors of our repesctive programs and would
-                like to show you what we have done... come from di erent backgorunds - mixed up group of people (not in a
-                bad way) di erent project types and di erent ideas - creativity mixed perspective, viewers eye. Come join
-                us for lots of fun
-              </p>
-            </div>
           </div>
         </div>
-        <div class="col-md-6 col-12 ">
-          <div class="mix-info-content">
-            <div class="mix-heading">
-              <h3>Thursday April 12th <br> 12:00 - 5:00PM <br> Des Moines Botanical Gardens, IA</h3>
-            </div>
-            <div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5967.463302416787!2d-93.61856742194209!3d41.5966877461963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x87ee99a457093b8d%3A0x2e0ddf50113251e7!2sdes+moines+botanical+center!3m2!1d41.596709!2d-93.614188!5e0!3m2!1sen!2sus!4v1518410108343"
-                width="100%" height="192" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="row">
+        <div class="col-md-12 col-12 mobilePadding">
+            <div class="mix-info-content">
+                <div class="mix-heading">
+                  <h3>Thursday April 12th
+                    <br> 12:00 - 5:00PM
+                    <br> Des Moines Botanical Gardens, IA</h3>
+                </div>
+        </div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-12">
+      <p class="mix-info-content">
+          Get ready to mix and mingle at DMACC Portfolio Day 2018. DMACC Portfolio Day is the culmination of two years of 
+          refining talent and creative passion. Students of Graphic Design, Photography, Web Development, and Video Production 
+          will display their portfolios of work to the public and creative industry.
+        </p>
+  </div>
+  <div class="col-md-6 col-12">
+      <div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5967.463302416787!2d-93.61856742194209!3d41.5966877461963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x87ee99a457093b8d%3A0x2e0ddf50113251e7!2sdes+moines+botanical+center!3m2!1d41.596709!2d-93.614188!5e0!3m2!1sen!2sus!4v1518410108343"
+            width="100%" height="192" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+  </div>
+</div>
     </div>
   </div>
   <!--End Section 2-->
@@ -189,17 +208,17 @@
   <!--Section 3 Accordion-->
   <div id="accordion">
 
-    <h3 class="neon pink" id="graphic-design" >Graphic Design</h3>
+    <h3 class="neon pink" id="graphic-design">Graphic Design</h3>
     <div class="center-people graphic">
       <p id="graphicDesignStudents"></p>
     </div>
 
-    <h3 class="neon pink" id="photography" >Photography</h3>
+    <h3 class="neon pink" id="photography">Photography</h3>
     <div class="center-people photo">
       <p id="photo"></p>
     </div>
 
-  <h3 class="neon pink" id="web-development" >Web Development</h3>
+    <h3 class="neon pink" id="web-development">Web Development</h3>
     <div class="center-people web">
       <p id="webDev"></p>
     </div>
@@ -221,9 +240,15 @@
               <div class="glitch" data-text="JANE DOE">JANE DOE</div>
               <p>WEB DEVELOPMENT</p>
               <div class="bioLinks">
-                <p><a href="#">janedoe@yahoo.com</a></p>
-                <p><a href="#">My Portfolio</a></p>
-                <p><a href="#">My Repo | Linkedin</a></p>
+                <p>
+                  <a href="#">janedoe@yahoo.com</a>
+                </p>
+                <p>
+                  <a href="#">My Portfolio</a>
+                </p>
+                <p>
+                  <a href="#">My Repo | Linkedin</a>
+                </p>
               </div>
               <h3>HOMETOWN</h3>
               <p>Des Moines, IA</p>
@@ -240,29 +265,29 @@
   </div>
   <!--End Bio Modal-->
 
+  <!--Footer Section-->
   <footer class="row">
-    <div class="col-sm-4">
-      <p style="text-decoration: underline;">Follow Us!</p>
+    <div class="col-lg-4">
+      <h3>Follow Us</h3>
       <!-- Add font awesome icons -->
       <a href="https://www.facebook.com/dmaccportfolioday/" class="fa fa-facebook"></a>
       <a href="https://www.instagram.com/dmaccportfolioday/" class="fa fa-instagram"></a>
-  </div>
-
-  <div class="col-sm-4">
-    <p style="text-decoration: underline;">Portfolio Day Website:</p>
-        <p>Developed & Designed by Students of the DMACC Web Development Program.</p>
-        <p style="text-decoration: underline;">Neon Font:</p>
-        <p> <a href="https://www.behance.net/gallery/55332529/NEONEON-FREE-FONT" style="color: #9d9d9d;">Neoneon Font developed by Bakoom Studio</a></p>
-  </div>
-
-  <div class="col-sm-4">
-    <p style="text-decoration: underline;">DMACC PORTFOLIO DAY 2018</p>
-        <p>Thursday April 12th</p>
-        <p>12:00 - 5:00PM</p>
-        <p>Des Moines Botanical Gardens, IA</p>
-  </div>
-
+    </div>
+    <div class="col-lg-4">
+      <h3>Portfolio Day Website</h3>
+      <p>Developed &amp; Designed by Students of the DMACC Web Development Program.</p>
+      <p>Neon Font:
+        <a href="https://www.behance.net/gallery/55332529/NEONEON-FREE-FONT">Neoneon Font developed by Bakoom Studio</a>
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <h3>Dmacc Portfolio Day 2018</h3>
+      <p>Thursday April 12th
+        <br> 12:00 - 5:00PM
+        <br> Des Moines Botanical Gardens, IA</p>
+    </div>
   </footer>
+  <!--End Footer-->
 
   <!--Up Page Button-->
   <p id="fixedBtn">
@@ -275,69 +300,69 @@
     //   collapsible: false
     // });
 
-// <!--
-//     function openPhotosAccordion() {
-//       $("#accordion").accordion({
-//         active: 2
-//       });
-//       var active = $("#accordion").accordion("option", "active");
-//       // Setter
-//       $("#accordion").accordion("option", "active", 1);
-//       callPhotoStudents();
-//     }
+    // <!--
+    //     function openPhotosAccordion() {
+    //       $("#accordion").accordion({
+    //         active: 2
+    //       });
+    //       var active = $("#accordion").accordion("option", "active");
+    //       // Setter
+    //       $("#accordion").accordion("option", "active", 1);
+    //       callPhotoStudents();
+    //     }
 
-//     function openGDAccordion() {
-//       $("#accordion").accordion({
-//         active: 2
-//       });
-//       var active = $("#accordion").accordion("option", "active");
-//       // Setter
-//       $("#accordion").accordion("option", "active", 0);
-//       callGraphicDesignStudents();
-//     }
+    //     function openGDAccordion() {
+    //       $("#accordion").accordion({
+    //         active: 2
+    //       });
+    //       var active = $("#accordion").accordion("option", "active");
+    //       // Setter
+    //       $("#accordion").accordion("option", "active", 0);
+    //       callGraphicDesignStudents();
+    //     }
 
-//     function openWebAccordion() {
-//       $("#accordion").accordion({
-//         active: 2
-//       });
-//       // Getter
-//       var active = $("#accordion").accordion("option", "active");
-//       // Setter
-//       $("#accordion").accordion("option", "active", 2);
-//       callWebDevStudents();
-//     } -->
+    //     function openWebAccordion() {
+    //       $("#accordion").accordion({
+    //         active: 2
+    //       });
+    //       // Getter
+    //       var active = $("#accordion").accordion("option", "active");
+    //       // Setter
+    //       $("#accordion").accordion("option", "active", 2);
+    //       callWebDevStudents();
+    //     } -->
 
     // function callWebDevStudents() {
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("webDev").innerHTML = this.responseText;
-        }
-      };
-      xmlhttp.open("GET", "assets/php/webDevStudents.php", true);
-      xmlhttp.send();
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("webDev").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "assets/php/webDevStudents.php", true);
+    xmlhttp.send();
     // }
 
     // function callGraphicDesignStudents() {
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("graphicDesignStudents").innerHTML = this.responseText;
-        }
-      };
-      xmlhttp.open("GET", "assets/php/graphicDesignStudents.php", true);
-      xmlhttp.send();
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("graphicDesignStudents").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "assets/php/graphicDesignStudents.php", true);
+    xmlhttp.send();
     // }
 
     // function callPhotoStudents() {
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("photo").innerHTML = this.responseText;
-        }
-      };
-      xmlhttp.open("GET", "assets/php/photographyStudents.php", true);
-      xmlhttp.send();
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("photo").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "assets/php/photographyStudents.php", true);
+    xmlhttp.send();
     // }
     //Modal Scripts
     // Get the modal
@@ -348,18 +373,27 @@
 
     // When the user clicks the button, open the modal
     function modalDisplay() {
+      bioModal.classList.add('expand');
       bioModal.style.display = "block";
     }
 
-    // When the user clicks on <span> (x), close the modal
+    // When the user clicks on <span> (x), close the modal 
     span.onclick = function () {
-      bioModal.style.display = "none";
+      bioModal.classList.add('collapse');
+      //remove added animation classes after set amound of time
+      setTimeout(function () {
+        bioModal.classList.remove('expand', 'collapse');
+      }, 1250);
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
       if (event.target == bioModal) {
-        bioModal.style.display = "none";
+        bioModal.classList.add('collapse');
+        //remove added animation classes after set amount of time
+        setTimeout(function () {
+          bioModal.classList.remove('expand', 'collapse');
+        }, 1250);
       }
     }
   </script>

@@ -96,7 +96,7 @@ html, body {
     .mix-logo {
       width: 50vw;
     }
-
+ 
 
     /*----Old TV Scanlines Screen Effect----*/
 
@@ -166,36 +166,34 @@ html, body {
 
 /* What is Mix? Section */
 
-	.mix-info {
-		height: 50em;
-		background: white;
-		margin-top: 0.7em;
-		.mix-info-container {
-			margin-top: 5%;
-			margin-bottom: 5%;
-			.mix-info-title {
-				margin-bottom: 75px;
-				font-family: "neoneonregular";
-				font-size: 5em;
-				text-align: center;
-				font-weight: bold;
-			}
-			.mix-info-content {
-				margin: 0 auto;
-				padding: 0 5em;
-      			font-family: 'proxima_nova_ltsemibold';
-			}
-			.mix-heading {
-				height: 5em;
-				margin-bottom: 25px;
-				text-align: center;
-				h3 {
-					color: $primary-color3;
-				}
-			}
-
-		}
-	}
+.mix-info {
+  background: white;
+  margin-top: 0.7em; 
+}
+  .mix-info .mix-info-container {
+    margin-top: 3%;
+    margin-bottom: 3%; 
+  }
+    .mix-info .mix-info-container .mix-info-title {
+      margin-bottom: 75px;
+      font-family: "neoneonregular";
+      font-size: 5em;
+      text-align: center;
+      font-weight: bold; 
+    }
+    .mix-info .mix-info-container .mix-info-content {
+      margin: 0 auto;
+      padding: 0 5em;
+      font-family: 'proxima_nova_ltsemibold'; 
+    }
+      .mix-heading {
+      height: 5em;
+      margin-bottom: 25px;
+      text-align: center; 
+    }
+      .mix-info .mix-info-container .mix-heading h3 {
+        color: #D4295E; 
+      }
 
 /*----Accordion Styles----*/
 
@@ -393,6 +391,53 @@ html, body {
       text-shadow: 0px 0px 200px #ff91fc, 0px 0px 30px #ff49fb, -1px -1px 5px #fff, 10px 1px 100px #af00b2;
     }
 
+
+    /* BOX HOVER */
+ 
+    .student-overlay {
+      position: relative;
+      .student-overlay-info {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+        -webkit-transition: -webkit-transform 0.4s, opacity 0.2s 0.2s;
+        -moz-transition: -moz-transform 0.4s, opacity 0.2s 0.2s;
+        transition: transform 0.4s, opacity 0.2s 0.2s;
+       }
+      h3 {
+        background: rgba(1, 1, 1, 0.5);
+         //Use RGBA when changing the background because adding more spans and divs will cause some problems
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin:0;
+        padding: 5px;
+        opacity: 1;
+        font-family: 'proxima_nova_scosfthin';
+        color: white;
+
+      }
+    }
+    .student-overlay:hover .student-overlay-info  {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      transform: translateY(0px);
+      -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+      -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+      transition: transform 0.4s, opacity 0.1s;
+    }
+
+
     /*MODAL*/
 
     /* The Modal (background) */
@@ -418,8 +463,10 @@ html, body {
       /* Fallback color */
       background-color: rgba(0, 0, 0, 0.7);
       /* Black w/ opacity */
+      transform: scale(0);
     }
 
+    
     /* Modal Close Button */
 
     .close {
@@ -459,10 +506,10 @@ html, body {
       background: -o-linear-gradient(-45deg, rgba(94,75,141,1) 0%, rgba(212,41,94,1) 50%, rgba(251,173,47,1) 100%);
       background: -ms-linear-gradient(-45deg, rgba(94,75,141,1) 0%, rgba(212,41,94,1) 50%, rgba(251,173,47,1) 100%);
       background: linear-gradient(135deg, rgba(94,75,141,1) 0%, rgba(212,41,94,1) 50%, rgba(251,173,47,1) 100%);
-      background-size: 400% 400%;
-      -webkit-animation: Gradient 15s ease infinite;
-      -moz-animation: Gradient 15s ease infinite;
-      animation: Gradient 15s ease infinite;
+      background-size: 150% 150%;
+      -webkit-animation: Gradient 13s ease infinite;
+      -moz-animation: Gradient 13s ease infinite;
+      animation: Gradient 13s ease infinite;
     }
 
     #modalPhoto img{
@@ -707,26 +754,111 @@ html, body {
       clip: rect(0, 900px, 0, 0);
       animation: noise-anim-2 3s infinite linear alternate-reverse;
     }
+    
+    /* Modal In and Out Animation */
+    .bioModal.expand {
+      transform: scaleY(0.01) scaleX(0);
+      animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    .bioModal.expand .modalContent {
+      transform: scale(0);
+      animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    .bioModal.expand.collapse .modalContent {
+      animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    .bioModal.expand.collapse {
+      transform: scale(1);
+      animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    
+    @keyframes unfoldIn {
+      0% {
+        transform: scaleY(0.005) scaleX(0);
+      }
+      50% {
+        transform: scaleY(0.005) scaleX(1);
+      }
+      100% {
+        transform: scaleY(1) scaleX(1);
+      }
+    }
+    @keyframes unfoldOut {
+      0% {
+        transform: scaleY(1) scaleX(1);
+      }
+      50% {
+        transform: scaleY(0.005) scaleX(1);
+      }
+      100% {
+        transform: scaleY(0.005) scaleX(0);
+      }
+    }
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes zoomOut {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
 
     /* Footer */
-    footer{
-      background:rgba(0,0,0,.7);
-      margin:7px 0px;
-      text-align:center;
-      padding:4% 2% 3% 2%;
+    footer {
+      background: rgba(0, 0, 0, 0.7);
+      margin: 0;
+      margin-top:-1rem;
+      text-align: center;
+      padding: 2em 1em 1em 1em;
       font-family: 'proxima_nova_ltsemibold';
-      font-size:1.2em;
+      font-size: 1em;
     }
-    footer p{
-      margin-bottom:.5em;
+    .fa {
+        padding: 10px;
+        font-size: 30px;
+        width: 50px;
+        border-radius: 50%;
+        text-decoration: none;
+        margin: 3% 3%;
+        transition: border 1s, opacity 1s;
+    }
+    .fa:hover {
+        opacity: 0.8;
+        border: white solid 2px;
+        border-radius: 50%;
+        color: black;
+        text-decoration: none;
+    }
+    .fa-facebook {
+    background: #3B5998;
+    color: white;
+    }
+    .fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color: white;
+    }
+    footer p {
+      color: #9d9d9d; 
+    }
+    footer p a {
+      color: #9d9d9d; 
+    }
+    footer p a:hover {
+      color: #ffffff;
+    }
+    footer h3 {
+      text-decoration:underline;
+      text-transform:uppercase;
+      font-size:1.1em;
       color:#9d9d9d;
-    }
-    footer a{
-      color:#f5f5f5;
-      font-style:italic;
-    }
-    footer a:hover{
-      color:#d4295e;
     }
 
     /* Up Button */
@@ -884,13 +1016,34 @@ html, body {
       }
     }
     /*Footer Media Query*/
-    @media only screen and (max-width:768px){
-      footer{
-        padding-top:6%;
+    @media only screen and (max-width: 991px) {
+      div.col-lg-4 {
+        margin-bottom:3%;
+      }
+      footer .fa {
+        margin:0 .5rem .5rem .5rem;
+      }
+      footer p {
+        margin-bottom:0;
       }
     }
-    @media only screen and (max-width:400px){
-      footer{
-        padding-top:8%;
+    @media only screen and (max-width: 768px) {
+      footer {
+        padding-top: 6%;
+      }
+      div.col-lg-4 {
+        margin-bottom:3.5%;
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      footer {
+        padding-top: 8%; 
+        font-size:.9em;
+      }
+      div.col-lg-4 {
+        margin-bottom:4%;
+      }
+      footer h3{
+        font-size:1em;
       }
     }

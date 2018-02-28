@@ -12,6 +12,7 @@ $secondary-color3: #D4B04F;
 /* GENERAL */
 
 * {
+  -webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -35,6 +36,7 @@ html, body {
 
     /* Navbar Brand Logo Invert Color On Hover */
     .navbar-brand:hover{
+      -webkit-filter: invert(100%);
       filter:invert(100%);
     }
 
@@ -86,15 +88,19 @@ html, body {
       align-items: center;
       -webkit-justify-content: center;
       -moz-justify-content: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       position: absolute;
       top: 50%;
       left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       z-index: 10;
     }
     .mix-logo {
-      width: 50vw;
+      width: 40vw;
     }
  
 
@@ -131,6 +137,8 @@ html, body {
       z-index: 4;
       background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(51%, rgba(0, 0, 0, 0.3)));
       background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 51%);
+      background: -webkit-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.3) 51%);
+      background: -o-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.3) 51%);
       background-size: 100% 8px;
       -webkit-animation: scanlines 1s steps(60) infinite;
       animation: scanlines 1s steps(60) infinite;
@@ -177,22 +185,31 @@ html, body {
     .mix-info .mix-info-container .mix-info-title {
       margin-bottom: 75px;
       font-family: "neoneonregular";
-      font-size: 5em;
+      font-size: 4.5em;
       text-align: center;
       font-weight: bold; 
     }
     .mix-info .mix-info-container .mix-info-content {
       margin: 0 auto;
-      padding: 0 5em;
+      padding: 1% 3em;
       font-family: 'proxima_nova_ltsemibold'; 
     }
       .mix-heading {
-      height: 5em;
-      margin-bottom: 25px;
       text-align: center; 
     }
       .mix-info .mix-info-container .mix-heading h3 {
         color: #D4295E; 
+        font-size:1.6em;
+      }
+      #mix-info .col-lg-6:first-child{
+        padding:1% 0 3% 5%;
+        font-size: 1.3em;
+      }
+      #mix-info .col-lg-6:nth-child(2){
+        padding:1% 5% 3% 0;
+      }
+      .mix-info-map {
+        padding:0 3em;
       }
 
 /*----Accordion Styles----*/
@@ -266,6 +283,7 @@ html, body {
       background: -webkit-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
       background: -o-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
       background: -ms-linear-gradient(top, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
+      background: -webkit-gradient(linear, left top, left bottom, from(#5e4b8d), color-stop(27%, #5e4b8d), color-stop(54%, #5e4b8d), to(#d62960));
       background: linear-gradient(to bottom, rgba(94, 75, 141, 1) 0%, rgba(94, 75, 141, 1) 27%, rgba(94, 75, 141, 1) 54%, rgba(214, 41, 96, 1) 100%);
     }
 
@@ -276,6 +294,7 @@ html, body {
       background: -webkit-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
       background: -o-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
       background: -ms-linear-gradient(top, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
+      background: -webkit-gradient(linear, left top, left bottom, from(#d4295f), color-stop(60%, #d62960), color-stop(93%, #f59536), to(#fbac2d));
       background: linear-gradient(to bottom, rgba(212, 41, 95, 1) 0%, rgba(214, 41, 96, 1) 60%, rgba(245, 149, 54, 1) 93%, rgba(251, 172, 45, 1) 100%);
     }
 
@@ -286,6 +305,7 @@ html, body {
       background: -webkit-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
       background: -o-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
       background: -ms-linear-gradient(top, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
+      background: -webkit-gradient(linear, left top, left bottom, from(#fbad2f), to(rgba(251, 173, 47, 0.71)));
       background: linear-gradient(to bottom, rgba(251, 173, 47, 1) 0%, rgba(251, 173, 47, 0.71) 100%);
     }
 
@@ -384,7 +404,7 @@ html, body {
     .neon {
       font-family: 'neoneonregular';
       text-align: center;
-      font-size: 120px;
+      font-size: 4.5em;
     }
     .pink {
       color: #ffffff;
@@ -410,9 +430,10 @@ html, body {
         transform: translateY(100%);
         -webkit-transition: -webkit-transform 0.4s, opacity 0.2s 0.2s;
         -moz-transition: -moz-transform 0.4s, opacity 0.2s 0.2s;
+        -webkit-transition: opacity 0.2s 0.2s, -webkit-transform 0.4s;
         transition: transform 0.4s, opacity 0.2s 0.2s;
        }
-      h3 {
+       h3 {
         background: rgba(1, 1, 1, 0.5);
          //Use RGBA when changing the background because adding more spans and divs will cause some problems
         position: absolute;
@@ -423,7 +444,6 @@ html, body {
         opacity: 1;
         font-family: 'proxima_nova_scosfthin';
         color: white;
-
       }
     }
     .student-overlay:hover .student-overlay-info  {
@@ -463,7 +483,9 @@ html, body {
       /* Fallback color */
       background-color: rgba(0, 0, 0, 0.7);
       /* Black w/ opacity */
-      transform: scale(0);
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0); 
     }
 
     
@@ -494,6 +516,7 @@ html, body {
     .modalContent {
       border-radius:2px;
       position:relative;
+      -webkit-box-shadow: 0px 0px 1px 1px #191919;
       box-shadow: 0px 0px 1px 1px #191919;
       width:100%;
       max-width:1440px;
@@ -505,11 +528,10 @@ html, body {
       background: -webkit-linear-gradient(-45deg, rgba(94,75,141,1) 0%, rgba(212,41,94,1) 50%, rgba(251,173,47,1) 100%);
       background: -o-linear-gradient(-45deg, rgba(94,75,141,1) 0%, rgba(212,41,94,1) 50%, rgba(251,173,47,1) 100%);
       background: -ms-linear-gradient(-45deg, rgba(94,75,141,1) 0%, rgba(212,41,94,1) 50%, rgba(251,173,47,1) 100%);
+      background: -webkit-linear-gradient(315deg, #5e4b8d 0%, #d4295e 50%, #fbad2f 100%);
+      background: -o-linear-gradient(315deg, #5e4b8d 0%, #d4295e 50%, #fbad2f 100%);
       background: linear-gradient(135deg, rgba(94,75,141,1) 0%, rgba(212,41,94,1) 50%, rgba(251,173,47,1) 100%);
       background-size: 150% 150%;
-      -webkit-animation: Gradient 13s ease infinite;
-      -moz-animation: Gradient 13s ease infinite;
-      animation: Gradient 13s ease infinite;
     }
 
     #modalPhoto img{
@@ -518,42 +540,6 @@ html, body {
       margin-left:auto;
       margin-right:auto;
       padding:8% 0 8% 8%;
-    }
-
-    @-webkit-keyframes Gradient {
-      0% {
-        background-position: 0% 50%
-      }
-      50% {
-        background-position: 100% 50%
-      }
-      100% {
-        background-position: 0% 50%
-      }
-    }
-
-    @-moz-keyframes Gradient {
-      0% {
-        background-position: 0% 50%
-      }
-      50% {
-        background-position: 100% 50%
-      }
-      100% {
-        background-position: 0% 50%
-      }
-    }
-
-    @keyframes Gradient {
-      0% {
-        background-position: 0% 50%
-      }
-      50% {
-        background-position: 100% 50%
-      }
-      100% {
-        background-position: 0% 50%
-      }
     }
 
     /* Modal Text */
@@ -595,6 +581,72 @@ html, body {
       position: relative;
       margin: 0 auto;
       text-shadow: 1px 1px black;
+    }
+
+    @-webkit-keyframes noise-anim {
+      0% {
+        clip: rect(58px, 9999px, 3px, 0);
+      }
+      5% {
+        clip: rect(15px, 9999px, 9px, 0);
+      }
+      10% {
+        clip: rect(100px, 9999px, 44px, 0);
+      }
+      15% {
+        clip: rect(25px, 9999px, 40px, 0);
+      }
+      20% {
+        clip: rect(94px, 9999px, 14px, 0);
+      }
+      25% {
+        clip: rect(33px, 9999px, 63px, 0);
+      }
+      30% {
+        clip: rect(85px, 9999px, 55px, 0);
+      }
+      35% {
+        clip: rect(5px, 9999px, 96px, 0);
+      }
+      40% {
+        clip: rect(76px, 9999px, 37px, 0);
+      }
+      45% {
+        clip: rect(88px, 9999px, 44px, 0);
+      }
+      50% {
+        clip: rect(100px, 9999px, 88px, 0);
+      }
+      55% {
+        clip: rect(100px, 9999px, 12px, 0);
+      }
+      60% {
+        clip: rect(68px, 9999px, 23px, 0);
+      }
+      65% {
+        clip: rect(99px, 9999px, 18px, 0);
+      }
+      70% {
+        clip: rect(43px, 9999px, 81px, 0);
+      }
+      75% {
+        clip: rect(50px, 9999px, 57px, 0);
+      }
+      80% {
+        clip: rect(2px, 9999px, 72px, 0);
+      }
+      85% {
+        clip: rect(25px, 9999px, 79px, 0);
+      }
+      90% {
+        clip: rect(69px, 9999px, 75px, 0);
+      }
+      95% {
+        clip: rect(65px, 9999px, 16px, 0);
+      }
+      100% {
+        clip: rect(93px, 9999px, 77px, 0);
+      }
     }
 
     @keyframes noise-anim {
@@ -676,6 +728,72 @@ html, body {
       animation: noise-anim 2s infinite linear alternate-reverse;
     }
 
+    @-webkit-keyframes noise-anim-2 {
+      0% {
+        clip: rect(92px, 9999px, 44px, 0);
+      }
+      5% {
+        clip: rect(27px, 9999px, 19px, 0);
+      }
+      10% {
+        clip: rect(27px, 9999px, 93px, 0);
+      }
+      15% {
+        clip: rect(45px, 9999px, 42px, 0);
+      }
+      20% {
+        clip: rect(21px, 9999px, 28px, 0);
+      }
+      25% {
+        clip: rect(55px, 9999px, 87px, 0);
+      }
+      30% {
+        clip: rect(88px, 9999px, 30px, 0);
+      }
+      35% {
+        clip: rect(10px, 9999px, 44px, 0);
+      }
+      40% {
+        clip: rect(66px, 9999px, 85px, 0);
+      }
+      45% {
+        clip: rect(63px, 9999px, 16px, 0);
+      }
+      50% {
+        clip: rect(60px, 9999px, 26px, 0);
+      }
+      55% {
+        clip: rect(27px, 9999px, 90px, 0);
+      }
+      60% {
+        clip: rect(72px, 9999px, 21px, 0);
+      }
+      65% {
+        clip: rect(72px, 9999px, 37px, 0);
+      }
+      70% {
+        clip: rect(84px, 9999px, 54px, 0);
+      }
+      75% {
+        clip: rect(26px, 9999px, 19px, 0);
+      }
+      80% {
+        clip: rect(25px, 9999px, 49px, 0);
+      }
+      85% {
+        clip: rect(96px, 9999px, 29px, 0);
+      }
+      90% {
+        clip: rect(61px, 9999px, 38px, 0);
+      }
+      95% {
+        clip: rect(45px, 9999px, 16px, 0);
+      }
+      100% {
+        clip: rect(77px, 9999px, 96px, 0);
+      }
+    }
+
     @keyframes noise-anim-2 {
       0% {
         clip: rect(92px, 9999px, 44px, 0);
@@ -755,58 +873,162 @@ html, body {
       animation: noise-anim-2 3s infinite linear alternate-reverse;
     }
     
-    /* Modal In and Out Animation */
+    /* Modal In and Out Animation & Modal Background Animation */
     .bioModal.expand {
+      -webkit-transform: scaleY(0.01) scaleX(0);
+      -ms-transform: scaleY(0.01) scaleX(0);
       transform: scaleY(0.01) scaleX(0);
+      -webkit-animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
       animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     }
     .bioModal.expand .modalContent {
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
       transform: scale(0);
-      animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      -webkit-animation:Gradient 11s ease infinite, zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      animation:Gradient 11s ease infinite, zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     }
     .bioModal.expand.collapse .modalContent {
-      animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      -webkit-animation:Gradient 11s ease infinite, zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      animation:Gradient 11s ease infinite, zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     }
     .bioModal.expand.collapse {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
       transform: scale(1);
+      -webkit-animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
       animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     }
-    
-    @keyframes unfoldIn {
+
+    @-webkit-keyframes Gradient {
       0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @-moz-keyframes Gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes Gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+    @-webkit-keyframes unfoldIn {
+      0% {
+        -webkit-transform: scaleY(0.005) scaleX(0);
         transform: scaleY(0.005) scaleX(0);
       }
       50% {
+        -webkit-transform: scaleY(0.005) scaleX(1);
         transform: scaleY(0.005) scaleX(1);
       }
       100% {
+        -webkit-transform: scaleY(1) scaleX(1);
         transform: scaleY(1) scaleX(1);
+      }
+    }
+    @keyframes unfoldIn {
+      0% {
+        -webkit-transform: scaleY(0.005) scaleX(0);
+        transform: scaleY(0.005) scaleX(0);
+      }
+      50% {
+        -webkit-transform: scaleY(0.005) scaleX(1);
+        transform: scaleY(0.005) scaleX(1);
+      }
+      100% {
+        -webkit-transform: scaleY(1) scaleX(1);
+        transform: scaleY(1) scaleX(1);
+      }
+    }
+    @-webkit-keyframes unfoldOut {
+      0% {
+        -webkit-transform: scaleY(1) scaleX(1);
+        transform: scaleY(1) scaleX(1);
+      }
+      50% {
+        -webkit-transform: scaleY(0.005) scaleX(1);
+        transform: scaleY(0.005) scaleX(1);
+      }
+      100% {
+        -webkit-transform: scaleY(0.005) scaleX(0);
+        transform: scaleY(0.005) scaleX(0);
       }
     }
     @keyframes unfoldOut {
       0% {
+        -webkit-transform: scaleY(1) scaleX(1);
         transform: scaleY(1) scaleX(1);
       }
       50% {
+        -webkit-transform: scaleY(0.005) scaleX(1);
         transform: scaleY(0.005) scaleX(1);
       }
       100% {
+        -webkit-transform: scaleY(0.005) scaleX(0);
         transform: scaleY(0.005) scaleX(0);
+      }
+    }
+    @-webkit-keyframes zoomIn  {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
       }
     }
     @keyframes zoomIn {
       0% {
+        -webkit-transform: scale(0);
         transform: scale(0);
       }
       100% {
+        -webkit-transform: scale(1);
         transform: scale(1);
+      }
+    }
+    @-webkit-keyframes zoomOut {
+      0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+      100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
       }
     }
     @keyframes zoomOut {
       0% {
+        -webkit-transform: scale(1);
         transform: scale(1);
       }
       100% {
+        -webkit-transform: scale(0);
         transform: scale(0);
       }
     }
@@ -826,16 +1048,10 @@ html, body {
         font-size: 30px;
         width: 50px;
         border-radius: 50%;
+        border:none;
         text-decoration: none;
         margin: 3% 3%;
-        transition: border 1s, opacity 1s;
-    }
-    .fa:hover {
-        opacity: 0.8;
-        border: white solid 2px;
-        border-radius: 50%;
-        color: black;
-        text-decoration: none;
+        transition: all 1s ease;
     }
     .fa-facebook {
     background: #3B5998;
@@ -845,6 +1061,13 @@ html, body {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     color: white;
     }
+    .fa:hover {
+      font-size: 28px;
+      opacity: 0.7;
+      border:solid white 1px;
+      color: black;
+      text-decoration: none;
+  }
     footer p {
       color: #9d9d9d; 
     }
@@ -935,17 +1158,51 @@ html, body {
       }
     }
     /* What is Mix Section Media Queries */
+    @media only screen and (max-width:991px){
+      #mix-info .col-lg-6:first-child,#mix-info .col-lg-6:nth-child(2){
+        padding:2% 5%;
+        font-size: 1.2em;
+      }
+    }
     @media only screen and (max-width:767px){
       .mix-info {
         height: 100%;
       }
-    }
-    @media only screen and (max-width:493px){
-      iframe {
-        margin-top: 56px;
+      .mix-info .mix-info-container .mix-info-title {
+        font-size:3.5em;
       }
-      .mix-info .mix-info-container .mix-info-content {
-        padding: 0 2em;
+    }
+    @media only screen and (max-width:605px){
+      #mix-info .col-lg-6:first-child,#mix-info .col-lg-6:nth-child(2){
+        padding:3%;
+        font-size: 1.2em;
+      }
+      .mix-info .mix-info-container .mix-info-content,.mix-info-map {
+        padding: 1% 2em;
+      }
+      .mix-info .mix-info-container .mix-info-title {
+        font-size:3em;
+      }
+      .mix-info .mix-info-container .mix-heading h3 {
+        font-size:1.5em;
+      }
+      #portfolioDayCountDown {
+        font-size:1.9em;
+      }
+    }
+    @media only screen and (max-width:490px){
+      .mix-info .mix-info-container .mix-info-title {
+        font-size:2.7em;
+      }
+      .mix-info .mix-info-container .mix-heading h3 {
+        font-size:1.3em;
+      }
+      #portfolioDayCountDown {
+        font-size:1.7em;
+      }
+      #mix-info .col-lg-6:first-child,#mix-info .col-lg-6:nth-child(2){
+        padding:2% 5%;
+        font-size: 1em;
       }
     }
 
@@ -1018,7 +1275,7 @@ html, body {
     /*Footer Media Query*/
     @media only screen and (max-width: 991px) {
       div.col-lg-4 {
-        margin-bottom:3%;
+        margin-bottom:3.5%;
       }
       footer .fa {
         margin:0 .5rem .5rem .5rem;
@@ -1032,7 +1289,7 @@ html, body {
         padding-top: 6%;
       }
       div.col-lg-4 {
-        margin-bottom:3.5%;
+        margin-bottom:4%;
       }
     }
     @media only screen and (max-width: 400px) {
@@ -1041,7 +1298,7 @@ html, body {
         font-size:.9em;
       }
       div.col-lg-4 {
-        margin-bottom:4%;
+        margin-bottom:4.5%;
       }
       footer h3{
         font-size:1em;

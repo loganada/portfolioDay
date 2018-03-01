@@ -114,35 +114,10 @@
       //Main MIX logo animation rotate
       var myVar = setInterval(cycleThroughImages, 1200);
 
-      var path = 'assets/img/MIX_logos_forWeb/',
-        imgs = ['MIX_Logo_Artboard 1 _web.png', 'MIX_Logo_Artboard 2 _web.png', 'MIX_Logo_Artboard 3 _web.png',
-          'MIX_Logo_Artboard 4 _web.png', 'MIX_Logo_Artboard 5 _web.png', 'MIX_Logo_Artboard 6 _web.png',
-          'MIX_Logo_Artboard 7 _web.png', 'MIX_Logo_Artboard 8 _web.png', 'MIX_Logo_Artboard 9 _web.png',
-          'MIX_Logo_Artboard 10 _web.png', 'MIX_Logo_Artboard 11 _web.png', 'MIX_Logo_Artboard 12 _web.png',
-          'MIX_Logo_Artboard 13 _web.png', 'MIX_Logo_Artboard 14 _web.png', 'MIX_Logo_Artboard 15 _web.png',
-
-          'MIX_Logo_Artboard 16 _web.png', 'MIX_Logo_Artboard 17 _web.png',
-          'MIX_Logo_Artboard 19 _web.png', 'MIX_Logo_Artboard 20 _web.png', 'MIX_Logo_Artboard 21 _web.png',
-          'MIX_Logo_Artboard 22 _web.png', 'MIX_Logo_Artboard 23 _web.png', 'MIX_Logo_Artboard 24 _web.png',
-          'MIX_Logo_Artboard 25 _web.png', 'MIX_Logo_Artboard 26 _web.png', 'MIX_Logo_Artboard 27 _web.png',
-          'MIX_Logo_Artboard 28 _web.png', 'MIX_Logo_Artboard 29 _web.png', 'MIX_Logo_Artboard 30 _web.png',
-          'MIX_Logo_Artboard 31 _web.png', 'MIX_Logo_Artboard 32 _web.png', 'MIX_Logo_Artboard 33 _web.png',
-          'MIX_Logo_Artboard 34 _web.png', 'MIX_Logo_Artboard 35 _web.png', 'MIX_Logo_Artboard 36 _web.png',
-          'MIX_Logo_Artboard 37 _web.png', 'MIX_Logo_Artboard 38 _web.png', 'MIX_Logo_Artboard 39 _web.png',
-          'MIX_Logo_Artboard 40 _web.png', 'MIX_Logo_Artboard 41 _web.png', 'MIX_Logo_Artboard 42 _web.png',
-          'MIX_Logo_Artboard 44 _web.png', 'MIX_Logo_Artboard 45 _web.png', 'MIX_Logo_Artboard 46 _web.png',
-          'MIX_Logo_Artboard 47 _web.png', 'MIX_Logo_Artboard 48 _web.png', 'MIX_Logo_Artboard 49 _web.png',
-          'MIX_Logo_Artboard 50 _web.png', 'MIX_Logo_Artboard 51 _web.png', 'MIX_Logo_Artboard 52 _web.png',
-          'MIX_Logo_Artboard 54 _web.png', 'MIX_Logo_Artboard 55 _web.png', 'MIX_Logo_Artboard 56 _web.png',
-          'MIX_Logo_Artboard 58 _web.png', 'MIX_Logo_Artboard 59 _web.png', 'MIX_Logo_Artboard 60 _web.png',
-          'MIX_Logo_Artboard 61 _web.png', 'MIX_Logo_Artboard 62 _web.png', 'MIX_Logo_Artboard 63 _web.png',
-          'MIX_Logo_Artboard 64 _web.png', 'MIX_Logo_Artboard 65 _web.png', 'MIX_Logo_Artboard 66 _web.png',
-          'MIX_Logo_Artboard 68 _web.png', 'MIX_Logo_Artboard 69 _web.png', 'MIX_Logo_Artboard 70 _web.png',
-          'MIX_Logo_Artboard 71 _web.png', 'MIX_Logo_Artboard 72 _web.png', 'MIX_Logo_Artboard 73 _web.png',
-          'MIX_Logo_Artboard 74 _web.png', 'MIX_Logo_Artboard 75 _web.png', 'MIX_Logo_Artboard 76 _web.png',
-          'MIX_Logo_Artboard 77 _web.png', 'MIX_Logo_Artboard 78 _web.png', 'MIX_Logo_Artboard 80 _web.png',
-          'MIX_Logo_Artboard 81 _web.png', 'MIX_Logo_Artboard 82 _web.png', 'MIX_Logo_Artboard 83 _web.png'
-        ];
+    var path = 'assets/img/MIX_GIF_forWeb/',
+    for (var i = 1; i < 12; i++) {
+      print MIX_GIF_i;
+    }
 
 
       function cycleThroughImages() {
@@ -182,8 +157,8 @@
         <div class="row">
           <div class="col-lg-6 col-12">
               <p class="mix-info-content">
-                  Get ready to mix and mingle at DMACC Portfolio Day 2018. DMACC Portfolio Day is the culmination of two years of 
-                  refining talent and creative passion. Students of Graphic Design, Photography, Web Development, and Video Production 
+                  Get ready to mix and mingle at DMACC Portfolio Day 2018. DMACC Portfolio Day is the culmination of two years of
+                  refining talent and creative passion. Students of Graphic Design, Photography, Web Development, and Video Production
                   will display their portfolios of work to the public and creative industry.
                 </p>
           </div>
@@ -203,15 +178,15 @@
 
     <h3 class="neon pink" id="graphic-design">Graphic Design</h3>
     <div class="center-people graphic">
-      <p id="graphicDesignStudents"></p>
+      <p id="graphicDesignStudents" onclick="modalGDContent()"></p>
     </div>
 
-    <h3 class="neon pink" id="photography">Photography</h3>
+    <h3 class="neon pink" id="photography" onclick="modalPhotoContent()">Photography</h3>
     <div class="center-people photo">
       <p id="photo"></p>
     </div>
 
-    <h3 class="neon pink" id="web-development">Web Development</h3>
+    <h3 class="neon pink" id="web-development" onclick="modalWDContent()">Web Development</h3>
     <div class="center-people web">
       <p id="webDev"></p>
     </div>
@@ -226,7 +201,7 @@
         <div class="row">
           <span class="close">&times;</span>
           <div id="modalPhoto" class="col-lg-6 col-12">
-            <img width='400px' src='assets/img/girl.jpg' />
+
           </div>
           <div class="col-lg-6 col-12">
             <div id="modalText">
@@ -370,7 +345,7 @@
       bioModal.style.display = "block";
     }
 
-    // When the user clicks on <span> (x), close the modal 
+    // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
       bioModal.classList.add('collapse');
       //remove added animation classes after set amound of time
@@ -388,6 +363,17 @@
           bioModal.classList.remove('expand', 'collapse');
         }, 1250);
       }
+    }
+    function modalGDContent(){
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("modalPhoto").innerHTML = this.responseText;
+        }
+      };
+      xmlhttp.open("GET", "assets/php/loadGDModal.php?q=" + , true);
+      xmlhttp.send();
     }
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"

@@ -102,7 +102,7 @@
 
     <!-- logo -->
     <div class="header-container">
-      <span class="cycleThroughLogos"></span>
+      <span id= "logo" class="cycleThroughLogos"></span>
     </div>
 
     <div class="header-text">
@@ -112,13 +112,10 @@
     </div>
     <script>
       //Main MIX logo animation rotate
-      var myVar = setInterval(cycleThroughImages, 1200);
+     var myVar = setInterval(cycleThroughImages, 1200);
 
-    var path = 'assets/img/MIX_GIF_forWeb/',
-    for (var i = 1; i < 12; i++) {
-      print MIX_GIF_i;
-    }
-
+    var path ='assets/img/MIX_GIF_forWeb/';
+     var imgs=['MIX_GIF_1.gif', 'MIX_GIF_2.gif', 'MIX_GIF_3.gif', 'MIX_GIF_4.gif', 'MIX_GIF_5.gif', 'MIX_GIF_6.gif', 'MIX_GIF_7.gif'];
 
       function cycleThroughImages() {
         i = Math.floor(Math.random() * imgs.length);
@@ -365,6 +362,7 @@
       }
     }
     function modalGDContent(){
+      alert($(this.attr("id"));
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
 
@@ -372,7 +370,7 @@
           document.getElementById("modalPhoto").innerHTML = this.responseText;
         }
       };
-      xmlhttp.open("GET", "assets/php/loadGDModal.php?q=" + , true);
+      xmlhttp.open("GET", "assets/php/loadGDModal.php?q=" + this.id, true);
       xmlhttp.send();
     }
   </script>

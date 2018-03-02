@@ -1,9 +1,22 @@
 <?php
+include "loadData.php";
 $q = $_REQUEST["q"];
-
   if ($q == "GD 1") {
     echo "<img class='picture' id ='modalGD 1' width='200px'
             src='assets/img/dpd-photos/GD-1.jpg'/>";
+    echo $arrayGD[0]['bio_login_email'];
+    echo $arrayGD[0]['bio_first_name'];
+    echo $arrayGD[0]['bio_last_name'];
+    echo $arrayGD[0]['bio_program'];
+    echo $arrayGD[0]['bio_second_program'];
+    echo $arrayGD[0]['bio_website_address'];
+    echo $arrayGD[0]['bio_second_web'];
+    echo $arrayGD[0]['bio_linkedIn'];
+    echo $arrayGD[0]['bio_email'];
+    echo $arrayGD[0]['bio_hometown'];
+    echo $arrayGD[0]['bio_email'];
+    echo $arrayGD[0]['bio_career_goals'];
+    echo $arrayGD[0]['bio_three_words'];
   }
   if ($q == "GD 2") {
     echo "<img class='picture' id ='modalGD 2' width='200px'

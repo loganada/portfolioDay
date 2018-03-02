@@ -402,7 +402,7 @@
        //alert(targetID);
    });
         if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("modalPhoto").innerHTML = this.responseText;
+          document.getElementById("myModal").innerHTML = this.responseText;
         }
       };
       xmlhttp.open("GET", "assets/php/loadWDModal.php?q=" + targetID, true);

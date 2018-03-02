@@ -298,7 +298,7 @@
     //       $("#accordion").accordion("option", "active", 2);
     //       callWebDevStudents();
     //     } -->
-    // function callWebDevStudents() {
+   function callWebDevStudents() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -307,8 +307,8 @@
     };
     xmlhttp.open("GET", "assets/php/webDevStudents.php", true);
     xmlhttp.send();
-    // }
-    // function callGraphicDesignStudents() {
+     }
+    function callGraphicDesignStudents() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -317,8 +317,8 @@
     };
     xmlhttp.open("GET", "assets/php/graphicDesignStudents.php", true);
     xmlhttp.send();
-    // }
-    // function callPhotoStudents() {
+     }
+    function callPhotoStudents() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -327,7 +327,8 @@
     };
     xmlhttp.open("GET", "assets/php/photographyStudents.php", true);
     xmlhttp.send();
-    // }
+     }
+    
     //Modal Scripts
     // Get the modal
     var bioModal = document.getElementById('myModal');

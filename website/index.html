@@ -74,7 +74,7 @@
     <!--Navigation-->
     <nav class="navbar navbar-default navbar-expand-lg navbar-light fixed-top">
       <a class="navbar-brand nav-link" href="#page-top">
-        <img src="assets/img/MIX_logos_forWeb/MIX_Logo_Artboard 6 _web.png" height="30px" class="d-inline-block align-top" title="MIX"
+        <img src="assets/img/small-logo.png" height="30px" class="d-inline-block align-top" title="MIX"
           alt="Mix Logo">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -93,7 +93,13 @@
             <a class="nav-link" href="#photography"> PHOTOGRAPHY</a>
           </li>
           <li class="desktop-menu-item">
+            <a class="nav-link" href="#video-production">VIDEO PRODUCTION</a>
+          </li>
+          <li class="desktop-menu-item">
             <a class="nav-link" href="#web-development"> WEB DEVELOPMENT</a>
+          </li>
+          <li class="desktop-menu-item">
+            <a class="nav-link" href="form/bioform.php"> STUDENT SIGNUP</a>
           </li>
         </ul>
       </div>
@@ -102,17 +108,15 @@
 
     <!-- logo -->
     <div class="header-container">
-      <span id= "logo" class="cycleThroughLogos"></span>
+      <span id= "logo" class="cycleThroughLogos">
+        <img class='mix-logo' title='MIX Logo' alt='Logo used for DMACC PORTFOLIO DAY 2018' src='assets/img/MIX_GIF_forWeb/MIX_GIF_7.gif'>
+      </span>
+        <h2>DMACC<br>PORTFOLIO <BR> DAY 2018</h2>
     </div>
 
-    <div class="header-text">
-      <h2>DMACC
-        <br> PORTFOLIO
-        <br> DAY 2018</h2>
-    </div>
     <script>
       //Main MIX logo animation rotate
-     var myVar = setInterval(cycleThroughImages, 1200);
+     var myVar = setInterval(cycleThroughImages, 12000);
 
     var path ='assets/img/MIX_GIF_forWeb/';
      var imgs=['MIX_GIF_1.gif', 'MIX_GIF_2.gif', 'MIX_GIF_3.gif', 'MIX_GIF_4.gif', 'MIX_GIF_5.gif', 'MIX_GIF_6.gif', 'MIX_GIF_7.gif'];
@@ -182,11 +186,12 @@
     <div class="center-people photo">
       <p id="photo" onclick="modalPhotoContent()"></p>
     </div>
-
+    <h3 class="neon pink" id="video-production" onclick="modalWDContent()">Video Production</h3>
     <h3 class="neon pink" id="web-development" onclick="modalWDContent()">Web Development</h3>
     <div class="center-people web">
       <p id="webDev" onclick="modalWDContent()"></p>
     </div>
+
   </div>
   <!--End Section 3-->
 
@@ -258,13 +263,12 @@
   <p id="fixedBtn">
     <a id="toTopBtn" href="#page-top">^</a>
   </p>
-  <script>
+<script>
     // $("#accordion").accordion({
     //   heightStyle: "content",
     //   animate: 300,
     //   collapsible: false
     // });
-
     // <!--
     //     function openPhotosAccordion() {
     //       $("#accordion").accordion({
@@ -275,7 +279,6 @@
     //       $("#accordion").accordion("option", "active", 1);
     //       callPhotoStudents();
     //     }
-
     //     function openGDAccordion() {
     //       $("#accordion").accordion({
     //         active: 2
@@ -285,7 +288,6 @@
     //       $("#accordion").accordion("option", "active", 0);
     //       callGraphicDesignStudents();
     //     }
-
     //     function openWebAccordion() {
     //       $("#accordion").accordion({
     //         active: 2
@@ -296,7 +298,6 @@
     //       $("#accordion").accordion("option", "active", 2);
     //       callWebDevStudents();
     //     } -->
-
     // function callWebDevStudents() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -307,7 +308,6 @@
     xmlhttp.open("GET", "assets/php/webDevStudents.php", true);
     xmlhttp.send();
     // }
-
     // function callGraphicDesignStudents() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -318,7 +318,6 @@
     xmlhttp.open("GET", "assets/php/graphicDesignStudents.php", true);
     xmlhttp.send();
     // }
-
     // function callPhotoStudents() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -332,16 +331,13 @@
     //Modal Scripts
     // Get the modal
     var bioModal = document.getElementById('myModal');
-
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
-
     // When the user clicks the button, open the modal
     function modalDisplay() {
       bioModal.classList.add('expand');
       bioModal.style.display = "block";
     }
-
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
       bioModal.classList.add('collapse');
@@ -350,7 +346,6 @@
         bioModal.classList.remove('expand', 'collapse');
       }, 1250);
     }
-
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
       if (event.target == bioModal) {
@@ -363,7 +358,6 @@
     }
     var targetID;
     function modalGDContent(){
-
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function (event) {
         $("img").click(function(event) {
@@ -377,9 +371,7 @@
       xmlhttp.open("GET", "assets/php/loadGDModal.php?q=" + targetID, true);
       xmlhttp.send();
     }
-
     function modalPhotoContent(){
-
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function (event) {
         $("img").click(function(event) {
@@ -394,7 +386,6 @@
       xmlhttp.send();
     }
     function modalWDContent(){
-
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function (event) {
         $("img").click(function(event) {

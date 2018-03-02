@@ -15,9 +15,10 @@ catch(PDOException $e)
     echo "Connection failed: " . $e->getMessage();
     }
 
+
 try {
 
-  $stmt = "SELECT COUNT(*)  FROM gullydsm_dmacc";
+  $stmt = "SELECT COUNT(*)  FROM local_dpd_bio";
   if ($res = $conn->query($stmt))
   {
         if ($res->fetchColumn() > 0) {

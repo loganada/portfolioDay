@@ -184,12 +184,12 @@
 
     <h3 class="neon pink" id="photography" onclick="modalPhotoContent()">Photography</h3>
     <div class="center-people photo">
-      <p id="photo"></p>
+      <p id="photo" onclick="modalPhotoContent()"></p>
     </div>
     <h3 class="neon pink" id="video-production" onclick="modalWDContent()">Video Production</h3>
     <h3 class="neon pink" id="web-development" onclick="modalWDContent()">Web Development</h3>
     <div class="center-people web">
-      <p id="webDev"></p>
+      <p id="webDev" onclick="modalWDContent()"></p>
     </div>
 
   </div>
@@ -366,16 +366,51 @@
         }, 1250);
       }
     }
+    var targetID;
     function modalGDContent(){
-      alert($(this.attr("id"));
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
 
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function (event) {
+        $("img").click(function(event) {
+        targetID=event.target.id;
+       //alert(targetID);
+   });
         if (this.readyState == 4 && this.status == 200) {
           document.getElementById("modalPhoto").innerHTML = this.responseText;
         }
       };
-      xmlhttp.open("GET", "assets/php/loadGDModal.php?q=" + this.id, true);
+      xmlhttp.open("GET", "assets/php/loadGDModal.php?q=" + targetID, true);
+      xmlhttp.send();
+    }
+
+    function modalPhotoContent(){
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function (event) {
+        $("img").click(function(event) {
+        targetID=event.target.id;
+       //alert(targetID);
+   });
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("modalPhoto").innerHTML = this.responseText;
+        }
+      };
+      xmlhttp.open("GET", "assets/php/loadphotoModal.php?q=" + targetID, true);
+      xmlhttp.send();
+    }
+    function modalWDContent(){
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function (event) {
+        $("img").click(function(event) {
+        targetID=event.target.id;
+       //alert(targetID);
+   });
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("modalPhoto").innerHTML = this.responseText;
+        }
+      };
+      xmlhttp.open("GET", "assets/php/loadWDModal.php?q=" + targetID, true);
       xmlhttp.send();
     }
   </script>

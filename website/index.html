@@ -163,14 +163,18 @@
   <div id="myModal" class="bioModal">
     <div class="container-fluid">
       <!-- Modal content -->
-      <div class="modalContent">
+      <div id="modalContent" class="modalContent">
         <div class="row">
-          <span class="close">&times;</span>
+          <span class="close">X</span>
           <div id="modalPhoto" class="col-lg-6 col-12">
 
-          </div>
 
-
+        <div class='col-lg-6 col-12'>
+        <div id='modalText' class='modalText'>
+          
+</div>
+        </div>
+        </div>
         </div>
         <!--End Row -->
       </div>
@@ -309,7 +313,7 @@
        //alert(targetID);
    });
         if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("modalPhoto").innerHTML = this.responseText;
+          document.getElementById("modalContent").innerHTML = this.responseText;
         }
       };
       xmlhttp.open("GET", "assets/php/loadGDModal.php?q=" + targetID, true);
@@ -323,7 +327,7 @@
        //alert(targetID);
    });
         if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("modalPhoto").innerHTML = this.responseText;
+          document.getElementById("modalContent").innerHTML = this.responseText;
         }
       };
       xmlhttp.open("GET", "assets/php/loadphotoModal.php?q=" + targetID, true);
@@ -337,7 +341,7 @@
        //alert(targetID);
    });
         if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("modalPhoto").innerHTML = this.responseText;
+          document.getElementById("modalContent").innerHTML = this.responseText;
         }
       };
       xmlhttp.open("GET", "assets/php/loadWDModal.php?q=" + targetID, true);

@@ -169,29 +169,8 @@
           <div id="modalPhoto" class="col-lg-6 col-12">
 
           </div>
-          <div class="col-lg-6 col-12">
-            <div id="modalText">
-              <div class="glitch" data-text="JANE DOE">JANE DOE</div>
-              <p>WEB DEVELOPMENT</p>
-              <div class="bioLinks">
-                <p>
-                  <a href="#">janedoe@yahoo.com</a>
-                </p>
-                <p>
-                  <a href="#">My Portfolio</a>
-                </p>
-                <p>
-                  <a href="#">My Repo | Linkedin</a>
-                </p>
-              </div>
-              <h3>HOMETOWN</h3>
-              <p>Des Moines, IA</p>
-              <h3>CAREER GOALS</h3>
-              <p>Just being totally awesome at my job!</p>
-              <h3>THREE WORDS TO DESCRIBE ME</h3>
-              <p>Smart, Really Smart, &amp; Uber Smart</p>
-            </div>
-          </div>
+
+
         </div>
         <!--End Row -->
       </div>
@@ -262,7 +241,7 @@
     //       $("#accordion").accordion("option", "active", 2);
     //       callWebDevStudents();
     //     } -->
-   function callWebDevStudents() {
+  // function callWebDevStudents() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -271,8 +250,8 @@
     };
     xmlhttp.open("GET", "assets/php/webDevStudents.php", true);
     xmlhttp.send();
-     }
-    function callGraphicDesignStudents() {
+    // }
+    //function callGraphicDesignStudents() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -281,8 +260,8 @@
     };
     xmlhttp.open("GET", "assets/php/graphicDesignStudents.php", true);
     xmlhttp.send();
-     }
-    function callPhotoStudents() {
+     //}
+    //function callPhotoStudents() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -291,8 +270,8 @@
     };
     xmlhttp.open("GET", "assets/php/photographyStudents.php", true);
     xmlhttp.send();
-     }
-    
+     //}
+
     //Modal Scripts
     // Get the modal
     var bioModal = document.getElementById('myModal');
@@ -358,7 +337,7 @@
        //alert(targetID);
    });
         if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("myModal").innerHTML = this.responseText;
+          document.getElementById("modalPhoto").innerHTML = this.responseText;
         }
       };
       xmlhttp.open("GET", "assets/php/loadWDModal.php?q=" + targetID, true);

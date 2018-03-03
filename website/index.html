@@ -165,13 +165,12 @@
       <!-- Modal content -->
       <div id="modalContent" class="modalContent">
         <div class="row">
-          <span class="close">X</span>
           <div id="modalPhoto" class="col-lg-6 col-12">
 
 
         <div class='col-lg-6 col-12'>
         <div id='modalText' class='modalText'>
-          
+
 </div>
         </div>
         </div>
@@ -306,9 +305,12 @@
     }
     var targetID;
     function modalGDContent(){
+      bioModal.classList.add('expand');
+      bioModal.style.display = "block";
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function (event) {
         $("img").click(function(event) {
+
         targetID=event.target.id;
        //alert(targetID);
    });
@@ -320,9 +322,12 @@
       xmlhttp.send();
     }
     function modalPhotoContent(){
+      bioModal.classList.add('expand');
+      bioModal.style.display = "block";
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function (event) {
         $("img").click(function(event) {
+
         targetID=event.target.id;
        //alert(targetID);
    });
@@ -334,9 +339,12 @@
       xmlhttp.send();
     }
     function modalWDContent(){
+      bioModal.classList.add('expand');
+      bioModal.style.display = "block";
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function (event) {
         $("img").click(function(event) {
+
         targetID=event.target.id;
        //alert(targetID);
    });

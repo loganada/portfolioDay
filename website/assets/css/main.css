@@ -407,13 +407,23 @@ html, body {
   background: -webkit-linear-gradient(315deg, #5e4b8d 0%, #d4295e 50%, #fbad2f 100%);
   background: -o-linear-gradient(315deg, #5e4b8d 0%, #d4295e 50%, #fbad2f 100%);
   background: linear-gradient(135deg, #5e4b8d 0%, #d4295e 50%, #fbad2f 100%);
-  background-size: 150% 150%; }
+  background-size: 150% 150%;
+overflow: scroll;}
 
 #modalPhoto{
 border-radius: 15px;
   width: 40%;
 }
+.descrip{
+background: rgba(255, 166, 77, .2);
+  border-radius: 20px;
+  text-align: center;
+  width: 30px;
 
+}
+.center{
+  text-align: center;
+}
 /* Modal Text */
 #modalText, .modalText {
   font-family: 'proxima_nova_ltsemibold';

@@ -415,13 +415,7 @@ overflow: scroll;}
 border-radius: 15px;
   width: 40%;
 }
-.descrip{
-background: rgba(255, 166, 77, .2);
-  border-radius: 20px;
-  text-align: center;
-  width: 30px;
 
-}
 .center{
   text-align: center;
 }
@@ -429,7 +423,8 @@ background: rgba(255, 166, 77, .2);
 #modalText, .modalText {
   font-family: 'proxima_nova_ltsemibold';
   color: #f5f5f5;
-  margin-right: 10%;
+  margin-right: 5%;
+
   float: right;
   clear: both;
 width: 45%;
@@ -437,9 +432,9 @@ width: 45%;
 #modalText h1{
   display: inline;
   text-decoration: underline;
-  margin: 0 5px 5px 5px;
+  margin: 10px 5px 5px 5px;
 }
-#modalText h3 { 
+#modalText h3 {
 display: inline;}
 #modalText h5 {
 
@@ -451,11 +446,20 @@ display: inline;}
   margin-bottom: 5px;
 
 }
-
+.descrip{
+background: rgba(255, 166, 77, .2);
+  border-radius: 20px;
+  text-align: center;
+color: black;
+}
 .bioLinks {
-  padding-top: 3.5%;
-  padding-bottom: 4%; }
 
+
+ }
+.border{
+  border: 2px solid black;
+  border-radius: 20px;
+}
 #modalText .bioLinks p {
   margin-bottom: 0; }
 

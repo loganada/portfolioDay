@@ -146,14 +146,17 @@
       <p id="graphicDesignStudents" onclick="modalGDContent()"></p>
     </div>
 
-    <h3 class="neon pink" id="photography" onclick="modalPhotoContent()">Photography</h3>
-    <div class="center-people photo">
-      <p id="photo" onclick="modalPhotoContent()"></p>
+    <h3 class="neon pink" id="photography">Photography</h3>
+    <div class="center-people photo" onclick="modalPhotoContent()" >
+      <p id="photo"></p>
     </div>
-    <h3 class="neon pink" id="video-production" onclick="modalWDContent()">Video Production</h3>
-    <h3 class="neon pink" id="web-development" onclick="modalWDContent()">Web Development</h3>
-    <div class="center-people web">
-      <p id="webDev" onclick="modalWDContent()"></p>
+    <h3 class="neon pink" id="video-production" >Video Production</h3>
+    <div class="center-people video" onclick="modalVideoContent()" >
+      <p id="VP"></p>
+    </div>
+    <h3 class="neon pink" id="web-development" >Web Development</h3>
+    <div class="center-people web" onclick="modalWDContent()" >
+      <p id="webDev"></p>
     </div>
 
   </div>
@@ -164,6 +167,7 @@
     <div class="container-fluid">
       <!-- Modal content -->
       <div id="modalContent" class="modalContent">
+        <span class='close'>X</span>
         <div class="row">
           <div id="modalPhoto" class="col-lg-6 col-12">
 
@@ -274,6 +278,16 @@
     xmlhttp.open("GET", "assets/php/photographyStudents.php", true);
     xmlhttp.send();
      //}
+     //function callVideoStudents() {
+     var xmlhttp = new XMLHttpRequest();
+     xmlhttp.onreadystatechange = function () {
+       if (this.readyState == 4 && this.status == 200) {
+         document.getElementById("VP").innerHTML = this.responseText;
+       }
+     };
+     xmlhttp.open("GET", "assets/php/videoStudents.php", true);
+     xmlhttp.send();
+      //}
 
     //Modal Scripts
     // Get the modal
@@ -304,9 +318,8 @@
       }
     }
     var targetID;
-    function modalGDContent(){
-      bioModal.classList.add('expand');
-      bioModal.style.display = "block";
+function modalGDContent(){
+
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function (event) {
         $("img").click(function(event) {
@@ -322,8 +335,7 @@
       xmlhttp.send();
     }
     function modalPhotoContent(){
-      bioModal.classList.add('expand');
-      bioModal.style.display = "block";
+
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function (event) {
         $("img").click(function(event) {
@@ -338,9 +350,25 @@
       xmlhttp.open("GET", "assets/php/loadphotoModal.php?q=" + targetID, true);
       xmlhttp.send();
     }
+    function modalVideoContent(){
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function (event) {
+        $("img").click(function(event) {
+
+        targetID=event.target.id;
+       //alert(targetID);
+   });
+        if (this.readyState == 4 && this.status == 200) {
+
+          document.getElementById("modalContent").innerHTML = this.responseText;
+        }
+      };
+      xmlhttp.open("GET", "assets/php/loadVideoModal.php?q=" + targetID, true);
+      xmlhttp.send();
+    }
     function modalWDContent(){
-      bioModal.classList.add('expand');
-      bioModal.style.display = "block";
+
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function (event) {
         $("img").click(function(event) {

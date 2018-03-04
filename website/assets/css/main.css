@@ -196,7 +196,8 @@ html, body {
   background: -webkit-linear-gradient(top, #d4295f 0%, #d4295f 16%, #d4295f 53%, #f37b1f 100%);
   background: -o-linear-gradient(top, #d4295f 0%, #d4295f 16%, #d4295f 53%, #f37b1f 100%);
   background: -ms-linear-gradient(top, #d4295f 0%, #d4295f 16%, #d4295f 53%, #f37b1f 100%);
-  background: linear-gradient(to bottom, #d4295f 0%, #d4295f 16%, #d4295f 53%, #f37b1f 100%); }
+  background: linear-gradient(to bottom, #d4295f 0%, #d4295f 16%, #d4295f 53%, #f37b1f 100%);
+display: none;}
 
 .video {
   background: #f37b1f;
@@ -217,7 +218,7 @@ html, body {
   background: linear-gradient(to bottom, #fbad2f 0%, rgba(245, 214, 128, 0.96) 100%); }
 
 /* Accordion Images Effects */
-#graphicDesignStudents img:hover, #photo img:hover, #webDev img:hover {
+#graphicDesignStudents img:hover, #photo img:hover, #webDev img:hover, #VP img:hover{
   cursor: pointer; }
 
 .picture {
@@ -438,9 +439,11 @@ width: 45%;
   text-decoration: underline;
   margin: 0 5px 5px 5px;
 }
-#modalText h3 {
-  margin-bottom: 0;
-  margin-top: 5px; }
+#modalText h3 { 
+display: inline;}
+#modalText h5 {
+
+display: inline;}
 
 #modalText p {
   font-size: 1.5em;
@@ -459,10 +462,10 @@ width: 45%;
 .bioLinks a {
   font-family: 'proxima_nova_ltsemibold';
   display: block;
-  color: #323232; }
+  color: white; }
 
 .bioLinks a:hover {
-  color: #ffffff; }
+  color: black; }
 
 /*---Modal Name Glitch Text Effect----*/
 .glitch {
@@ -1035,7 +1038,7 @@ footer h3 {
 /* Student Section Media Query */
 /* iPhone SE and other small phones */
 @media only screen and (max-width: 350px) {
-  #photography, #web-development, #graphic-design {
+  #photography, #web-development, #graphic-design, #video-production {
     margin: 0;
     padding: 1em;
     font-size: 2.5em; } }

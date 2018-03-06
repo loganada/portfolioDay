@@ -33,7 +33,7 @@ try {
                   }
 
 
-                $stmt = "SELECT  bio_login_email, bio_first_name, bio_last_name, bio_program, bio_second_program, bio_website_address, bio_second_web, bio_linkedIn, bio_email, bio_hometown, bio_career_goals, bio_three_words FROM local_dpd_bio";
+                $stmt = "SELECT  bio_login_email, bio_first_name, bio_last_name, bio_program, bio_second_program, bio_website_address, bio_second_web, bio_linkedIn, bio_email, bio_hometown, bio_career_goals, bio_three_words FROM local_dpd_bio WHERE bio_program='photography'";
                 $arrayphoto = array();
 
                 foreach ($conn->query($stmt) as $row) {

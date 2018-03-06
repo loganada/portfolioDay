@@ -3,6 +3,13 @@ include "loadData.php";
 $q = $_REQUEST["q"];
 $photo = array();
  for ($i=0; $i < 11; $i++) {
+   if($arrayphoto[$i]['bio_program'] == 'photography')
+   {
+     $arrayphoto[$i]['bio_program'] = 'Photography';
+   }
+   if($arrayphoto[$i]['bio_second_program'] == 'none'){
+     $arrayphoto[$i]['bio_second_program'] = '';
+   }
    $photo[$i]=
     "<h1 class='modalText center'>" .  $arrayphoto[$i]['bio_first_name'] . " ". $arrayphoto[$i]['bio_last_name'] . "</h1>" .
     "<h3 class='modalText center'>" . $arrayphoto[$i]['bio_program'] . "</h3> <h5 class='modalText center'> ". $arrayphoto[$i]['bio_second_program']."</h5>" .
@@ -24,39 +31,39 @@ $photo = array();
   "<span class='close'>X</span>";
 }
 if ($q == "photo 0") {
- echo $photo[0];
+ //echo $photo[0];
 
 }
  if ($q == "photo 1") {
-   echo $photo[1];
+   //echo $photo[1];
 }
 if ($q == "photo 2") {
- echo $photo[2];
+// echo $photo[2];
 }
 if ($q == "photo 3") {
- echo $photo[3];
+ //echo $photo[3];
 }
 if ($q == "photo 4") {
- echo $photo[4];
+/// echo $photo[4];
 }
 if ($q == "photo 5") {
- echo $photo[5];
+ //echo $photo[5];
 }
 if ($q == "photo 6") {
- echo $photo[6];
+ //echo $photo[6];
 }
 if ($q == "photo 7") {
- echo $photo[7];
+ //echo $photo[7];
 }
 if ($q == "photo 8") {
- echo $photo[8];
+ //echo $photo[8];
 }
 if ($q == "photo 9") {
- echo $photo[9];
+ //echo $photo[9];
 }
 if ($q == "photo 10") {
- echo $photo[10];
+ //echo $photo[10];
 }
 if ($q == "photo 11") {
- echo $photo[11];
+ //echo $photo[11];
 }

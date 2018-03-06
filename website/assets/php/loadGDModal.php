@@ -3,6 +3,13 @@
 $q = $_REQUEST["q"];
 $GD = array();
   for ($i=0; $i < 18; $i++) {
+    if($arrayGD[$i]['bio_program'] == 'graphicDesign')
+    {
+      $arrayGD[$i]['bio_program'] = 'Graphic Design';
+    }
+    if($arrayGD[$i]['bio_second_program'] == 'none'){
+      $arrayGD[$i]['bio_second_program'] = '';
+    }
   $GD[$i]=
    "<h1 class='modalText center'>" .  $arrayGD[$i]['bio_first_name'] . " ". $arrayGD[$i]['bio_last_name'] . "</h1>" .
    "<h3 class='modalText center'>" . $arrayGD[$i]['bio_program'] . "</h3> <h5 class='modalText center'> ". $arrayGD[$i]['bio_second_program']."</h5>" .

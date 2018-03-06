@@ -197,7 +197,7 @@ html, body {
   background: -o-linear-gradient(top, #d4295f 0%, #d4295f 16%, #d4295f 53%, #f37b1f 100%);
   background: -ms-linear-gradient(top, #d4295f 0%, #d4295f 16%, #d4295f 53%, #f37b1f 100%);
   background: linear-gradient(to bottom, #d4295f 0%, #d4295f 16%, #d4295f 53%, #f37b1f 100%);
-display: none;}
+}
 
 .video {
   background: #f37b1f;

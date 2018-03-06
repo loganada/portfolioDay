@@ -3,6 +3,13 @@
 $q = $_REQUEST["q"];
 $video = array();
   for ($i=0; $i < 3; $i++) {
+    if($arrayVideo[$i]['bio_program'] == 'videoProduction')
+    {
+      $arrayVideo[$i]['bio_program'] = 'Video Production';
+    }
+    if($arrayVideo[$i]['bio_second_program'] == 'none'){
+      $arrayVideo[$i]['bio_second_program'] = '';
+    }
     $video[$i]=
      "<h1 class='modalText center'>" .  $arrayVideo[$i]['bio_first_name'] . " ". $arrayVideo[$i]['bio_last_name'] . "</h1>" .
      "<h3 class='modalText center'>" . $arrayVideo[$i]['bio_program'] . "</h3> <h5 class='modalText center'> ". $arrayVideo[$i]['bio_second_program']."</h5>" .

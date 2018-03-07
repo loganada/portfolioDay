@@ -28,7 +28,7 @@ $WD = array();
    "<h4 class='modalText descrip' >Three Words That Describe Me</h4>" .
   "<h3 class='modalText center'>" . $arrayWD[$i]['bio_three_words'] . "</h3>" .
   "<img class='picture' id ='modalPhoto' src='assets/img/dpd-photos/WD-$i.jpg'/><br>" .
-  "<span class='close'>X</span>";
+  "<span class='close' onclick='closeModal()'>X</span>";
 }
 if ($q == "WD 0") {
  echo $WD[0];

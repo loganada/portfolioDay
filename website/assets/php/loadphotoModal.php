@@ -28,7 +28,7 @@ $photo = array();
    "<h4 class='modalText descrip' >Three Words That Describe Me</h4>" .
   "<h3 class='modalText center'>" . $arrayphoto[$i]['bio_three_words'] . "</h3>" .
   "<img class='picture' id ='modalPhoto' src='assets/img/dpd-photos/photo-$i.jpg'/><br>" .
-  "<span class='close'>X</span>";
+  "<span class='close' onclick='closeModal()'>X</span>";
 }
 if ($q == "photo 0") {
  //echo $photo[0];

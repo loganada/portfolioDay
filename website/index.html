@@ -147,15 +147,15 @@
     </div>
 
     <h3 class="neon pink" id="photography">Photography</h3>
-    <div class="center-people photo" onclick="modalPhotoContent()" >
+    <div class="center-people photo" onclick="modalphotoContent()">
       <p id="photo"></p>
     </div>
     <h3 class="neon pink" id="video-production" >Video Production</h3>
-    <div class="center-people video" onclick="modalVideoContent()" >
+    <div class="center-people video" onclick="modalVideoContent()">
       <p id="VP"></p>
     </div>
     <h3 class="neon pink" id="web-development" >Web Development</h3>
-    <div class="center-people web" onclick="modalWDContent()" >
+    <div class="center-people web" onclick="modalWDContent()">
       <p id="webDev"></p>
     </div>
 
@@ -214,6 +214,7 @@
     <a id="toTopBtn" href="#page-top">^</a>
   </p>
 <script>
+
     // $("#accordion").accordion({
     //   heightStyle: "content",
     //   animate: 300,
@@ -288,15 +289,80 @@
      xmlhttp.open("GET", "assets/php/videoStudents.php", true);
      xmlhttp.send();
       //}
+      var targetID;
+  function modalGDContent(){
+      //modalDisplay();
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function (event) {
+          $("img").click(function(event) {
 
+          targetID=event.target.id;
+         //alert(targetID);
+     });
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("modalContent").innerHTML = this.responseText;
+          }
+        };
+        xmlhttp.open("GET", "assets/php/loadGDModal.php?q=" + targetID, true);
+        xmlhttp.send();
+      }
+      function modalPhotoContent(){
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function (event) {
+          $("img").click(function(event) {
+
+          targetID=event.target.id;
+         //alert(targetID);
+     });
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("modalContent").innerHTML = this.responseText;
+          }
+        };
+        xmlhttp.open("GET", "assets/php/loadphotoModal.php?q=" + targetID, true);
+        xmlhttp.send();
+      }
+      function modalVideoContent(){
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function (event) {
+          $("img").click(function(event) {
+
+          targetID=event.target.id;
+         //alert(targetID);
+     });
+          if (this.readyState == 4 && this.status == 200) {
+
+            document.getElementById("modalContent").innerHTML = this.responseText;
+          }
+        };
+        xmlhttp.open("GET", "assets/php/loadVideoModal.php?q=" + targetID, true);
+        xmlhttp.send();
+      }
+      function modalWDContent(){
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function (event) {
+          $("img").click(function(event) {
+
+          targetID=event.target.id;
+         //alert(targetID);
+     });
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("modalContent").innerHTML = this.responseText;
+          }
+        };
+        xmlhttp.open("GET", "assets/php/loadWDModal.php?q=" + targetID, true);
+        xmlhttp.send();
+      }
     //Modal Scripts
     // Get the modal
     var bioModal = document.getElementById('myModal');
     var bioContainer = document.getElementById('bioContainer');
     var navbarArea = document.getElementById('navbarNav');
     // Get the <span> element that closes the modal
+
     var closebutton = document.getElementsByClassName("close")[0];
-  
     // When the user clicks on <span> (x), close the modal
 
       function closeModal() {
@@ -306,8 +372,8 @@
         bioModal.classList.remove('expand', 'collapse');
       }, 1250);
     }
-    
-     
+
+
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
@@ -362,7 +428,7 @@ function modalGDContent(){
       xmlhttp.open("GET", "assets/php/loadphotoModal.php?q=" + targetID, true);
       xmlhttp.send();
     }
-    
+
     function modalVideoContent(){
 
       var xmlhttp = new XMLHttpRequest();
@@ -396,6 +462,7 @@ function modalGDContent(){
       xmlhttp.open("GET", "assets/php/loadWDModal.php?q=" + targetID, true);
       xmlhttp.send();
     }
+
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>

@@ -70,7 +70,7 @@ if ($q == "GD 11") {
 }
 if ($q == "GD 12") {
   echo $GD[12];
-  print_r ($GD);
+  // print_r ($GD);
 }
   if ($q == "GD 13") {
     echo $GD[13];

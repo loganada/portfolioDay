@@ -32,7 +32,7 @@
     });
   </script>
 </head>
-<body id="page-top" onload="modalGDContent()">
+<body id="page-top" onload="modalWDContent()">
   <!--Section 1-->
   <div class="section1 scanlines">
     <!--Navigation-->
@@ -345,6 +345,7 @@ function modalGDContent(){
       xmlhttp.open("GET", "assets/php/loadGDModal.php?q=" + targetID, true);
       xmlhttp.send();
     }
+
     function modalPhotoContent(){
 
       var xmlhttp = new XMLHttpRequest();
@@ -361,6 +362,7 @@ function modalGDContent(){
       xmlhttp.open("GET", "assets/php/loadphotoModal.php?q=" + targetID, true);
       xmlhttp.send();
     }
+    
     function modalVideoContent(){
 
       var xmlhttp = new XMLHttpRequest();

@@ -32,7 +32,7 @@
     });
   </script>
 </head>
-<body id="page-top">
+<body id="page-top" onload="modalGDContent()">
   <!--Section 1-->
   <div class="section1 scanlines">
     <!--Navigation-->
@@ -164,7 +164,7 @@
 
   <!-- The Bio Modal -->
   <div id="myModal" class="bioModal">
-    <div class="container-fluid">
+    <div class="container-fluid" id="bioContainer">
       <!-- Modal content -->
       <div id="modalContent" class="modalContent">
         <span class='close'>X</span>
@@ -292,25 +292,26 @@
     //Modal Scripts
     // Get the modal
     var bioModal = document.getElementById('myModal');
+    var bioContainer = document.getElementById('bioContainer');
+    var navbarArea = document.getElementById('navbarNav');
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    // When the user clicks the button, open the modal
-    function modalDisplay() {
-      bioModal.classList.add('expand');
-      bioModal.style.display = "block";
-
-    }
+    var closebutton = document.getElementsByClassName("close")[0];
+  
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      bioModal.classList.add('collapse');
+
+      function closeModal() {
+        bioModal.classList.add('collapse');
       //remove added animation classes after set amound of time
       setTimeout(function () {
         bioModal.classList.remove('expand', 'collapse');
       }, 1250);
     }
+    
+     
+
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-      if (event.target == bioModal) {
+      if (event.target == bioModal || event.target == bioContainer|| event.target == navbarArea) {
         bioModal.classList.add('collapse');
         //remove added animation classes after set amount of time
         setTimeout(function () {
@@ -318,7 +319,16 @@
         }, 1250);
       }
     }
+
+
+      // When the user clicks the image of the student, open the modal
+      function modalDisplay() {
+      bioModal.classList.add('expand');
+      bioModal.style.display = "block";
+
+    }
     var targetID;
+
 function modalGDContent(){
 
       var xmlhttp = new XMLHttpRequest();

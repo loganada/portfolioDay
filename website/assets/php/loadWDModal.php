@@ -10,6 +10,18 @@ $WD = array();
    if($arrayWD[$i]['bio_second_program'] == 'none'){
      $arrayWD[$i]['bio_second_program'] = '';
    }
+   if($arrayGD[$i]['bio_second_program'] == 'photography')
+   {
+       $arrayGD[$i]['bio_second_program'] = 'Photography';
+   }
+   if($arrayGD[$i]['bio_second_program'] == 'graphicDesign')
+   {
+       $arrayGD[$i]['bio_second_program'] = 'Graphic Design';
+   }
+   if($arrayGD[$i]['bio_second_program'] == 'videoProduction')
+   {
+       $arrayGD[$i]['bio_second_program'] = 'Video Production';
+   }
    $WD[$i]=
     "<h1 class='modalText center'>" .  $arrayWD[$i]['bio_first_name'] . " ". $arrayWD[$i]['bio_last_name'] . "</h1>" .
     "<h3 class='modalText center'>" . $arrayWD[$i]['bio_program'] . "</h3> <h5 class='modalText center'> ". $arrayWD[$i]['bio_second_program']."</h5>" .

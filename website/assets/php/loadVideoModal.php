@@ -10,6 +10,18 @@ $video = array();
     if($arrayVideo[$i]['bio_second_program'] == 'none'){
       $arrayVideo[$i]['bio_second_program'] = '';
     }
+    if($arrayGD[$i]['bio_second_program'] == 'photography')
+    {
+        $arrayGD[$i]['bio_second_program'] = 'Photography';
+    }
+    if($arrayGD[$i]['bio_second_program'] == 'webDevelopment')
+    {
+        $arrayGD[$i]['bio_second_program'] = 'Web Development';
+    }
+    if($arrayGD[$i]['bio_second_program'] == 'graphicDesign')
+    {
+        $arrayGD[$i]['bio_second_program'] = 'Graphic Design';
+    }
     $video[$i]=
      "<h1 class='modalText center'>" .  $arrayVideo[$i]['bio_first_name'] . " ". $arrayVideo[$i]['bio_last_name'] . "</h1>" .
      "<h3 class='modalText center'>" . $arrayVideo[$i]['bio_program'] . "</h3> <h5 class='modalText center'> ". $arrayVideo[$i]['bio_second_program']."</h5>" .

@@ -299,6 +299,11 @@
           targetID=event.target.id;
          //alert(targetID);
      });
+     $(".open").click(function(event) {
+
+     targetID=event.target.id;
+    //alert(targetID);
+  });
           if (this.readyState == 4 && this.status == 200) {
             document.getElementById("modalContent").innerHTML = this.responseText;
           }
@@ -404,6 +409,11 @@ function modalGDContent(){
         targetID=event.target.id;
        //alert(targetID);
    });
+   $(".open").click(function(event) {
+
+   targetID=event.target.id;
+  //alert(targetID);
+});
         if (this.readyState == 4 && this.status == 200) {
           document.getElementById("modalContent").innerHTML = this.responseText;
         }

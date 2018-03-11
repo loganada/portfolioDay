@@ -10,7 +10,7 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
   letter-spacing: .04em; }
-  
+
 /* Navigation Bar */
 .navbar {
   margin: 0;
@@ -974,7 +974,16 @@ footer h3 {
     font-size: 1.5em; }
 
   #portfolioDayCountDown {
-    font-size: 1.9em; } }
+    font-size: 1.9em; }
+#modalPhoto{
+  width: 100%;
+  float: none;
+}
+.modalText{
+  width: 98%;
+  float: none;
+}
+  }
 @media only screen and (max-width: 490px) {
   .mix-info .mix-info-container .mix-info-title {
     font-size: 2.7em; }

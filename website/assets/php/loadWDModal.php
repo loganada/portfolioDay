@@ -28,9 +28,9 @@ $WD = array();
 
  //  echo "<h3 class='modalText'>" . $arrayGD[6]['bio_login_email'] . "</h3>";
    "<div class='bioLinks'><h4 class='modalText descrip'>Web Links</h4>" .
-   "<h5><a class='modalText center' href=mailto:".$arrayWD[$i]['bio_login_email'] ."?Subject=Dmacc%20Portfolio%20Day%202018 target='_top'>Email Me</a></h5>" .
+   "<h5><a class='modalText center' href=mailto:".$arrayWD[$i]['bio_email'] ."?Subject=Dmacc%20Portfolio%20Day%202018 target='_top'>Email Me</a></h5>" .
     "<h5><a class='modalText center' href=" . $arrayWD[$i]['bio_website_address'] . ">My Website</a></h5>" .
-    "<h5><a class='modalText center' href=" . $arrayWD[$i]['bio_second_web'] . ">My Resources</a></h5>" .
+    "<h5><a class='modalText center' href=" . $arrayWD[$i]['bio_second_web'] . ">My Work</a></h5>" .
     "<h5><a class='modalText center' href=" . $arrayWD[$i]['bio_linkedIn'] . ">My Linkedin</a></h5>" .
     "</div>".
    "<h4 class='modalText descrip'>Hometown</h4>" .

@@ -1,8 +1,8 @@
 <?php
 $serverName = "localhost";
-$database = "wdv490_portfolio_day";
-$username = "root";
-$password = "";
+$database = "gullydsm_dmacc";
+$username = "gullydsm_dmacc";
+$password = "wdv341";
 
 
 try {

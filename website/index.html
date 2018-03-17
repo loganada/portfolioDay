@@ -171,13 +171,12 @@
         <div class="row">
           <div id="modalPhoto" class="col-lg-6 col-12">
 
+            <div class='col-lg-6 col-12'>
+              <div id='modalText' class='modalText'>
 
-        <div class='col-lg-6 col-12'>
-        <div id='modalText' class='modalText'>
-
-</div>
-        </div>
-        </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!--End Row -->
       </div>
@@ -204,7 +203,8 @@
       <h3>Dmacc Portfolio Day 2018</h3>
       <p>Thursday April 12th
         <br> 12:00 - 5:00PM
-        <br> Des Moines Botanical Gardens, IA</p>
+        <br> Botanical Gardens
+        <br> Des Moines, IA</p>
     </div>
   </footer>
   <!--End Footer-->
@@ -299,6 +299,11 @@
           targetID=event.target.id;
          //alert(targetID);
      });
+     $(".open").click(function(event) {
+
+     targetID=event.target.id;
+    //alert(targetID);
+  });
           if (this.readyState == 4 && this.status == 200) {
             document.getElementById("modalContent").innerHTML = this.responseText;
           }
@@ -404,6 +409,11 @@ function modalGDContent(){
         targetID=event.target.id;
        //alert(targetID);
    });
+   $(".open").click(function(event) {
+
+   targetID=event.target.id;
+  //alert(targetID);
+});
         if (this.readyState == 4 && this.status == 200) {
           document.getElementById("modalContent").innerHTML = this.responseText;
         }

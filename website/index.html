@@ -1,483 +1,887 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
   <title>DMACC PORTFOLIO DAY</title>
+
   <meta charset="utf-8">
 
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
+
+
   <!-- Bootstrap CSS -->
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+
+
   <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
   <link href='assets/fonts/main-fonts.css' rel='stylesheet' type='text/css'>
+
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+  <style>
+    .modalContent {
+      overflow: hidden;
+    }
+  </style>
 
   <script>
     // on nav links or up button click animated easy scroll to section
+
     $(document).ready(function () {
+
       $("a[href^='#']").click(function (e) {
+
         e.preventDefault();
+
+
 
         var position = $($(this).attr("href")).offset().top - 71;
 
+
+
         $("body, html").animate({
+
           scrollTop: position
+
         }, 1000);
+
       });
+
     });
   </script>
+
 </head>
+
 <body id="page-top" onload="modalWDContent()">
+
   <!--Section 1-->
+
   <div class="section1 scanlines">
+
     <!--Navigation-->
+
     <nav class="navbar navbar-default navbar-expand-xl navbar-light fixed-top">
+
       <a class="navbar-brand nav-link" href="#page-top">
-        <img src="assets/img/small-logo.png" height="30px" class="d-inline-block align-top" title="MIX"
-          alt="Mix Logo">
+
+        <img src="assets/img/small-logo.png" height="30px" class="d-inline-block align-top" title="MIX" alt="Mix Logo">
+
       </a>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
         aria-label="Toggle navigation">
+
         <span class="navbar-toggler-icon"></span>
+
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
+
         <ul class="navbar-nav">
+
           <li class="desktop-menu-item">
+
             <a class="nav-link" href="#mix-info"> WHAT IS MIX?</a>
+
           </li>
+
           <li class="desktop-menu-item">
+
             <a class="nav-link" href="#graphic-design"> GRAPHIC DESIGN</a>
+
           </li>
+
           <li class="desktop-menu-item">
+
             <a class="nav-link" href="#photography"> PHOTOGRAPHY</a>
+
           </li>
+
           <li class="desktop-menu-item">
+
             <a class="nav-link" href="#video-production">VIDEO PRODUCTION</a>
+
           </li>
+
           <li class="desktop-menu-item">
+
             <a class="nav-link" href="#web-development"> WEB DEVELOPMENT</a>
+
           </li>
+
           <li class="desktop-menu-item">
+
             <a class="nav-link" href="form/bioform.php"> STUDENT SIGNUP</a>
+
           </li>
+
         </ul>
+
       </div>
+
     </nav>
+
     <!--end navigation -->
 
+
+
     <!-- logo -->
+
     <div class="header-container">
-      <span id= "logo" class="cycleThroughLogos">
+
+      <span id="logo" class="cycleThroughLogos">
+
         <img class='mix-logo' title='MIX Logo' alt='Logo used for DMACC PORTFOLIO DAY 2018' src='assets/img/MIX_GIF_forWeb/MIX_GIF_7.gif'>
+
       </span>
-        <h2>DMACC<br>PORTFOLIO <BR> DAY 2018</h2>
+
+      <h2>DMACC
+        <br>PORTFOLIO
+        <BR> DAY 2018</h2>
+
     </div>
+
+
 
     <script>
       //Main MIX logo animation rotate
-     var myVar = setInterval(cycleThroughImages, 12000);
 
-    var path ='assets/img/MIX_GIF_forWeb/';
-     var imgs=['MIX_GIF_1.gif', 'MIX_GIF_2.gif', 'MIX_GIF_3.gif', 'MIX_GIF_4.gif', 'MIX_GIF_5.gif', 'MIX_GIF_6.gif', 'MIX_GIF_7.gif'];
+      var myVar = setInterval(cycleThroughImages, 12000);
+
+
+
+      var path = 'assets/img/MIX_GIF_forWeb/';
+
+      var imgs = ['MIX_GIF_1.gif', 'MIX_GIF_2.gif', 'MIX_GIF_3.gif', 'MIX_GIF_4.gif', 'MIX_GIF_5.gif', 'MIX_GIF_6.gif',
+        'MIX_GIF_7.gif'
+      ];
+
+
 
       function cycleThroughImages() {
+
         i = Math.floor(Math.random() * imgs.length);
+
         $('.cycleThroughLogos').html(
+
           "<img class='mix-logo' title='MIX Logo' alt='Logo used for DMACC PORTFOLIO DAY 2018' src='" + path + imgs[i] +
+
           "'>");
+
       }
     </script>
+
   </div>
+
   <!--end section 1 -->
 
+
+
   <!--Section 2-->
+
   <div class="mix-info" id="mix-info">
+
     <div class="mix-info-container">
+
       <h1 class="mix-info-title">What is Mix?</h1>
+
       <div class="row ">
+
         <div class="col-12 ">
+
           <div class="mix-info-content">
+
             <div class="mix-heading">
+
               <h1 id="portfolioDayCountDown"></h1>
+
             </div>
+
           </div>
+
         </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 col-12 mobilePadding">
-            <div class="mix-info-content">
-                <div class="mix-heading">
-                  <h3>Thursday April 12th
-                    <br> 12:00 - 5:00PM
-                    <br> Des Moines Botanical Gardens, IA</h3>
-                </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-12 col-12 mobilePadding">
+
+          <div class="mix-info-content">
+
+            <div class="mix-heading">
+
+              <h3>Thursday April 12th
+
+                <br> 12:00 - 5:00PM
+
+                <br> Des Moines Botanical Gardens, IA</h3>
+
             </div>
+
           </div>
+
         </div>
-        <div class="row">
-          <div class="col-lg-6 col-12">
-              <p class="mix-info-content">
-                  Get ready to mix and mingle at DMACC Portfolio Day 2018. DMACC Portfolio Day is the culmination of two years of
-                  refining talent and creative passion. Students of Graphic Design, Photography, Web Development, and Video Production
-                  will display their portfolios of work to the public and creative industry.
-                </p>
-          </div>
-          <div class="col-lg-6 col-12">
-              <div class="mix-info-map">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5967.463302416787!2d-93.61856742194209!3d41.5966877461963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x87ee99a457093b8d%3A0x2e0ddf50113251e7!2sdes+moines+botanical+center!3m2!1d41.596709!2d-93.614188!5e0!3m2!1sen!2sus!4v1518410108343"
-                    width="100%" height="192" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-          </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-6 col-12">
+
+          <p class="mix-info-content">
+
+            Get ready to mix and mingle at DMACC Portfolio Day 2018. DMACC Portfolio Day is the culmination of two years of refining
+            talent and creative passion. Students of Graphic Design, Photography, Web Development, and Video Production will
+            display their portfolios of work to the public and creative industry.
+
+          </p>
+
         </div>
+
+        <div class="col-lg-6 col-12">
+
+          <div class="mix-info-map">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5967.463302416787!2d-93.61856742194209!3d41.5966877461963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x87ee99a457093b8d%3A0x2e0ddf50113251e7!2sdes+moines+botanical+center!3m2!1d41.596709!2d-93.614188!5e0!3m2!1sen!2sus!4v1518410108343"
+              width="100%" height="192" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
+
   </div>
+
   <!--End Section 2-->
 
+
+
   <!--Section 3 Accordion-->
+
   <div id="accordion">
 
+
+
     <h3 class="neon pink" id="graphic-design">Graphic Design</h3>
+
     <div class="center-people graphic">
+
       <p id="graphicDesignStudents" onclick="modalGDContent()"></p>
+
     </div>
+
+
 
     <h3 class="neon pink" id="photography">Photography</h3>
+
     <div class="center-people photo" onclick="modalphotoContent()">
+
       <p id="photo"></p>
-    </div>
-    <h3 class="neon pink" id="video-production" >Video Production</h3>
-    <div class="center-people video" onclick="modalVideoContent()">
-      <p id="VP"></p>
-    </div>
-    <h3 class="neon pink" id="web-development" >Web Development</h3>
-    <div class="center-people web" onclick="modalWDContent()">
-      <p id="webDev"></p>
+
     </div>
 
+    <h3 class="neon pink" id="video-production">Video Production</h3>
+
+    <div class="center-people video" onclick="modalVideoContent()">
+
+      <p id="VP"></p>
+
+    </div>
+
+    <h3 class="neon pink" id="web-development">Web Development</h3>
+
+    <div class="center-people web" onclick="modalWDContent()">
+
+      <p id="webDev"></p>
+
+    </div>
+
+
+
   </div>
+
   <!--End Section 3-->
 
+
+
   <!-- The Bio Modal -->
+
   <div id="myModal" class="bioModal">
+
     <div class="container-fluid" id="bioContainer">
+
       <!-- Modal content -->
+
       <div id="modalContent" class="modalContent">
+
         <span class='close'>X</span>
+
         <div class="row">
+
           <div id="modalPhoto" class="col-lg-6 col-12">
 
+
+
             <div class='col-lg-6 col-12'>
+
               <div id='modalText' class='modalText'>
 
+
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
         <!--End Row -->
+
       </div>
+
     </div>
+
   </div>
+
   <!--End Bio Modal-->
 
+
+
   <!--Footer Section-->
+
   <footer class="row">
+
     <div class="col-lg-4">
+
       <h3>Follow Us</h3>
+
       <!-- Add font awesome icons -->
+
       <a href="https://www.facebook.com/dmaccportfolioday/" class="fa fa-facebook"></a>
+
       <a href="https://www.instagram.com/dmaccportfolioday/" class="fa fa-instagram"></a>
+
     </div>
+
     <div class="col-lg-4">
+
       <h3>Portfolio Day Website</h3>
+
       <p>Developed &amp; Designed by Students of the DMACC Web Development Program.</p>
+
       <p>Neon Font:
+
         <a href="https://www.behance.net/gallery/55332529/NEONEON-FREE-FONT">Neoneon Font developed by Bakoom Studio</a>
+
       </p>
+
     </div>
+
     <div class="col-lg-4">
+
       <h3>Dmacc Portfolio Day 2018</h3>
+
       <p>Thursday April 12th
+
         <br> 12:00 - 5:00PM
+
         <br> Botanical Gardens
+
         <br> Des Moines, IA</p>
+
     </div>
+
   </footer>
+
   <!--End Footer-->
 
+
+
   <!--Up Page Button-->
+
   <p id="fixedBtn">
+
     <a id="toTopBtn" href="#page-top">^</a>
+
   </p>
-<script>
 
-    // $("#accordion").accordion({
-    //   heightStyle: "content",
-    //   animate: 300,
-    //   collapsible: false
-    // });
-    // <!--
-    //     function openPhotosAccordion() {
-    //       $("#accordion").accordion({
-    //         active: 2
-    //       });
-    //       var active = $("#accordion").accordion("option", "active");
-    //       // Setter
-    //       $("#accordion").accordion("option", "active", 1);
-    //       callPhotoStudents();
-    //     }
-    //     function openGDAccordion() {
-    //       $("#accordion").accordion({
-    //         active: 2
-    //       });
-    //       var active = $("#accordion").accordion("option", "active");
-    //       // Setter
-    //       $("#accordion").accordion("option", "active", 0);
-    //       callGraphicDesignStudents();
-    //     }
-    //     function openWebAccordion() {
-    //       $("#accordion").accordion({
-    //         active: 2
-    //       });
-    //       // Getter
-    //       var active = $("#accordion").accordion("option", "active");
-    //       // Setter
-    //       $("#accordion").accordion("option", "active", 2);
-    //       callWebDevStudents();
-    //     } -->
-  // function callWebDevStudents() {
+  <script>
+
+    // function callWebDevStudents() {
+
     var xmlhttp = new XMLHttpRequest();
+
     xmlhttp.onreadystatechange = function () {
+
       if (this.readyState == 4 && this.status == 200) {
+
         document.getElementById("webDev").innerHTML = this.responseText;
+
       }
+
     };
+
     xmlhttp.open("GET", "assets/php/webDevStudents.php", true);
+
     xmlhttp.send();
+
     // }
+
     //function callGraphicDesignStudents() {
+
     var xmlhttp = new XMLHttpRequest();
+
     xmlhttp.onreadystatechange = function () {
+
       if (this.readyState == 4 && this.status == 200) {
+
         document.getElementById("graphicDesignStudents").innerHTML = this.responseText;
+
       }
+
     };
+
     xmlhttp.open("GET", "assets/php/graphicDesignStudents.php", true);
+
     xmlhttp.send();
-     //}
+
+    //}
+
     //function callPhotoStudents() {
+
     var xmlhttp = new XMLHttpRequest();
+
     xmlhttp.onreadystatechange = function () {
+
       if (this.readyState == 4 && this.status == 200) {
+
         document.getElementById("photo").innerHTML = this.responseText;
+
       }
+
     };
+
     xmlhttp.open("GET", "assets/php/photographyStudents.php", true);
+
     xmlhttp.send();
-     //}
-     //function callVideoStudents() {
-     var xmlhttp = new XMLHttpRequest();
-     xmlhttp.onreadystatechange = function () {
-       if (this.readyState == 4 && this.status == 200) {
-         document.getElementById("VP").innerHTML = this.responseText;
-       }
-     };
-     xmlhttp.open("GET", "assets/php/videoStudents.php", true);
-     xmlhttp.send();
-      //}
-      var targetID;
-  function modalGDContent(){
+
+    //}
+
+    //function callVideoStudents() {
+
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function () {
+
+      if (this.readyState == 4 && this.status == 200) {
+
+        document.getElementById("VP").innerHTML = this.responseText;
+
+      }
+
+    };
+
+    xmlhttp.open("GET", "assets/php/videoStudents.php", true);
+
+    xmlhttp.send();
+
+    //}
+
+    var targetID;
+
+    function modalGDContent() {
+
       //modalDisplay();
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function (event) {
-          $("img").click(function(event) {
 
-          targetID=event.target.id;
-         //alert(targetID);
-     });
-     $(".open").click(function(event) {
+      var xmlhttp = new XMLHttpRequest();
 
-     targetID=event.target.id;
-    //alert(targetID);
-  });
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("modalContent").innerHTML = this.responseText;
-          }
-        };
-        xmlhttp.open("GET", "assets/php/loadGDModal.php?q=" + targetID, true);
-        xmlhttp.send();
-      }
-      function modalPhotoContent(){
+      xmlhttp.onreadystatechange = function (event) {
 
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function (event) {
-          $("img").click(function(event) {
+        $("img").click(function (event) {
 
-          targetID=event.target.id;
-         //alert(targetID);
-     });
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("modalContent").innerHTML = this.responseText;
-          }
-        };
-        xmlhttp.open("GET", "assets/php/loadphotoModal.php?q=" + targetID, true);
-        xmlhttp.send();
-      }
-      function modalVideoContent(){
 
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function (event) {
-          $("img").click(function(event) {
 
-          targetID=event.target.id;
-         //alert(targetID);
-     });
-          if (this.readyState == 4 && this.status == 200) {
+          targetID = event.target.id;
 
-            document.getElementById("modalContent").innerHTML = this.responseText;
-          }
-        };
-        xmlhttp.open("GET", "assets/php/loadVideoModal.php?q=" + targetID, true);
-        xmlhttp.send();
-      }
-      function modalWDContent(){
+          //alert(targetID);
 
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function (event) {
-          $("img").click(function(event) {
+        });
 
-          targetID=event.target.id;
-         //alert(targetID);
-     });
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("modalContent").innerHTML = this.responseText;
-          }
-        };
-        xmlhttp.open("GET", "assets/php/loadWDModal.php?q=" + targetID, true);
-        xmlhttp.send();
-      }
+        $(".open").click(function (event) {
+
+
+
+          targetID = event.target.id;
+
+          //alert(targetID);
+
+        });
+
+        if (this.readyState == 4 && this.status == 200) {
+
+          document.getElementById("modalContent").innerHTML = this.responseText;
+
+        }
+
+      };
+
+      xmlhttp.open("GET", "assets/php/loadGDModal.php?q=" + targetID, true);
+
+      xmlhttp.send();
+
+    }
+
+    function modalPhotoContent() {
+
+
+
+      var xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onreadystatechange = function (event) {
+
+        $("img").click(function (event) {
+
+
+
+          targetID = event.target.id;
+
+          //alert(targetID);
+
+        });
+
+        if (this.readyState == 4 && this.status == 200) {
+
+          document.getElementById("modalContent").innerHTML = this.responseText;
+
+        }
+
+      };
+
+      xmlhttp.open("GET", "assets/php/loadphotoModal.php?q=" + targetID, true);
+
+      xmlhttp.send();
+
+    }
+
+    function modalVideoContent() {
+
+
+
+      var xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onreadystatechange = function (event) {
+
+        $("img").click(function (event) {
+
+
+
+          targetID = event.target.id;
+
+          //alert(targetID);
+
+        });
+
+        if (this.readyState == 4 && this.status == 200) {
+
+
+
+          document.getElementById("modalContent").innerHTML = this.responseText;
+
+        }
+
+      };
+
+      xmlhttp.open("GET", "assets/php/loadVideoModal.php?q=" + targetID, true);
+
+      xmlhttp.send();
+
+    }
+
+    function modalWDContent() {
+
+
+
+      var xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onreadystatechange = function (event) {
+
+        $("img").click(function (event) {
+
+
+
+          targetID = event.target.id;
+
+          //alert(targetID);
+
+        });
+
+        if (this.readyState == 4 && this.status == 200) {
+
+          document.getElementById("modalContent").innerHTML = this.responseText;
+
+        }
+
+      };
+
+      xmlhttp.open("GET", "assets/php/loadWDModal.php?q=" + targetID, true);
+
+      xmlhttp.send();
+
+    }
+
     //Modal Scripts
+
     // Get the modal
+
     var bioModal = document.getElementById('myModal');
+
     var bioContainer = document.getElementById('bioContainer');
+
     var navbarArea = document.getElementById('navbarNav');
+
     // Get the <span> element that closes the modal
 
+
+
     var closebutton = document.getElementsByClassName("close")[0];
+
     // When the user clicks on <span> (x), close the modal
 
-      function closeModal() {
-        bioModal.classList.add('collapse');
+
+
+    function closeModal() {
+
+      bioModal.classList.add('collapse');
+
       //remove added animation classes after set amound of time
+
       setTimeout(function () {
+
         bioModal.classList.remove('expand', 'collapse');
+
       }, 1250);
+
     }
+
+
+
+
 
 
 
     // When the user clicks anywhere outside of the modal, close it
+
     window.onclick = function (event) {
-      if (event.target == bioModal || event.target == bioContainer|| event.target == navbarArea) {
+
+      if (event.target == bioModal || event.target == bioContainer || event.target == navbarArea) {
+
         bioModal.classList.add('collapse');
+
         //remove added animation classes after set amount of time
+
         setTimeout(function () {
+
           bioModal.classList.remove('expand', 'collapse');
+
         }, 1250);
+
       }
+
     }
 
 
-      // When the user clicks the image of the student, open the modal
-      function modalDisplay() {
+
+
+
+    // When the user clicks the image of the student, open the modal
+
+    function modalDisplay() {
+
       bioModal.classList.add('expand');
+
       bioModal.style.display = "block";
 
+
+
     }
+
     var targetID;
 
-function modalGDContent(){
+
+
+    function modalGDContent() {
+
+
 
       var xmlhttp = new XMLHttpRequest();
+
       xmlhttp.onreadystatechange = function (event) {
-        $("img").click(function(event) {
 
-        targetID=event.target.id;
-       //alert(targetID);
-   });
-   $(".open").click(function(event) {
+        $("img").click(function (event) {
 
-   targetID=event.target.id;
-  //alert(targetID);
-});
+
+
+          targetID = event.target.id;
+
+          //alert(targetID);
+
+        });
+
+        $(".open").click(function (event) {
+
+
+
+          targetID = event.target.id;
+
+          //alert(targetID);
+
+        });
+
         if (this.readyState == 4 && this.status == 200) {
+
           document.getElementById("modalContent").innerHTML = this.responseText;
+
         }
+
       };
+
       xmlhttp.open("GET", "assets/php/loadGDModal.php?q=" + targetID, true);
+
       xmlhttp.send();
+
     }
 
-    function modalPhotoContent(){
+
+
+    function modalPhotoContent() {
+
+
 
       var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function (event) {
-        $("img").click(function(event) {
 
-        targetID=event.target.id;
-       //alert(targetID);
-   });
+      xmlhttp.onreadystatechange = function (event) {
+
+        $("img").click(function (event) {
+
+
+
+          targetID = event.target.id;
+
+          //alert(targetID);
+
+        });
+
         if (this.readyState == 4 && this.status == 200) {
+
           document.getElementById("modalContent").innerHTML = this.responseText;
+
         }
+
       };
+
       xmlhttp.open("GET", "assets/php/loadphotoModal.php?q=" + targetID, true);
+
       xmlhttp.send();
+
     }
 
-    function modalVideoContent(){
+
+
+    function modalVideoContent() {
+
+
 
       var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function (event) {
-        $("img").click(function(event) {
 
-        targetID=event.target.id;
-       //alert(targetID);
-   });
+      xmlhttp.onreadystatechange = function (event) {
+
+        $("img").click(function (event) {
+
+
+
+          targetID = event.target.id;
+
+          //alert(targetID);
+
+        });
+
         if (this.readyState == 4 && this.status == 200) {
 
+
+
           document.getElementById("modalContent").innerHTML = this.responseText;
+
         }
+
       };
+
       xmlhttp.open("GET", "assets/php/loadVideoModal.php?q=" + targetID, true);
+
       xmlhttp.send();
+
     }
-    function modalWDContent(){
+
+    function modalWDContent() {
+
+
 
       var xmlhttp = new XMLHttpRequest();
+
       xmlhttp.onreadystatechange = function (event) {
-        $("img").click(function(event) {
 
-        targetID=event.target.id;
-       //alert(targetID);
-   });
+        $("img").click(function (event) {
+
+
+
+          targetID = event.target.id;
+
+          //alert(targetID);
+
+        });
+
         if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("modalContent").innerHTML = this.responseText;
-        }
-      };
-      xmlhttp.open("GET", "assets/php/loadWDModal.php?q=" + targetID, true);
-      xmlhttp.send();
-    }
 
+          document.getElementById("modalContent").innerHTML = this.responseText;
+
+        }
+
+      };
+
+      xmlhttp.open("GET", "assets/php/loadWDModal.php?q=" + targetID, true);
+
+      xmlhttp.send();
+
+    }
   </script>
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
+
   <script src="assets/js/countdown.js"></script>
+
 </body>
+
 </html>

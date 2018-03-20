@@ -200,13 +200,13 @@ html, body {
 }
 
 .video {
-  background: #f37b1f;
-  background: -moz-linear-gradient(top, #f37b1f 0%, #f37b1f 79%, #fbad2f 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f37b1f), color-stop(79%, #f37b1f), color-stop(100%, #fbad2f));
-  background: -webkit-linear-gradient(top, #f37b1f 0%, #f37b1f 79%, #fbad2f 100%);
-  background: -o-linear-gradient(top, #f37b1f 0%, #f37b1f 79%, #fbad2f 100%);
-  background: -ms-linear-gradient(top, #f37b1f 0%, #f37b1f 79%, #fbad2f 100%);
-  background: linear-gradient(to bottom, #f37b1f 0%, #f37b1f 79%, #fbad2f 100%); }
+  background: rgba(243,123,31,1);
+  background: -moz-linear-gradient(top, rgba(243,123,31,1) 0%, rgba(251,173,47,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(243,123,31,1)), color-stop(100%, rgba(251,173,47,1)));
+  background: -webkit-linear-gradient(top, rgba(243,123,31,1) 0%, rgba(251,173,47,1) 100%);
+  background: -o-linear-gradient(top, rgba(243,123,31,1) 0%, rgba(251,173,47,1) 100%);
+  background: -ms-linear-gradient(top, rgba(243,123,31,1) 0%, rgba(251,173,47,1) 100%);
+  background: linear-gradient(to bottom, rgba(243,123,31,1) 0%, rgba(251,173,47,1) 100%); }
 
 .web {
   background: #fbad2f;
@@ -936,6 +936,26 @@ footer h3 {
     position: relative;
     padding-left: 0.5em;
     /*padding-left to make heading align up with the logo*/ } }
+  /* Makes the header-container's text fit the screen */
+@media only screen and (max-width: 390px) {
+  .header-container h2 {
+    font-size: 3em; } }
+/*Section 1 Landscape Media Queries*/
+@media screen and (max-width: 850px) and (orientation: landscape) {
+  .header-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding-top:3%; }
+  .mix-logo {
+    width: 50vw; }
+  .header-container h2 {
+    font-size:2rem;
+    margin-bottom:0rem; }
+}
+
 /* What is Mix Section Media Queries */
 @media only screen and (max-width: 991px) {
   #mix-info .col-lg-6:first-child, #mix-info .col-lg-6:nth-child(2) {
@@ -1049,10 +1069,7 @@ footer h3 {
     margin: 0;
     padding: 1em;
     font-size: 2.5em; } }
-/* Makes the header-container's text fit the screen */
-@media only screen and (max-width: 390px) {
-  .header-container h2 {
-    font-size: 3em; } }
+
 /*Footer Media Query*/
 @media only screen and (max-width: 991px) {
   div.col-lg-4 {

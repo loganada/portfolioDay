@@ -1,5 +1,6 @@
 /* SCSS VARIABLES */
 /* GENERAL */
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -258,7 +259,8 @@ html, body {
   -webkit-animation: glitchy 0.5s ease 0.5s infinite;
   animation: glitchy 0.5s ease 0.5s infinite; }
 
-.imageBorder:hover:after {
+.
+:hover:after {
   animation: glitchy 0.5s ease infinite reverse; }
 
 @-webkit-keyframes glitchy {
@@ -302,6 +304,7 @@ html, body {
 .pink {
   color: #ffffff;
   text-shadow: 0px 0px 200px #ff91fc, 0px 0px 30px #ff49fb, -1px -1px 5px #fff, 10px 1px 100px #af00b2; }
+@media only screen and (min-width: 700px){
 
 /* BOX HOVER */
 .student-overlay {
@@ -342,6 +345,50 @@ html, body {
   -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
   -moz-transition: -moz-transform 0.4s, opacity 0.1s;
   transition: transform 0.4s, opacity 0.1s; }
+}
+@media only screen and (max-width: 700px){
+
+/* BOX HOVER */
+.student-overlay {
+  position: relative; }
+  .student-overlay .student-overlay-info {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.2s 0.2s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.2s 0.2s;
+    -webkit-transition: opacity 0.2s 0.2s, -webkit-transform 0.4s;
+    transition: transform 0.4s, opacity 0.2s 0.2s; }
+  .student-overlay h3 {
+    background: rgba(1, 1, 1, 0.5);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    opacity: 1;
+    font-family: 'proxima_nova_scosfthin';
+    color: white; }
+
+.student-overlay .student-overlay-info {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s; }
+
+}
 
 /*MODAL*/
 /* The Modal (background) */
@@ -890,6 +937,7 @@ footer h3 {
 
   .nav-link {
     padding: .5rem; } }
+
 @media only screen and (max-width: 1300px) {
   .navbar-light .navbar-nav .nav-link {
     font-size: .9em; } }

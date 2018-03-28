@@ -10,17 +10,17 @@ $WD = array();
    if($arrayWD[$i]['bio_second_program'] == 'none'){
      $arrayWD[$i]['bio_second_program'] = '';
    }
-   if($arrayGD[$i]['bio_second_program'] == 'photography')
+   if($arrayWD[$i]['bio_second_program'] == 'photography')
    {
-       $arrayGD[$i]['bio_second_program'] = 'Photography';
+       $arrayWD[$i]['bio_second_program'] = 'Photography';
    }
-   if($arrayGD[$i]['bio_second_program'] == 'graphicDesign')
+   if($arrayWD[$i]['bio_second_program'] == 'graphicDesign')
    {
-       $arrayGD[$i]['bio_second_program'] = 'Graphic Design';
+       $arrayWD[$i]['bio_second_program'] = 'Graphic Design';
    }
-   if($arrayGD[$i]['bio_second_program'] == 'videoProduction')
+   if($arrayWD[$i]['bio_second_program'] == 'videoProduction')
    {
-       $arrayGD[$i]['bio_second_program'] = 'Video Production';
+       $arrayWD[$i]['bio_second_program'] = 'Video Production';
    }
    $WD[$i]=
     "<h1 class='modalText center'>" .  $arrayWD[$i]['bio_first_name'] . " ". $arrayWD[$i]['bio_last_name'] . "</h1>" .
@@ -28,10 +28,10 @@ $WD = array();
 
  //  echo "<h3 class='modalText'>" . $arrayGD[6]['bio_login_email'] . "</h3>";
    "<div class='bioLinks'><h4 class='modalText descrip'>Web Links</h4>" .
-   "<h5><a class='modalText center' href=mailto:".$arrayWD[$i]['bio_email'] ."?Subject=Dmacc%20Portfolio%20Day%202018 target='_top'>Email Me</a></h5>" .
-    "<h5><a class='modalText center' href=" . $arrayWD[$i]['bio_website_address'] . ">My Website</a></h5>" .
-    "<h5><a class='modalText center' href=" . $arrayWD[$i]['bio_second_web'] . ">My Work</a></h5>" .
-    "<h5><a class='modalText center' href=" . $arrayWD[$i]['bio_linkedIn'] . ">My Linkedin</a></h5>" .
+   "<h5 class='modalText center'> ".$arrayWD[$i]['bio_email'] ."</h5>" .
+    "<h5><a class='modalText center' href=" . $arrayWD[$i]['bio_website_address'] . ">View My Website</a></h5>" .
+    "<h5><a class='modalText center' href=" . $arrayWD[$i]['bio_second_web'] . ">View My Work</a></h5>" .
+    "<h5><a class='modalText center' href=" . $arrayWD[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>" .
     "</div>".
    "<h4 class='modalText descrip'>Hometown</h4>" .
     "<h5 class='modalText center'>" . $arrayWD[$i]['bio_hometown'] . "</h5>" .

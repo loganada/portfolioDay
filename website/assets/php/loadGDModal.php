@@ -2,7 +2,7 @@
  include "loadData.php";
 $q = $_REQUEST["q"];
 $GD = array();
-  for ($i=0; $i < 18; $i++) {
+  for ($i=0; $i < 19; $i++) {
     if($arrayGD[$i]['bio_program'] == 'graphicDesign')
     {
       $arrayGD[$i]['bio_program'] = 'Graphic Design';
@@ -28,10 +28,10 @@ $GD = array();
 
 //  echo "<h3 class='modalText'>" . $arrayGD[6]['bio_login_email'] . "</h3>";
   "<div class='bioLinks'><h4 class='modalText descrip'>Web Links</h4>" .
-  "<h5><a class='modalText center' href=mailto:".$arrayGD[$i]['bio_email'] ."?Subject=Dmacc%20Portfolio%20Day%202018 target='_top'>Email Me</a></h5>" .
-   "<h5><a class='modalText center' href=" . $arrayGD[$i]['bio_website_address'] . ">My Website</a></h5>" .
-   "<h5><a class='modalText center' href=" . $arrayGD[$i]['bio_second_web'] . ">My Work</a></h5>" .
-   "<h5><a class='modalText center' href=" . $arrayGD[$i]['bio_linkedIn'] . ">My Linkedin</a></h5>" .
+  "<h5 class='modalText center'> ".$arrayGD[$i]['bio_email'] ."</h5>" .
+   "<h5><a class='modalText center' href=" . $arrayGD[$i]['bio_website_address'] . ">View My Website</a></h5>" .
+   "<h5><a class='modalText center' href=" . $arrayGD[$i]['bio_second_web'] . ">View My Work</a></h5>" .
+   "<h5><a class='modalText center' href=" . $arrayGD[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>" .
    "</div>".
   "<h4 class='modalText descrip'>Hometown</h4>" .
    "<h5 class='modalText center'>" . $arrayGD[$i]['bio_hometown'] . "</h5>" .
@@ -101,32 +101,44 @@ if ($q == "GD 17") {
 }
 if ($q == "GD 18") {
   //echo $GD[18];
+echo "NO STUDENT INFORMATION";
 }
 if ($q == "GD 19") {
   //echo $GD[19];
+echo "NO STUDENT INFORMATION";
 }
 if ($q == "GD 20") {
 //  echo $GD[20];
+echo "NO STUDENT INFORMATION";
 }
 if ($q == "GD 21") {
 //  echo $GD[21];
+echo "NO STUDENT INFORMATION";
 }
 if ($q == "GD 22") {
   //echo $GD[22];
+echo "NO STUDENT INFORMATION";
 }
 if ($q == "GD 23") {
 //  echo $GD[23];
+echo "NO STUDENT INFORMATION";
 }
 if ($q == "GD 24") {
 //  echo $GD[24];
+echo "NO STUDENT INFORMATION";
 }
 if ($q == "GD 25") {
   //echo $GD[25];
+echo "NO STUDENT INFORMATION";
 }
 if ($q == "GD 26") {
   //echo $GD[26];
+echo "NO STUDENT INFORMATION";
 }
-
+if ($q == "GD 27") {
+  //echo $GD[27];
+  echo "NO STUDENT INFORMATION";
+}
 
 
  ?>

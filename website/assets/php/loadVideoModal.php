@@ -2,7 +2,7 @@
  include "loadData.php";
 $q = $_REQUEST["q"];
 $video = array();
-  for ($i=0; $i < 3; $i++) {
+  for ($i=0; $i < 4; $i++) {
     if($arrayVideo[$i]['bio_program'] == 'videoProduction')
     {
       $arrayVideo[$i]['bio_program'] = 'Video Production';
@@ -10,17 +10,17 @@ $video = array();
     if($arrayVideo[$i]['bio_second_program'] == 'none'){
       $arrayVideo[$i]['bio_second_program'] = '';
     }
-    if($arrayGD[$i]['bio_second_program'] == 'photography')
+    if($arrayVideo[$i]['bio_second_program'] == 'photography')
     {
-        $arrayGD[$i]['bio_second_program'] = 'Photography';
+        $arrayVideo[$i]['bio_second_program'] = 'Photography';
     }
-    if($arrayGD[$i]['bio_second_program'] == 'webDevelopment')
+    if($arrayVideo[$i]['bio_second_program'] == 'webDevelopment')
     {
-        $arrayGD[$i]['bio_second_program'] = 'Web Development';
+        $arrayVideo[$i]['bio_second_program'] = 'Web Development';
     }
-    if($arrayGD[$i]['bio_second_program'] == 'graphicDesign')
+    if($arrayVideo[$i]['bio_second_program'] == 'graphicDesign')
     {
-        $arrayGD[$i]['bio_second_program'] = 'Graphic Design';
+        $arrayVideo[$i]['bio_second_program'] = 'Graphic Design';
     }
     $video[$i]=
      "<h1 class='modalText center'>" .  $arrayVideo[$i]['bio_first_name'] . " ". $arrayVideo[$i]['bio_last_name'] . "</h1>" .
@@ -28,10 +28,10 @@ $video = array();
 
   //  echo "<h3 class='modalText'>" . $arrayGD[6]['bio_login_email'] . "</h3>";
     "<div class='bioLinks'><h4 class='modalText descrip'>Web Links</h4>" .
-    "<h5><a class='modalText center' href=mailto:".$arrayVideo[$i]['bio_email'] ."?Subject=Dmacc%20Portfolio%20Day%202018 target='_top'>Email Me</a></h5>" .
-     "<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_website_address'] . ">My Website</a></h5>" .
-     "<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_second_web'] . ">My Work</a></h5>" .
-     "<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_linkedIn'] . ">My Linkedin</a></h5>" .
+    "<h5 class='modalText center'> ".$arrayVideo[$i]['bio_email'] ."</h5>" .
+     "<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_website_address'] . ">View My Website</a></h5>" .
+     "<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_second_web'] . ">View My Work</a></h5>" .
+     "<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>" .
      "</div>".
     "<h4 class='modalText descrip'>Hometown</h4>" .
      "<h5 class='modalText center'>" . $arrayVideo[$i]['bio_hometown'] . "</h5>" .

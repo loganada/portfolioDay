@@ -376,6 +376,7 @@ html, body {
     padding: 5px;
     opacity: 1;
     font-family: 'proxima_nova_scosfthin';
+    font-size:1.1rem;
     color: white; }
 
 .student-overlay .student-overlay-info {

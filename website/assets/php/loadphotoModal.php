@@ -79,5 +79,27 @@ if ($q == "photo 10") {
 }
 if ($q == "photo 11") {
  //echo $photo[11];
+ echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
+}
+if ($q == "photo 12") {
+ // echo $photo[12];
+ echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
+}
+if ($q == "photo 13") {
+ // echo $photo[13];
+ echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
+}
+if ($q == "photo 14") {
+ // echo $photo[14];
+ echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
+}
+if ($q == "photo 15") {
+ //echo $photo[15];
+ echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
+}
+if ($q == "photo 16") {
+ //echo $photo[16];
+ echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
+
 }
 ?>

@@ -101,43 +101,43 @@ if ($q == "GD 17") {
 }
 if ($q == "GD 18") {
   //echo $GD[18];
-echo "NO STUDENT INFORMATION";
+echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
 }
 if ($q == "GD 19") {
   //echo $GD[19];
-echo "NO STUDENT INFORMATION";
+echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
 }
 if ($q == "GD 20") {
 //  echo $GD[20];
-echo "NO STUDENT INFORMATION";
+echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
 }
 if ($q == "GD 21") {
 //  echo $GD[21];
-echo "NO STUDENT INFORMATION";
+echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
 }
 if ($q == "GD 22") {
   //echo $GD[22];
-echo "NO STUDENT INFORMATION";
+echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
 }
 if ($q == "GD 23") {
 //  echo $GD[23];
-echo "NO STUDENT INFORMATION";
+echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
 }
 if ($q == "GD 24") {
 //  echo $GD[24];
-echo "NO STUDENT INFORMATION";
+echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
 }
 if ($q == "GD 25") {
   //echo $GD[25];
-echo "NO STUDENT INFORMATION";
+echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
 }
 if ($q == "GD 26") {
   //echo $GD[26];
-echo "NO STUDENT INFORMATION";
+echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
 }
 if ($q == "GD 27") {
   //echo $GD[27];
-  echo "NO STUDENT INFORMATION";
+  echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
 }
 
 

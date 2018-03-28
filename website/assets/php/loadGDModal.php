@@ -26,7 +26,7 @@ $GD = array();
    "<h1 class='modalText center'>" .  $arrayGD[$i]['bio_first_name'] . " ". $arrayGD[$i]['bio_last_name'] . "</h1>" .
    "<h3 class='modalText center'>" . $arrayGD[$i]['bio_program'] . "</h3> <h5 class='modalText center'> ". $arrayGD[$i]['bio_second_program']."</h5>" .
 
-//  echo "<h3 class='modalText'>" . $arrayGD[6]['bio_login_email'] . "</h3>";
+ //"<h3 class='modalText'>" . $arrayGD[$i]['bio_login_email'] . "</h3>".
   "<div class='bioLinks'><h4 class='modalText descrip'>Web Links</h4>" .
   "<h5 class='modalText center'> ".$arrayGD[$i]['bio_email'] ."</h5>" .
    "<h5><a class='modalText center' href=" . $arrayGD[$i]['bio_website_address'] . ">View My Website</a></h5>" .

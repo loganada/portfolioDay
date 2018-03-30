@@ -22,7 +22,7 @@ $video = array();
     {
         $arrayVideo[$i]['bio_second_program'] = 'Graphic Design';
     }
-    $videoHead[$i]=
+    $videoHead[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']]=
      "<h1 class='modalText center'>" .  $arrayVideo[$i]['bio_first_name'] . " ". $arrayVideo[$i]['bio_last_name'] . "</h1>" .
      "<h3 class='modalText center'>" . $arrayVideo[$i]['bio_program'] . "</h3> <h5 class='modalText center'> ". $arrayVideo[$i]['bio_second_program']."</h5>" .
 
@@ -33,68 +33,68 @@ $video = array();
 
   for ($i=0; $i < 4; $i++) {
   if (empty($arrayVideo[$i]['bio_website_address'])) {
-    $videoWebLink[$i] = '';
+    $videoWebLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']]= '';
   }
   else {
-    $videoWebLink[$i] ="<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_website_address'] . ">View My Website</a></h5>";
+    $videoWebLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']] ="<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_website_address'] . ">View My Website</a></h5>";
   }}
   for ($i=0; $i < 4; $i++) {
   if (empty($arrayVideo[$i]['bio_second_web'])) {
-    $videoWorkLink[$i] = '';
+    $videoWorkLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']]= '';
   }
   else {
-    $videoWorkLink[$i] ="<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_second_web'] . ">View My Work</a></h5>";
+    $videoWorkLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']] ="<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_second_web'] . ">View My Work</a></h5>";
   }}
   for ($i=0; $i < 4; $i++) {
   if (empty($arrayVideo[$i]['bio_linkedIn'])) {
-    $videoLinkedinLink[$i] = '';
+    $videoLinkedinLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']] = '';
   }
   else {
-    $videoLinkedinLink[$i] ="<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>";
+    $videoLinkedinLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']] ="<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>";
   }}
   for ($i=0; $i < 4; $i++) {
-    $videoFooter[$i]=
+    $videoFooter[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']]=
     "</div><h4 class='modalText descrip'>Hometown</h4>" .
      "<h5 class='modalText center'>" . $arrayVideo[$i]['bio_hometown'] . "</h5>" .
     "<h4 class='modalText descrip'>Career Goals</h4>" .
    "<p class='modalText center'>" . $arrayVideo[$i]['bio_career_goals'] . "</p>" .
     "<h4 class='modalText descrip' >Three Words That Describe Me</h4>" .
    "<h3 class='modalText center'>" . $arrayVideo[$i]['bio_three_words'] . "</h3>" .
-   "<img class='picture' id ='modalPhoto' src='assets/img/dpd-photos/video-$i.jpg'/><br>" .
+   "<img class='picture' id ='modalPhoto' src='assets/img/finalPicsVideo/".$arrayVideo[$i]['bio_last_name'] . ".". $arrayVideo[$i]['bio_first_name'] .".jpg'/><br>" .
    "<span class='close' onclick='closeModal()'>X</span>";
 
 }
-if ($q == "video 0") {
-  echo $videoHead[0];
-echo $videoWebLink[0];
-echo $videoWorkLink[0];
-echo $videoLinkedinLink[0];
-echo $videoFooter[0];
+if ($q == "Bandy.Aaron") {
+  echo $videoHead['Bandy.Aaron'];
+echo $videoWebLink['Bandy.Aaron'];
+echo $videoWorkLink['Bandy.Aaron'];
+echo $videoLinkedinLink['Bandy.Aaron'];
+echo $videoFooter['Bandy.Aaron'];
 
 
 }
-  if ($q == "video 1") {
-    echo $videoHead[1];
-  echo $videoWebLink[1];
-  echo $videoWorkLink[1];
-  echo $videoLinkedinLink[1];
-  echo $videoFooter[1];
+  if ($q == "Isolini.Jamie") {
+    echo $videoHead['Isolini.Jamie'];
+  echo $videoWebLink['Isolini.Jamie'];
+  echo $videoWorkLink['Isolini.Jamie'];
+  echo $videoLinkedinLink['Isolini.Jamie'];
+  echo $videoFooter['Isolini.Jamie'];
 
 }
-if ($q == "video 2") {
-  echo $videoHead[2];
-echo $videoWebLink[2];
-echo $videoWorkLink[2];
-echo $videoLinkedinLink[2];
-echo $videoFooter[2];
+if ($q == "Nemmers.Scott") {
+  echo $videoHead['Nemmers.Scott'];
+echo $videoWebLink['Nemmers.Scott'];
+echo $videoWorkLink['Nemmers.Scott'];
+echo $videoLinkedinLink['Nemmers.Scott'];
+echo $videoFooter['Nemmers.Scott'];
 
 }
-if ($q == "video 3") {
-  echo $videoHead[3];
-echo $videoWebLink[3];
-echo $videoWorkLink[3];
-echo $videoLinkedinLink[3];
-echo $videoFooter[3];
+if ($q == "Stevens.Caleb") {
+  echo $videoHead['Stevens.Caleb'];
+echo $videoWebLink['Stevens.Caleb'];
+echo $videoWorkLink['Stevens.Caleb'];
+echo $videoLinkedinLink['Stevens.Caleb'];
+echo $videoFooter['Stevens.Caleb'];
 }
 // if ($q == "video 4") {
 //   echo $video[4];

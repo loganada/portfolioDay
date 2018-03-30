@@ -2,7 +2,7 @@
 include "loadData.php";
 $q = $_REQUEST["q"];
 $photo = array();
- for ($i=0; $i < 11; $i++) {
+ for ($i=0; $i < 14; $i++) {
    if($arrayphoto[$i]['bio_program'] == 'photography')
    {
      $arrayphoto[$i]['bio_program'] = 'Photography';
@@ -23,7 +23,7 @@ $photo = array();
      $arrayphoto[$i]['bio_second_program'] = 'Video Production';
  }
 
-   $photoHead[$i]=
+   $photoHead[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']]=
     "<h1 class='modalText center'>" .  $arrayphoto[$i]['bio_first_name'] . " ". $arrayphoto[$i]['bio_last_name'] . "</h1>" .
     "<h3 class='modalText center'>" . $arrayphoto[$i]['bio_program'] . "</h3> <h5 class='modalText center'> ". $arrayphoto[$i]['bio_second_program']."</h5>" .
 
@@ -31,139 +31,149 @@ $photo = array();
    "<div class='bioLinks'><h4 class='modalText descrip'>Web Links</h4>" .
    "<h5 class='modalText center'> ".$arrayphoto[$i]['bio_login_email'] ."</h5>";
 }
-   for ($i=0; $i < 11; $i++) {
+   for ($i=0; $i < 14; $i++) {
    if (empty($arrayphoto[$i]['bio_website_address'])) {
-     $photoWebLink[$i] = '';
+     $photoWebLink[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']] = '';
    }
    else {
-     $photoWebLink[$i] ="<h5><a class='modalText center' href=" . $arrayphoto[$i]['bio_website_address'] . ">View My Website</a></h5>";
+     $photoWebLink[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']] ="<h5><a class='modalText center' href=" . $arrayphoto[$i]['bio_website_address'] . ">View My Website</a></h5>";
    }}
-   for ($i=0; $i < 11; $i++) {
+   for ($i=0; $i < 14; $i++) {
    if (empty($arrayphoto[$i]['bio_second_web'])) {
-     $photoWorkLink[$i] = '';
+     $photoWorkLink[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']] = '';
    }
    else {
-     $photoWorkLink[$i] ="<h5><a class='modalText center' href=" . $arrayphoto[$i]['bio_second_web'] . ">View My Work</a></h5>";
+     $photoWorkLink[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']] ="<h5><a class='modalText center' href=" . $arrayphoto[$i]['bio_second_web'] . ">View My Work</a></h5>";
    }}
-   for ($i=0; $i < 11; $i++) {
+   for ($i=0; $i < 14; $i++) {
    if (empty($arrayphoto[$i]['bio_linkedIn'])) {
-     $photoLinkedinLink[$i] = '';
+     $photoLinkedinLink[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']] = '';
    }
    else {
-     $photoLinkedinLink[$i] ="<h5><a class='modalText center' href=" . $arrayphoto[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>";
+     $photoLinkedinLink[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']] ="<h5><a class='modalText center' href=" . $arrayphoto[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>";
    }}
-   for ($i=0; $i < 11; $i++) {
-     $photoFooter[$i]=
+   for ($i=0; $i < 14; $i++) {
+     $photoFooter[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']]=
    "</div><h4 class='modalText descrip'>Hometown</h4>" .
     "<h5 class='modalText center'>" . $arrayphoto[$i]['bio_hometown'] . "</h5>" .
    "<h4 class='modalText descrip'>Career Goals</h4>" .
   "<p class='modalText center'>" . $arrayphoto[$i]['bio_career_goals'] . "</p>" .
    "<h4 class='modalText descrip' >Three Words That Describe Me</h4>" .
   "<h3 class='modalText center'>" . $arrayphoto[$i]['bio_three_words'] . "</h3>" .
-  "<img class='picture' id ='modalPhoto' src='assets/img/dpd-photos/photo-$i.jpg'/><br>" .
+  "<img class='picture' id ='modalPhoto' src='assets/img/finalPicsPhoto/".$arrayphoto[$i]['bio_last_name'] . ".". $arrayphoto[$i]['bio_first_name'] .".jpg'/><br>" .
   "<span class='close' onclick='closeModal()'>X</span>";
 }
-if ($q == "photo 0") {
-  echo $photoHead[0];
-echo $photoWebLink[0];
-echo $photoWorkLink[0];
-echo $photoLinkedinLink[0];
-echo $photoFooter[0];
+if ($q == "Agosti.Jami") {
+  echo $photoHead['Agosti.Jami'];
+echo $photoWebLink['Agosti.Jami'];
+echo $photoWorkLink['Agosti.Jami'];
+echo $photoLinkedinLink['Agosti.Jami'];
+echo $photoFooter['Agosti.Jami'];
 
 }
- if ($q == "photo 1") {
-   echo $photoHead[1];
- echo $photoWebLink[1];
- echo $photoWorkLink[1];
- echo $photoLinkedinLink[1];
- echo $photoFooter[1];
+ if ($q == "Conrad.Molly") {
+   echo $photoHead['Conrad.Molly'];
+ echo $photoWebLink['Conrad.Molly'];
+ echo $photoWorkLink['Conrad.Molly'];
+ echo $photoLinkedinLink['Conrad.Molly'];
+ echo $photoFooter['Conrad.Molly'];
 }
-if ($q == "photo 2") {
-  echo $photoHead[2];
-echo $photoWebLink[2];
-echo $photoWorkLink[2];
-echo $photoLinkedinLink[2];
-echo $photoFooter[2];
+if ($q == "Dawson.Jasminn") {
+  echo $photoHead['Dawson.Jasminn'];
+echo $photoWebLink['Dawson.Jasminn'];
+echo $photoWorkLink['Dawson.Jasminn'];
+echo $photoLinkedinLink['Dawson.Jasminn'];
+echo $photoFooter['Dawson.Jasminn'];
 }
-if ($q == "photo 3") {
-  echo $photoHead[3];
-echo $photoWebLink[3];
-echo $photoWorkLink[3];
-echo $photoLinkedinLink[3];
-echo $photoFooter[3];
+if ($q == "Eaton.Allyson") {
+  echo $photoHead['Eaton.Allyson'];
+echo $photoWebLink['Eaton.Allyson'];
+echo $photoWorkLink['Eaton.Allyson'];
+echo $photoLinkedinLink['Eaton.Allyson'];
+echo $photoFooter['Eaton.Allyson'];
 }
-if ($q == "photo 4") {
-  echo $photoHead[4];
-echo $photoWebLink[4];
-echo $photoWorkLink[4];
-echo $photoLinkedinLink[4];
-echo $GDFooter[4];
+if ($q == "Espinosa.Jacey") {
+  echo $photoHead['Espinosa.Jacey'];
+echo $photoWebLink['Espinosa.Jacey'];
+echo $photoWorkLink['Espinosa.Jacey'];
+echo $photoLinkedinLink['Espinosa.Jacey'];
+echo $photoFooter['Espinosa.Jacey'];
 }
-if ($q == "photo 5") {
-  echo $photoHead[5];
-echo $photoWebLink[5];
-echo $photoWorkLink[5];
-echo $photoLinkedinLink[5];
-echo $photoFooter[5];
+if ($q == "Hemmingsen.Emily") {
+  echo $photoHead['Hemmingsen.Emily'];
+echo $photoWebLink['Hemmingsen.Emily'];
+echo $photoWorkLink['Hemmingsen.Emily'];
+echo $photoLinkedinLink['Hemmingsen.Emily'];
+echo $photoFooter['Hemmingsen.Emily'];
 }
-if ($q == "photo 6") {
-  echo $photoHead[6];
-echo $photoWebLink[6];
-echo $photoWorkLink[6];
-echo $photoLinkedinLink[6];
-echo $photoFooter[6];
+if ($q == "Herrera.Elizabeth") {
+  echo $photoHead['Herrera.Elizabeth'];
+echo $photoWebLink['Herrera.Elizabeth'];
+echo $photoWorkLink['Herrera.Elizabeth'];
+echo $photoLinkedinLink['Herrera.Elizabeth'];
+echo $photoFooter['Herrera.Elizabeth'];
 }
-if ($q == "photo 7") {
-  echo $photoHead[7];
-echo $photoWebLink[7];
-echo $photoWorkLink[7];
-echo $photoLinkedinLink[7];
-echo $photoFooter[7];
+if ($q == "Laugerman.Alex") {
+  echo $photoHead['Laugerman.Alex'];
+echo $photoWebLink['Laugerman.Alex'];
+echo $photoWorkLink['Laugerman.Alex'];
+echo $photoLinkedinLink['Laugerman.Alex'];
+echo $photoFooter['Laugerman.Alex'];
 }
-if ($q == "photo 8") {
-  echo $photoHead[8];
-echo $photoWebLink[8];
-echo $photoWorkLink[8];
-echo $photoLinkedinLink[8];
-echo $photoFooter[8];
+if ($q == "Ruff.Liam") {
+  echo $photoHead['Ruff.Liam'];
+echo $photoWebLink['Ruff.Liam'];
+echo $photoWorkLink['Ruff.Liam'];
+echo $photoLinkedinLink['Ruff.Liam'];
+echo $photoFooter['Ruff.Liam'];
 }
-if ($q == "photo 9") {
-  echo $photoHead[9];
-echo $photoWebLink[9];
-echo $photoWorkLink[9];
-echo $photoLinkedinLink[9];
-echo $photoFooter[9];
+if ($q == "Stender.Andraya") {
+  echo $photoHead['Stender.Andraya'];
+echo $photoWebLink['Stender.Andraya'];
+echo $photoWorkLink['Stender.Andraya'];
+echo $photoLinkedinLink['Stender.Andraya'];
+echo $photoFooter['Stender.Andraya'];
 }
-if ($q == "photo 10") {
-  echo $photoHead[10];
-echo $photoWebLink[10];
-echo $photoWorkLink[10];
-echo $photoLinkedinLink[10];
-echo $photoFooter[10];
+if ($q == "Swick.Brittany") {
+  echo $photoHead['Swick.Brittany'];
+echo $photoWebLink['Swick.Brittany'];
+echo $photoWorkLink['Swick.Brittany'];
+echo $photoLinkedinLink['Swick.Brittany'];
+echo $photoFooter['Swick.Brittany'];
 }
-if ($q == "photo 11") {
- //echo $photo[11];
- echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
+if ($q == "Sternquist.Jake") {
+  echo $photoHead['Sternquist.Jake'];
+echo $photoWebLink['Sternquist.Jake'];
+echo $photoWorkLink['Sternquist.Jake'];
+echo $photoLinkedinLink['Sternquist.Jake'];
+echo $photoFooter['Sternquist.Jake'];
 }
-if ($q == "photo 12") {
- // echo $photo[12];
- echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
+if ($q == "Enos.Lawrence") {
+  echo $photoHead['Enos.Lawrence'];
+echo $photoWebLink['Enos.Lawrence'];
+echo $photoWorkLink['Enos.Lawrence'];
+echo $photoLinkedinLink['Enos.Lawrence'];
+echo $photoFooter['Enos.Lawrence'];
 }
-if ($q == "photo 13") {
- // echo $photo[13];
- echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
+if ($q == "Bullock.Abbigail") {
+  echo $photoHead['Bullock.Abbigail'];
+echo $photoWebLink['Bullock.Abbigail'];
+echo $photoWorkLink['Bullock.Abbigail'];
+echo $photoLinkedinLink['Bullock.Abbigail'];
+echo $photoFooter['Bullock.Abbigail'];
 }
-if ($q == "photo 14") {
- // echo $photo[14];
- echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
+if ($q == "Priest.Jillian") {
+  echo $photoHead['Priest.Jillian'];
+echo $photoWebLink['Priest.Jillian'];
+echo $photoWorkLink['Priest.Jillian'];
+echo $photoLinkedinLink['Priest.Jillian'];
+echo $photoFooter['Priest.Jillian'];
 }
-if ($q == "photo 15") {
- //echo $photo[15];
- echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
-}
-if ($q == "photo 16") {
- //echo $photo[16];
- echo "<h1 class='center'>NO STUDENT INFORMATION</h1>";
-
+if ($q == "Lamm.Amy") {
+  echo $photoHead['Lamm.Amy'];
+echo $photoWebLink['Lamm.Amy'];
+echo $photoWorkLink['Lamm.Amy'];
+echo $photoLinkedinLink['Lamm.Amy'];
+echo $photoFooter['Lamm.Amy'];
 }
 ?>

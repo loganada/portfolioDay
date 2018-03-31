@@ -27,7 +27,7 @@ $GD = array();
 
    "<h1 class='modalText center'>" .  $arrayGD[$i]['bio_first_name'] . " ". $arrayGD[$i]['bio_last_name'] . "</h1>" .
    "<h3 class='modalText center'>" . $arrayGD[$i]['bio_program'] . "</h3> <h5 class='modalText center'> ". $arrayGD[$i]['bio_second_program']."</h5>".
- "<h3 class='modalText'>" . $arrayGD[$i]['bio_login_email'] . "</h3>".
+ //"<h3 class='modalText'>" . $arrayGD[$i]['bio_login_email'] . "</h3>".
   "<div class='bioLinks'><h4 class='modalText descrip'>Web Links</h4>".
   "<h5 class='modalText center'> ".$arrayGD[$i]['bio_email'] ."</h5>";
 }
@@ -219,6 +219,13 @@ echo $GDWebLink['Filzer.Zoe'];
 echo $GDWorkLink['Filzer.Zoe'];
 echo $GDLinkedinLink['Filzer.Zoe'];
 echo $GDFooter['Filzer.Zoe'];
+}
+if ($q == "Hammer.Stephen") {
+  echo $GDHead['Hammer.Stephen'];
+echo $GDWebLink['Hammer.Stephen'];
+echo $GDWorkLink['Hammer.Stephen'];
+echo $GDLinkedinLink['Hammer.Stephen'];
+echo $GDFooter['Hammer.Stephen'];
 }
 if ($q == "GD 26") {
 //   echo $GDHead['Lyon.Jill'];

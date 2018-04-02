@@ -169,11 +169,12 @@ echo $photoWorkLink['Priest.Jillian'];
 echo $photoLinkedinLink['Priest.Jillian'];
 echo $photoFooter['Priest.Jillian'];
 }
-if ($q == "Lamm.Amy") {
-  echo $photoHead['Lamm.Amy'];
-echo $photoWebLink['Lamm.Amy'];
-echo $photoWorkLink['Lamm.Amy'];
-echo $photoLinkedinLink['Lamm.Amy'];
-echo $photoFooter['Lamm.Amy'];
+if ($q == "photo 13") {
+//   echo $photoHead['Lamm.Amy'];
+// echo $photoWebLink['Lamm.Amy'];
+// echo $photoWorkLink['Lamm.Amy'];
+// echo $photoLinkedinLink['Lamm.Amy'];
+// echo $photoFooter['Lamm.Amy'];
+echo "<h1 class = 'center'>NO STUDENT INFO AVAILABLE</h1>";
 }
 ?>

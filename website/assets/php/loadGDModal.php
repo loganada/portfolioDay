@@ -191,14 +191,16 @@ echo $GDWorkLink['Wright.Spencer'];
 echo $GDLinkedinLink['Wright.Spencer'];
 echo $GDFooter['Wright.Spencer'];
 }
-if ($q == "Baker.Caleb") {
-  echo $GDHead['Baker.Caleb'];
-echo $GDWebLink['Baker.Caleb'];
-echo $GDWorkLink['Baker.Caleb'];
-echo $GDLinkedinLink['Baker.Caleb'];
-echo $GDFooter['Baker.Caleb'];
+if ($q == "GD 26") {
+//   echo $GDHead['Baker.Caleb'];
+// echo $GDWebLink['Baker.Caleb'];
+// echo $GDWorkLink['Baker.Caleb'];
+// echo $GDLinkedinLink['Baker.Caleb'];
+// echo $GDFooter['Baker.Caleb'];
+echo "<h1 class='center'>NO STUDENT INFO AVAILABLE</h1>";
+
 }
-if ($q == "GD 25") {
+if ($q == "GD 24") {
 //   echo $GDHead['Bovenmyer.Matthew'];
 // echo $GDWebLink['Bovenmyer.Matthew'];
 // echo $GDWorkLink['Bovenmyer.Matthew'];
@@ -227,7 +229,7 @@ echo $GDWorkLink['Hammer.Stephen'];
 echo $GDLinkedinLink['Hammer.Stephen'];
 echo $GDFooter['Hammer.Stephen'];
 }
-if ($q == "GD 26") {
+if ($q == "GD 25") {
 //   echo $GDHead['Lyon.Jill'];
 // echo $GDWebLink['Lyon.Jill'];
 // echo $GDWorkLink['Lyon.Jill'];

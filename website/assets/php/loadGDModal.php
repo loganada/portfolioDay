@@ -36,21 +36,21 @@ if (empty($arrayGD[$i]['bio_website_address'])) {
   $GDWebLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]= '';
 }
 else {
-  $GDWebLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]="<h5><a class='modalText center' href=" . $arrayGD[$i]['bio_website_address'] . ">View My Website</a></h5>";
+  $GDWebLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]="<h5><a class='modalText center' target='_blank' href=" . $arrayGD[$i]['bio_website_address']  . ">View My Website</a></h5>";
 }}
 for ($i=0; $i < 26; $i++) {
 if (empty($arrayGD[$i]['bio_second_web'])) {
   $GDWorkLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]= '';
 }
 else {
-  $GDWorkLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]="<h5><a class='modalText center' href=" . $arrayGD[$i]['bio_second_web'] . ">View My Work</a></h5>";
+  $GDWorkLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]="<h5><a class='modalText center' target='_blank' href=" . $arrayGD[$i]['bio_second_web'] . ">View My Work</a></h5>";
 }}
 for ($i=0; $i < 26; $i++) {
 if (empty($arrayGD[$i]['bio_linkedIn'])) {
   $GDLinkedinLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]= '';
 }
 else {
-  $GDLinkedinLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]="<h5><a class='modalText center' href=" . $arrayGD[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>";
+  $GDLinkedinLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]="<h5><a class='modalText center' target='_blank' href=" . $arrayGD[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>";
 }}
 for ($i=0; $i < 26; $i++) {
   $GDFooter[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]=

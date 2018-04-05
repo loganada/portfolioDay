@@ -2,7 +2,7 @@
  include "loadData.php";
 $q = $_REQUEST["q"];
 $GD = array();
-  for ($i=0; $i < 23; $i++) {
+  for ($i=0; $i < 26; $i++) {
     if($arrayGD[$i]['bio_program'] == 'graphicDesign')
     {
       $arrayGD[$i]['bio_program'] = 'Graphic Design';
@@ -31,28 +31,28 @@ $GD = array();
   "<div class='bioLinks'><h4 class='modalText descrip'>Web Links</h4>".
   "<h5 class='modalText center'> ".$arrayGD[$i]['bio_email'] ."</h5>";
 }
-for ($i=0; $i < 23; $i++) {
+for ($i=0; $i < 26; $i++) {
 if (empty($arrayGD[$i]['bio_website_address'])) {
   $GDWebLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]= '';
 }
 else {
   $GDWebLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]="<h5><a class='modalText center' href=" . $arrayGD[$i]['bio_website_address'] . ">View My Website</a></h5>";
 }}
-for ($i=0; $i < 23; $i++) {
+for ($i=0; $i < 26; $i++) {
 if (empty($arrayGD[$i]['bio_second_web'])) {
   $GDWorkLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]= '';
 }
 else {
   $GDWorkLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]="<h5><a class='modalText center' href=" . $arrayGD[$i]['bio_second_web'] . ">View My Work</a></h5>";
 }}
-for ($i=0; $i < 23; $i++) {
+for ($i=0; $i < 26; $i++) {
 if (empty($arrayGD[$i]['bio_linkedIn'])) {
   $GDLinkedinLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]= '';
 }
 else {
   $GDLinkedinLink[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]="<h5><a class='modalText center' href=" . $arrayGD[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>";
 }}
-for ($i=0; $i < 23; $i++) {
+for ($i=0; $i < 26; $i++) {
   $GDFooter[$arrayGD[$i]['bio_last_name'].'.'.$arrayGD[$i]['bio_first_name']]=
   "</div><h4 class='modalText descrip'>Hometown</h4>" .
    "<h5 class='modalText center'>" . $arrayGD[$i]['bio_hometown'] . "</h5>" .
@@ -155,6 +155,13 @@ echo $GDFooter['Meyer.Caleb'];
   echo $GDWorkLink['Millard.Dallas'];
   echo $GDLinkedinLink['Millard.Dallas'];
   echo $GDFooter['Millard.Dallas'];
+}
+if ($q == "Roman.Brandon") {
+  echo $GDHead['Roman.Brandon'];
+echo $GDWebLink['Roman.Brandon'];
+echo $GDWorkLink['Roman.Brandon'];
+echo $GDLinkedinLink['Roman.Brandon'];
+echo $GDFooter['Roman.Brandon'];
 }
 if ($q == "Morgan.Kylie") {
   echo $GDHead['Morgan.Kylie'];
@@ -260,13 +267,20 @@ echo $GDWorkLink['Wilson.Liz'];
 echo $GDLinkedinLink['Wilson.Liz'];
 echo $GDFooter['Wilson.Liz'];
 }
-if ($q == "GD 22") {
-//   echo $GDHead['Field.Tracey'];
-// echo $GDWebLink['Field.Tracey'];
-// echo $GDWorkLink['Field.Tracey'];
-// echo $GDLinkedinLink['Field.Tracey'];
-// echo $GDFooter['Field.Tracey'];
-echo "<h1 class='center'>NO STUDENT INFO AVAILABLE</h1>";
+if ($q == "Van Zandt.Marissa") {
+  echo $GDHead['Van Zandt.Marissa'];
+echo $GDWebLink['Van Zandt.Marissa'];
+echo $GDWorkLink['Van Zandt.Marissa'];
+echo $GDLinkedinLink['Van Zandt.Marissa'];
+echo $GDFooter['Van Zandt.Marissa'];
+}
+if ($q == "Field.Tracey") {
+  echo $GDHead['Field.Tracey'];
+echo $GDWebLink['Field.Tracey'];
+echo $GDWorkLink['Field.Tracey'];
+echo $GDLinkedinLink['Field.Tracey'];
+echo $GDFooter['Field.Tracey'];
+//echo "<h1 class='center'>NO STUDENT INFO AVAILABLE</h1>";
 }
 
 

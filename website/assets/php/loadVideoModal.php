@@ -36,21 +36,21 @@ $video = array();
     $videoWebLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']]= '';
   }
   else {
-    $videoWebLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']] ="<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_website_address'] . ">View My Website</a></h5>";
+    $videoWebLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']] ="<h5><a class='modalText center' target='_blank' href=" . $arrayVideo[$i]['bio_website_address'] . ">View My Website</a></h5>";
   }}
   for ($i=0; $i < 4; $i++) {
   if (empty($arrayVideo[$i]['bio_second_web'])) {
     $videoWorkLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']]= '';
   }
   else {
-    $videoWorkLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']] ="<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_second_web'] . ">View My Work</a></h5>";
+    $videoWorkLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']] ="<h5><a class='modalText center' target='_blank' href=" . $arrayVideo[$i]['bio_second_web'] . ">View My Work</a></h5>";
   }}
   for ($i=0; $i < 4; $i++) {
   if (empty($arrayVideo[$i]['bio_linkedIn'])) {
     $videoLinkedinLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']] = '';
   }
   else {
-    $videoLinkedinLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']] ="<h5><a class='modalText center' href=" . $arrayVideo[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>";
+    $videoLinkedinLink[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']] ="<h5><a class='modalText center' target='_blank' href=" . $arrayVideo[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>";
   }}
   for ($i=0; $i < 4; $i++) {
     $videoFooter[$arrayVideo[$i]['bio_last_name'].'.'.$arrayVideo[$i]['bio_first_name']]=

@@ -37,21 +37,21 @@ $WD = array();
    $WDWebLink[$arrayWD[$i]['bio_last_name'].'.'.$arrayWD[$i]['bio_first_name']]= '';
  }
  else {
-   $WDWebLink[$arrayWD[$i]['bio_last_name'].'.'.$arrayWD[$i]['bio_first_name']]="<h5><a class='modalText center' href=" . $arrayWD[$i]['bio_website_address'] . ">View My Website</a></h5>";
+   $WDWebLink[$arrayWD[$i]['bio_last_name'].'.'.$arrayWD[$i]['bio_first_name']]="<h5><a class='modalText center' target='_blank' href=" . $arrayWD[$i]['bio_website_address'] . ">View My Website</a></h5>";
  }}
  for ($i=0; $i < 8; $i++) {
  if (empty($arrayWD[$i]['bio_second_web'])) {
    $WDWorkLink[$arrayWD[$i]['bio_last_name'].'.'.$arrayWD[$i]['bio_first_name']]= '';
  }
  else {
-   $WDWorkLink[$arrayWD[$i]['bio_last_name'].'.'.$arrayWD[$i]['bio_first_name']]="<h5><a class='modalText center' href=" . $arrayWD[$i]['bio_second_web'] . ">View My Work</a></h5>";
+   $WDWorkLink[$arrayWD[$i]['bio_last_name'].'.'.$arrayWD[$i]['bio_first_name']]="<h5><a class='modalText center' target='_blank' href=" . $arrayWD[$i]['bio_second_web'] . ">View My Work</a></h5>";
  }}
  for ($i=0; $i < 8; $i++) {
  if (empty($arrayWD[$i]['bio_linkedIn'])) {
    $WDLinkedinLink[$arrayWD[$i]['bio_last_name'].'.'.$arrayWD[$i]['bio_first_name']]= '';
  }
  else {
-   $WDLinkedinLink[$arrayWD[$i]['bio_last_name'].'.'.$arrayWD[$i]['bio_first_name']] ="<h5><a class='modalText center' href=" . $arrayWD[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>";
+   $WDLinkedinLink[$arrayWD[$i]['bio_last_name'].'.'.$arrayWD[$i]['bio_first_name']] ="<h5><a class='modalText center' target='_blank' href=" . $arrayWD[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>";
  }}
  for ($i=0; $i < 8; $i++) {
    $WDFooter[$arrayWD[$i]['bio_last_name'].'.'.$arrayWD[$i]['bio_first_name']]=

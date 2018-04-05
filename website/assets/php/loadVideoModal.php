@@ -81,12 +81,12 @@ echo $videoFooter['Bandy.Aaron'];
   echo $videoFooter['Isolini.Jamie'];
 
 }
-if ($q == "Nemmers.Scott") {
-  echo $videoHead['Nemmers.Scott'];
-echo $videoWebLink['Nemmers.Scott'];
-echo $videoWorkLink['Nemmers.Scott'];
-echo $videoLinkedinLink['Nemmers.Scott'];
-echo $videoFooter['Nemmers.Scott'];
+if ($q == "Bellile.Kennoniah") {
+  echo $videoHead['Bellile.Kennoniah'];
+echo $videoWebLink['Bellile.Kennoniah'];
+echo $videoWorkLink['Bellile.Kennoniah'];
+echo $videoLinkedinLink['Bellile.Kennoniah'];
+echo $videoFooter['Bellile.Kennoniah'];
 
 }
 if ($q == "Stevens.Caleb") {

@@ -13,7 +13,7 @@ echo "<span class='imageBorder student-overlay'>
 }
 }
 
-for ($i=23; $i <27; $i++) {
+for ($i=23; $i <26; $i++) {
 echo "<span class='imageBorder student-overlay'>
 		<img class='picture' onclick='modalDisplay()' id ='GD $i' width='200px'  src='assets/img/dpd-photos/GD-$i.jpg'/>
 		</span>";

@@ -1,8 +1,8 @@
 <?php
 include "loadData.php";
 
-for ($i=0; $i <27; $i++) {
-	if ($i==11) {
+for ($i=0; $i <31; $i++) {
+	if ($i==12) {
 
 	}
 	else{
@@ -13,9 +13,5 @@ echo "<span class='imageBorder student-overlay'>
 }
 }
 
-for ($i=23; $i <26; $i++) {
-echo "<span class='imageBorder student-overlay'>
-		<img class='picture' onclick='modalDisplay()' id ='GD $i' width='200px'  src='assets/img/dpd-photos/GD-$i.jpg'/>
-		</span>";
-}
+
 ?>

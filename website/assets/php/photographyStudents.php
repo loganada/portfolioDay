@@ -1,8 +1,8 @@
 <?php
 include "loadData.php";
 
-for ($i=0; $i < 14; $i++) {
-	if ($i==7 || $i==11){
+for ($i=0; $i < 18; $i++) {
+	if ($i==7 || $i==11 || $i==14){
 
 	}
 	else{

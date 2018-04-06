@@ -2,7 +2,7 @@
 include "loadData.php";
 $q = $_REQUEST["q"];
 $photo = array();
- for ($i=0; $i < 14; $i++) {
+ for ($i=0; $i < 18; $i++) {
    if($arrayphoto[$i]['bio_program'] == 'photography')
    {
      $arrayphoto[$i]['bio_program'] = 'Photography';
@@ -31,28 +31,28 @@ $photo = array();
    "<div class='bioLinks'><h4 class='modalText descrip'>Web Links</h4>" .
    "<h5 class='modalText center'> ".$arrayphoto[$i]['bio_email'] ."</h5>";
 }
-   for ($i=0; $i < 14; $i++) {
+   for ($i=0; $i < 18; $i++) {
    if (empty($arrayphoto[$i]['bio_website_address'])) {
      $photoWebLink[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']] = '';
    }
    else {
      $photoWebLink[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']] ="<h5><a class='modalText center' target='_blank' href=" . $arrayphoto[$i]['bio_website_address'] . ">View My Website</a></h5>";
    }}
-   for ($i=0; $i < 14; $i++) {
+   for ($i=0; $i < 18; $i++) {
    if (empty($arrayphoto[$i]['bio_second_web'])) {
      $photoWorkLink[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']] = '';
    }
    else {
      $photoWorkLink[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']] ="<h5><a class='modalText center' target='_blank' href=" . $arrayphoto[$i]['bio_second_web'] . ">View My Work</a></h5>";
    }}
-   for ($i=0; $i < 14; $i++) {
+   for ($i=0; $i < 18; $i++) {
    if (empty($arrayphoto[$i]['bio_linkedIn'])) {
      $photoLinkedinLink[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']] = '';
    }
    else {
      $photoLinkedinLink[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']] ="<h5><a class='modalText center' target='_blank' href=" . $arrayphoto[$i]['bio_linkedIn'] . ">View My Linkedin</a></h5>";
    }}
-   for ($i=0; $i < 14; $i++) {
+   for ($i=0; $i < 18; $i++) {
      $photoFooter[$arrayphoto[$i]['bio_last_name'].'.'.$arrayphoto[$i]['bio_first_name']]=
    "</div><h4 class='modalText descrip'>Hometown</h4>" .
     "<h5 class='modalText center'>" . $arrayphoto[$i]['bio_hometown'] . "</h5>" .

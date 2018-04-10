@@ -64,6 +64,13 @@ for ($i=0; $i < 31; $i++) {
  "<span class='close' onclick='closeModal()'>X</span>";
 }
 
+if ($q == "Perry.Alan") {
+  echo $GDHead['Perry.Alan'];
+echo $GDWebLink['Perry.Alan'];
+echo $GDWorkLink['Perry.Alan'];
+echo $GDLinkedinLink['Perry.Alan'];
+echo $GDFooter['Perry.Alan'];
+}
 if ($q == "Connors.Steven") {
   echo $GDHead['Connors.Steven'];
 echo $GDWebLink['Connors.Steven'];
